@@ -4,21 +4,14 @@
   -->
 <resources>
     <string name="app_name">Trình dọn dẹp LTE</string>
-    <string name="lte_cleaner">LTE Cleaner!</string>
-    <string name="no_files_found">Không tìm thấy tập tin</string>
     <string name="delete_empty_folders">Xoá các thư mục rỗng</string>
     <string name="aggressive_filter">Kích hoạt bộ lọc mạnh</string>
-    <string name="Save">Lưu</string>
-    <string name="filter">Bộ lọc</string>
     <string name="whitelist">Trắng</string>
     <string name="privacy_policy">Chính sách riêng</string>
     <string name="add_to_whitelist">Thêm vào danh sách trắng</string>
     <string name="add">Thêm</string>
     <string name="cancel">Hủy</string>
     <string name="enter_file_name">Nhập vào tên tập tin/thư mục để làm trắng</string>
-    <string name="make_suggestion">Tạo đê ̀ xuất</string>
-    <string name="select_task">Chọn tác vụ</string>
-    <string name="do_you_want_to">Bạn có muốn xóa (Sạch) tất cả các tập tin đã tìm thấy, hoặc chỉ hiển thị (Phân tích) chúng không?</string>
     <string name="clean">Sạch</string>
     <string name="analyze">Phân tích</string>
     <string name="enable_generic_filter">Bật bộ lọc chung</string>
@@ -30,16 +23,10 @@
     <string name="are_you_reset_whitelist">Anh có chắc là muốn dọn sạch trắng không?</string>
     <string name="reset">Xóa</string>
     <string name="delete_apk_files">Xoá tập tin .apk</string>
-    <string name="lte_threading">Trình đọc tin LTE (Faster)</string>
-    <string name="default_whitelist">Whitelist mặc định</string>
-    <string name="add_defaults">Thêm khuyến cáo</string>
-    <string name="nothing_found">Không tìm thấy</string>
     <string name="status_idle">Trạng thái: Idle</string>
     <string name="progress_0">0%</string>
     <string name="status_running">Trạng thái: Chạy</string>
     <string name="privacy_sum">Xem chính sách bảo mật (liên kết bên ngoài)</string>
-    <string name="whitelist_sum">Hiển thị đường dẫn để loại trừ từ quét</string>
-    <string name="suggestion_sum">Mở một vấn đê ̀ trên GitHub tư ̀ ứng dụng. Không cần tài khoản</string>
     <string name="generic_sum">.tmp, .log, Logs, nhật ký</string>
     <string name="aggressive_sum">Quá nhiều để liệt kê ở đây</string>
     <string name="apk_sum">Tập tin trình cài đặt cho android</string>
@@ -47,13 +34,9 @@
     <string name="autowhite_sum">Phát hiện thư mục cần được bảo vệ tự động</string>
     <string name="prompt_string">Vui lòng thêm quyền truy cập tập tin</string>
     <string name="settings_string">Thiết lập</string>
-    <string name="hello_blank_fragment">Xin chào.</string>
     <string name="title_activity_prompt">Lời nhắc</string>
     <string name="corpse_summary">Tập tin bị bỏ qua các ứng dụng không cài đặt</string>
     <string name="corpse_title">Xoá tập tin xác chết</string>
-    <string name="donate">Hiến tặng</string>
-    <string name="donate_sum">Mua cà phê cho tôi! Hoặc chọn cách quyên góp bằng PayPal để tôi có thể giư ̃ lại ứng dụng này</string>
-    <string name="recommended">Đề nghị</string>
     <string name="defaultwhitelist">Mặc định</string>
     <string name="other">Khác</string>
     <string name="daily_title">Sạch hàng ngày</string>
@@ -63,6 +46,7 @@
     <string name="permission_needed">Cho phép!</string>
     <string name="failed_scan">Quét không thành công.</string>
     <string name="are_you_sure_deletion">Anh chắc chứ? Không thể khôi phục tập tin bị xóa</string>
+    <string name="are_you_sure_deletion_title">Xác nhận xóa</string>
     <string name="aggressive_filter_what_title">Những gì bộ lọc tích cực</string>
     <string name="adds_the_following">Thêm bộ lọc sau:</string>
     <string name="samsung_not_work">Không làm việc trên các thiết bị samsung</string>
@@ -102,9 +86,12 @@
         <item>bugreports</item>
         <item>.Trash</item>
         <item>cache</item>
+        <item>Splenad</item>
     </string-array>
     <string-array name="aggressive_filter_files">
         <item>.exo</item>
         <item>ngón tay cái? .db</item>
+        <item>.ngón cái[0-9]</item>
+        <item>Splenad</item>
     </string-array>
 </resources>

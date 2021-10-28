@@ -2,6 +2,4 @@
 <!--
   ~ Copyright 2020 Hunter J Drum
   -->
-<resources>
-    <string name="privacy_policy_url" translatable="false">https://cdn.rawgit.com/TheRedSpy15/LTECleanerFOSS/d9522c76/privacy_policy.html</string>
-</resources>
+<resources></resources>

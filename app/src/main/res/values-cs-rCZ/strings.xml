@@ -4,21 +4,14 @@
   -->
 <resources>
     <string name="app_name">Vyčištění LTE</string>
-    <string name="lte_cleaner">Uklízeč LTE!</string>
-    <string name="no_files_found">Nebyly nalezeny žádné soubory</string>
     <string name="delete_empty_folders">Odstranit prázdné složky</string>
     <string name="aggressive_filter">Povolit agresivní filtr</string>
-    <string name="Save">Uložit</string>
-    <string name="filter">Filtrovat</string>
     <string name="whitelist">Seznam povolených adres</string>
     <string name="privacy_policy">Ochrana osobních údajů</string>
     <string name="add_to_whitelist">Přidat do seznamu povolených</string>
     <string name="add">Přidat</string>
     <string name="cancel">Storno</string>
     <string name="enter_file_name">Zadejte název souboru/složky do seznamu povolených adres</string>
-    <string name="make_suggestion">Navrhnout návrh</string>
-    <string name="select_task">Vyberte úlohu</string>
-    <string name="do_you_want_to">Chcete odstranit (Vyčistit) všechny nalezené soubory, nebo je pouze zobrazit (Analyzovat)?</string>
     <string name="clean">Vyčistit</string>
     <string name="analyze">Analyzovat</string>
     <string name="enable_generic_filter">Povolit generický filtr</string>
@@ -30,16 +23,10 @@
     <string name="are_you_reset_whitelist">Jste si jisti, že chcete vymazat seznam povolených adres?</string>
     <string name="reset">Vyčistit</string>
     <string name="delete_apk_files">Odstranit soubory .apk</string>
-    <string name="lte_threading">LTE Threading (rychlejší)</string>
-    <string name="default_whitelist">Výchozí seznam povolených adres</string>
-    <string name="add_defaults">Přidat doporučené seznamy povolených adres</string>
-    <string name="nothing_found">Nic nenalezeno</string>
     <string name="status_idle">Stav: Nečinný</string>
     <string name="progress_0">0%</string>
     <string name="status_running">Stav: Spuštěno</string>
     <string name="privacy_sum">Zobrazit zásady ochrany osobních údajů (externí odkaz)</string>
-    <string name="whitelist_sum">Zobrazí cesty, které se mají vyloučit ze skenování</string>
-    <string name="suggestion_sum">Otevřete problém v aplikaci GitHub z aplikace. Není potřeba žádný účet</string>
     <string name="generic_sum">.tmp, .log, Protokoly, protokoly</string>
     <string name="aggressive_sum">Příliš mnoho na seznam zde</string>
     <string name="apk_sum">Soubory instalačního programu pro android</string>
@@ -47,13 +34,9 @@
     <string name="autowhite_sum">Zjišťovat složky, které mají být automaticky chráněny</string>
     <string name="prompt_string">Přidejte přístupová oprávnění k souboru</string>
     <string name="settings_string">NastaveníComment</string>
-    <string name="hello_blank_fragment">Prázdný fragment</string>
     <string name="title_activity_prompt">Aktivita náznaku</string>
     <string name="corpse_summary">Soubory ponechané v odinstalovaných aplikacích</string>
     <string name="corpse_title">Odstranit soubory mrtvol</string>
-    <string name="donate">Darování</string>
-    <string name="donate_sum">Kup mi kafe! Nebo zvolte, kolik se darovat pomocí služby PayPal, takže mohu pokračovat v podpoře této aplikace</string>
-    <string name="recommended">Doporučeno</string>
     <string name="defaultwhitelist">Výchozí</string>
     <string name="other">Další</string>
     <string name="daily_title">Denní vyčištění</string>
@@ -63,6 +46,7 @@
     <string name="permission_needed">Žádám o povolení!</string>
     <string name="failed_scan">Skenování se nezdařilo.</string>
     <string name="are_you_sure_deletion">Jsi si jistý? Odstraněné soubory nelze obnovit</string>
+    <string name="are_you_sure_deletion_title">Potvrdit odstranění</string>
     <string name="aggressive_filter_what_title">Co dělá agresivní filtr</string>
     <string name="adds_the_following">Přidává následující filtry:</string>
     <string name="samsung_not_work">Nefunguje na Samsung zařízeních.</string>
@@ -102,9 +86,12 @@
         <item>bugreports</item>
         <item>.Koš</item>
         <item>mezipaměť</item>
+        <item>splashad</item>
     </string-array>
     <string-array name="aggressive_filter_files">
         <item>.exo</item>
         <item>palce? .db</item>
+        <item>.thumb[0-9]</item>
+        <item>splashad</item>
     </string-array>
 </resources>

@@ -13,26 +13,10 @@
         <item name="android:textColorPrimary">#fff</item>
     </style>
 
-    <style name="AppThemeLight" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/colorSecondary</item>
-        <item name="colorPrimaryDark">@color/colorSecondaryLight</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColorSecondary">#B8B8B8</item>
-        <item name="android:textColorPrimary">#fff</item>
-    </style>
-
     <!-- Settings theme. -->
     <style name="SettingsTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimaryDark</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColorSecondary">#B8B8B8</item>
-        <item name="android:textColorPrimary">#fff</item>
-    </style>
-
-    <style name="SettingsThemeLight" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="colorPrimary">@color/colorSecondary</item>
-        <item name="colorPrimaryDark">@color/colorSecondary</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColorSecondary">#B8B8B8</item>
         <item name="android:textColorPrimary">#fff</item>
@@ -45,18 +29,9 @@
         <item name="android:windowBackground">@color/colorPrimary</item>
     </style>
 
-    <style name="MyAlertDialogThemeLight" parent="Theme.AppCompat.Dialog.Alert">
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:colorBackground">@color/colorSecondaryLight</item>
-        <item name="android:windowBackground">@color/colorSecondary</item>
-    </style>
-
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

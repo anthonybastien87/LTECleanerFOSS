@@ -4,21 +4,14 @@
   -->
 <resources>
     <string name="app_name">LTEクリーナー</string>
-    <string name="lte_cleaner">LTEクリーナー！</string>
-    <string name="no_files_found">ファイルが見つかりません</string>
     <string name="delete_empty_folders">空フォルダーの削除</string>
     <string name="aggressive_filter">アグレッシブフィルターを有効にする</string>
-    <string name="Save">保存</string>
-    <string name="filter">フィルター</string>
     <string name="whitelist">ホワイトリスト</string>
     <string name="privacy_policy">プライバシー・ポリシー</string>
     <string name="add_to_whitelist">ホワイトリストに追加</string>
     <string name="add">追加</string>
     <string name="cancel">キャンセル</string>
     <string name="enter_file_name">ファイル /フォルダー名をホワイトリストに入力してください</string>
-    <string name="make_suggestion">提案する</string>
-    <string name="select_task">タスクの選択</string>
-    <string name="do_you_want_to">検出されたすべてのファイルを削除 (クリーン) しますか、または表示 (分析) のみを行いますか ?</string>
     <string name="clean">クリーン</string>
     <string name="analyze">分析</string>
     <string name="enable_generic_filter">汎用フィルターの使用</string>
@@ -30,40 +23,31 @@
     <string name="are_you_reset_whitelist">ホワイトリストを消去してよろしいですか？</string>
     <string name="reset">クリア</string>
     <string name="delete_apk_files">.apk ファイルの削除</string>
-    <string name="lte_threading">LTE スレッディング (高速)</string>
-    <string name="default_whitelist">デフォルトのホワイトリスト</string>
-    <string name="add_defaults">推奨されるホワイトリストの追加</string>
-    <string name="nothing_found">見つかりません</string>
     <string name="status_idle">状況: アイドル</string>
     <string name="progress_0">0%</string>
     <string name="status_running">状況: 実行中</string>
     <string name="privacy_sum">プライバシー・ポリシーの表示 (外部リンク)</string>
-    <string name="whitelist_sum">スキャンから除外するパスを表示します。</string>
-    <string name="suggestion_sum">アプリケーションからGitHubのIssueを開きます。アカウントは不要です。</string>
     <string name="generic_sum">.tmp, .log, Logs, logs</string>
     <string name="aggressive_sum">ここには表示できないほど多数の条件</string>
     <string name="apk_sum">Androidのインストーラーファイル</string>
-    <string name="oneclick_sum">クリーン・ボタンが押されたときに確認ダイアログが表示</string>
+    <string name="oneclick_sum">クリーン・ボタンが押されたときに確認ダイアログを表示しません。</string>
     <string name="autowhite_sum">保護すべきフォルダーを自動的に検出する</string>
     <string name="prompt_string">ファイルのアクセス許可を追加してください</string>
     <string name="settings_string">設定</string>
-    <string name="hello_blank_fragment">Hello ブランク・フラグメント</string>
     <string name="title_activity_prompt">プロンプト・アクティビティー</string>
     <string name="corpse_summary">アプリケーションのアンインストール後に残されたファイル</string>
     <string name="corpse_title">残骸ファイルの削除</string>
-    <string name="donate">寄付</string>
-    <string name="donate_sum">このアプリのサポートを続けられるように、私にコーヒーを買ってください！または、PayPalで寄付金額を選ぶこともできます。</string>
-    <string name="recommended">推奨</string>
     <string name="defaultwhitelist">デフォルト</string>
     <string name="other">その他</string>
     <string name="daily_title">日次クリーニング</string>
-    <string name="daily_sum">アプリケーションを開くことなく、毎日自動的に実行されます。 一部のデバイスでは、 OEM 制限によりバックグラウンドで左側が開かれていない場合は、</string>
+    <string name="daily_sum">アプリケーションを開くことなく、毎日自動的に実行されます。 一部のデバイスでは、 OEM 制限により、バックグラウンドに残されていない場合には実行できません。</string>
     <string name="other_apps">他のアプリを確認してください。</string>
-    <string name="other_apps_sum">私は毎週新しいものを試してみたいと思っている。</string>
+    <string name="other_apps_sum">ほぼ毎週新作をリリースすることを目標にしています</string>
     <string name="permission_needed">許可が必要です。</string>
-    <string name="failed_scan">スキャンが失敗した</string>
+    <string name="failed_scan">スキャンに失敗しました。</string>
     <string name="are_you_sure_deletion">- 確かか ? 削除されたファイルを復元する</string>
-    <string name="aggressive_filter_what_title">攻撃フィルターの機能</string>
+    <string name="are_you_sure_deletion_title">削除の確認</string>
+    <string name="aggressive_filter_what_title">アグレッシブフィルターの機能</string>
     <string name="adds_the_following">次のフィルターを追加します。</string>
     <string name="samsung_not_work">サムソン・デバイスでは機能しません</string>
     <string name="clear_clipboard">クリップボードをクリア</string>
@@ -102,9 +86,12 @@
         <item>bugreports</item>
         <item>.Trash</item>
         <item>cache</item>
+        <item>スプラズド</item>
     </string-array>
     <string-array name="aggressive_filter_files">
         <item>.exo</item>
         <item>thumbs?.db</item>
+        <item>.サム[0-9]</item>
+        <item>スプラズド</item>
     </string-array>
 </resources>

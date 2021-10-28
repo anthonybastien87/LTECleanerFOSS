@@ -4,21 +4,14 @@
   -->
 <resources>
     <string name="app_name">LTE-rensning</string>
-    <string name="lte_cleaner">LTE Cleaner!</string>
-    <string name="no_files_found">Inga filer hittades</string>
     <string name="delete_empty_folders">Ta bort tomma mappar</string>
     <string name="aggressive_filter">Aktivera aggressivt filter</string>
-    <string name="Save">Spara</string>
-    <string name="filter">Filtrera</string>
     <string name="whitelist">Vitlista</string>
     <string name="privacy_policy">Privatpolicy</string>
     <string name="add_to_whitelist">Lägg till i vitlista</string>
     <string name="add">Lägg till</string>
     <string name="cancel">Avbryt</string>
     <string name="enter_file_name">Ange fil-/mappnamn till whitelist</string>
-    <string name="make_suggestion">Gör förslag till förslag</string>
-    <string name="select_task">Välj en uppgift</string>
-    <string name="do_you_want_to">Vill du ta bort (Clean) alla hittade filer, eller bara visa (Analysera) dem?</string>
     <string name="clean">Rensning</string>
     <string name="analyze">Analysera</string>
     <string name="enable_generic_filter">Aktivera generiska filter</string>
@@ -30,16 +23,10 @@
     <string name="are_you_reset_whitelist">Är du säker på att du vill rensa vitlistan?</string>
     <string name="reset">Undan!</string>
     <string name="delete_apk_files">Ta bort .apk-filer</string>
-    <string name="lte_threading">LTE-tråd (snabbare)</string>
-    <string name="default_whitelist">Standardvitlista</string>
-    <string name="add_defaults">Lägg till rekommenderade vitalister</string>
-    <string name="nothing_found">Ingenting hittades</string>
     <string name="status_idle">Status: Idle</string>
     <string name="progress_0">0%</string>
     <string name="status_running">Status: Kör</string>
     <string name="privacy_sum">Visa integritetspolicyn (extern länk)</string>
-    <string name="whitelist_sum">Visar sökvägar som ska uteslutas från skanningar</string>
-    <string name="suggestion_sum">Öppna en fråga på GitHub från appen. Inget konto behövs</string>
     <string name="generic_sum">.tmp, .log, Loggar, loggar</string>
     <string name="aggressive_sum">För mycket att lista här</string>
     <string name="apk_sum">Installationsfiler för android</string>
@@ -47,13 +34,9 @@
     <string name="autowhite_sum">Detektera mappar som ska skyddas automatiskt</string>
     <string name="prompt_string">Lägg till filåtkomstbehörigheter</string>
     <string name="settings_string">Inställningar</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_prompt">Promptaktivitet</string>
     <string name="corpse_summary">Filer som lämnas över från avinstallerade appar</string>
     <string name="corpse_title">Ta bort likfiler</string>
-    <string name="donate">Donera</string>
-    <string name="donate_sum">Köp mig en kaffe! Eller välja hur mycket att donera med PayPal så att jag kan fortsätta att stödja den här appen</string>
-    <string name="recommended">Rekommenderas</string>
     <string name="defaultwhitelist">Standard</string>
     <string name="other">Andra slag</string>
     <string name="daily_title">Dagligen rens</string>
@@ -63,6 +46,7 @@
     <string name="permission_needed">Behörighet behövs!</string>
     <string name="failed_scan">Skanningen misslyckades.</string>
     <string name="are_you_sure_deletion">Är du säker på det? Borttagna filer kan inte återställas</string>
+    <string name="are_you_sure_deletion_title">Bekräfta borttag</string>
     <string name="aggressive_filter_what_title">Vilket aggressivt filter gör</string>
     <string name="adds_the_following">Lägger till följande filter:</string>
     <string name="samsung_not_work">Fungs inte på Samsung-enheter</string>
@@ -102,9 +86,12 @@
         <item>bugreports</item>
         <item>.papperskorg</item>
         <item>cache</item>
+        <item>splashad</item>
     </string-array>
     <string-array name="aggressive_filter_files">
         <item>.exo</item>
         <item>Tummar?</item>
+        <item>.tumme[0-9]</item>
+        <item>splashad</item>
     </string-array>
 </resources>

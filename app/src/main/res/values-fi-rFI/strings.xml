@@ -4,21 +4,14 @@
   -->
 <resources>
     <string name="app_name">LTE-Cleaner</string>
-    <string name="lte_cleaner">-LTE Cleaner!</string>
-    <string name="no_files_found">Ei löytynyt tiedostoja</string>
     <string name="delete_empty_folders">Poista tyhjä kansio</string>
     <string name="aggressive_filter">Ota käyttöön aggressiivinen suodatin</string>
-    <string name="Save">Tallenna</string>
-    <string name="filter">Suodatin</string>
     <string name="whitelist">Whitelist</string>
     <string name="privacy_policy">Yksityisyyden suoja</string>
     <string name="add_to_whitelist">Lisää valkoiseen luetteloon</string>
     <string name="add">Lisää</string>
     <string name="cancel">Peruuta</string>
     <string name="enter_file_name">Anna tiedoston/kansion nimi valkoiseksi</string>
-    <string name="make_suggestion">Tee ehdotuksia</string>
-    <string name="select_task">Valitse tehtävä</string>
-    <string name="do_you_want_to">Haluatko poistaa (puhdistuksen) kaikki tiedostot tai vain näyttää ne?</string>
     <string name="clean">Puhdas</string>
     <string name="analyze">Analysoi</string>
     <string name="enable_generic_filter">Ota yleinen suodatin käyttöön</string>
@@ -30,16 +23,10 @@
     <string name="are_you_reset_whitelist">Oletko varma, että haluat tyhjentää valkoisten?</string>
     <string name="reset">Kirkas</string>
     <string name="delete_apk_files">Poista .apk-tiedostot</string>
-    <string name="lte_threading">LTE-Thluen (Nopeammin)</string>
-    <string name="default_whitelist">Whitelist-oletusarvo</string>
-    <string name="add_defaults">Lisää suositellut Whitelistit</string>
-    <string name="nothing_found">Ei löytynyt</string>
     <string name="status_idle">Tila: tila</string>
     <string name="progress_0">0 %</string>
     <string name="status_running">Tila: käytössä</string>
     <string name="privacy_sum">Näytä tietosuojakäytäntö (ulkoinen linkki)</string>
-    <string name="whitelist_sum">Näyttää polkuja, joita ei ole skannauksessa</string>
-    <string name="suggestion_sum">Avaa GitHub-sovellus sovelluksesta. Ei tarvetta</string>
     <string name="generic_sum">.tmp, .log, Logs, lokit</string>
     <string name="aggressive_sum">Liian paljon listattavaksi.</string>
     <string name="apk_sum">Android-tiedostot</string>
@@ -47,13 +34,9 @@
     <string name="autowhite_sum">Tunnisteita, jotka on suojattava automaattisesti</string>
     <string name="prompt_string">Lisää tiedoston käyttöoikeudet</string>
     <string name="settings_string">Asetukset</string>
-    <string name="hello_blank_fragment">Terve, tyhjä kappale</string>
     <string name="title_activity_prompt">PromptAktiviteetti</string>
     <string name="corpse_summary">Asennemattomasta sovelluksesta jääneet tiedostot</string>
     <string name="corpse_title">Poista ruumistiedostot</string>
-    <string name="donate">Donaatti</string>
-    <string name="donate_sum">Osta minulle kahvia! Tai valita, kuinka paljon lahjoittaa PayPal niin voin jatkaa tukea tätä sovellusta</string>
-    <string name="recommended">Suositeltava</string>
     <string name="defaultwhitelist">Oletusarvo</string>
     <string name="other">Muut</string>
     <string name="daily_title">Daily Clean</string>
@@ -63,6 +46,7 @@
     <string name="permission_needed">Lupa tarvitaan!</string>
     <string name="failed_scan">Scan epäonnistui.</string>
     <string name="are_you_sure_deletion">Oletko varma? Tiedostoja ei voi palauttaa</string>
+    <string name="are_you_sure_deletion_title">Vahvasta poisto</string>
     <string name="aggressive_filter_what_title">Mikä aggressiivinen suodatin</string>
     <string name="adds_the_following">Lisää seuraavat suodattimet:</string>
     <string name="samsung_not_work">Se ei toimi samsungin laitteissa.</string>
@@ -102,9 +86,12 @@
         <item>Bugretit</item>
         <item>.Trash</item>
         <item>Välimuisti</item>
+        <item>Splashad</item>
     </string-array>
     <string-array name="aggressive_filter_files">
         <item>.exo</item>
         <item>Peukalot?</item>
+        <item>Peukalo[0-9]</item>
+        <item>Splashad</item>
     </string-array>
 </resources>

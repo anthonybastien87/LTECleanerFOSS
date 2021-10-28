@@ -1,5 +1,7 @@
 ## LTECleanerFOSS
 
+Bitcoin address for donations: 394U4hMeLgiff4qgG2X8xRcgKGPLZcmrro
+
 ***The last Android cleaner you will ever need!***
 
 <img src="https://imgur.com/ykSLpTS.png" width="300">
@@ -23,11 +25,9 @@ __LTE Cleaner is 100% free, open source, ad free, and deletes everything it clai
 <details>
   <summary>Notice</summary>
 
-December 13th, 2020:
+October 7th, 2021:
 
-*In response to the large number of apps on the play store that are cloning LTE Cleaner and running ads, I will be changing from the MIT license, to GPLv3.*
-
-*2020 has been crazy too. I have not in anyway worked on this app since the summer. But I'm back baby!*
+10/7/2021 Marks the start of a new direction for LTE Cleaner. The playstore varient will have ads now displayed. While all other sources remain the same
 
 </details>
 
@@ -52,7 +52,6 @@ Cleans:
 
 Upoming major features:
 - Clean SD card
-- SAF file browser
 - Shortcuts
 - Community made filters
 
@@ -82,12 +81,10 @@ Buy us a coffee or two, as it enables us to put more free time into the active d
 
 </table>
 
-<details>
-  <summary>Contributors</summary>
-  
-#### Logo creation
-
-* Big thanks to [Ander Méndez](https://github.com/mendezand) for creating the awesome logo!
+#### The Team  
+<a href="https://github.com/TheRedSpy15/LTECleanerFOSS/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=TheRedSpy15/LTECleanerFOSS" />
+</a>
      
 </details>
 

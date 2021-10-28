@@ -4,21 +4,14 @@
   -->
 <resources>
     <string name="app_name">Curăţitor</string>
-    <string name="lte_cleaner">Mai curat!</string>
-    <string name="no_files_found">Niciun fişier găsit</string>
     <string name="delete_empty_folders">Ştergere foldere goale</string>
     <string name="aggressive_filter">Activare filtru agresiv</string>
-    <string name="Save">Salvare</string>
-    <string name="filter">Filtrare</string>
     <string name="whitelist">Listă albă</string>
     <string name="privacy_policy">Politică de confidenţialitate</string>
     <string name="add_to_whitelist">Adăugare la lista albă</string>
     <string name="add">Adăugare</string>
     <string name="cancel">Anulare</string>
     <string name="enter_file_name">Introduceţi numele fişierului/folderului în lista albă</string>
-    <string name="make_suggestion">Faceţi sugestie</string>
-    <string name="select_task">Selectaţi un task</string>
-    <string name="do_you_want_to">Doriţi să ştergeţi (Curăţaţi) toate fişierele găsite sau doar să afişaţi (Analizaţi) acestea?</string>
     <string name="clean">Curat</string>
     <string name="analyze">Analiză</string>
     <string name="enable_generic_filter">Activare filtru generic</string>
@@ -30,16 +23,10 @@
     <string name="are_you_reset_whitelist">Sunteţi sigur că doriţi să curăţaţi lista albă?</string>
     <string name="reset">Clar</string>
     <string name="delete_apk_files">Ştergere fişiere .apk</string>
-    <string name="lte_threading">Threy Threading (Mai repede)</string>
-    <string name="default_whitelist">Listă albă implicită</string>
-    <string name="add_defaults">Adăugare Whitelişti recomandaţi</string>
-    <string name="nothing_found">Nimic găsit</string>
     <string name="status_idle">Stare: Idle</string>
     <string name="progress_0">0%</string>
     <string name="status_running">Stare: Rularea</string>
     <string name="privacy_sum">Vizualizare politică de confidenţialitate (legătură externă)</string>
-    <string name="whitelist_sum">Afişează căile de exclus din scanări</string>
-    <string name="suggestion_sum">Deschideţi o problemă pe GitHub din aplicaţie. Nu este necesar niciun cont</string>
     <string name="generic_sum">.tmp, .log, Logs, istorice</string>
     <string name="aggressive_sum">Prea mult pentru a lista aici</string>
     <string name="apk_sum">Fişiere de instalare pentru android</string>
@@ -47,13 +34,9 @@
     <string name="autowhite_sum">Detectarea folderelor care ar trebui protejate automat</string>
     <string name="prompt_string">Vă rugăm adăugaţi permisiuni de acces fişier</string>
     <string name="settings_string">Setări</string>
-    <string name="hello_blank_fragment">Bun fragment blanc</string>
     <string name="title_activity_prompt">PromptActivitate</string>
     <string name="corpse_summary">Fişiere rămase de la aplicaţii neinstalate</string>
     <string name="corpse_title">Ştergere fişiere cadavru</string>
-    <string name="donate">Donează</string>
-    <string name="donate_sum">Cumpăr o cafea! Sau alegeţi cât de mult să donaţi folosind PayPal, astfel încât să pot păstra susţinerea acestei aplicaţii</string>
-    <string name="recommended">Recomandat</string>
     <string name="defaultwhitelist">Implicit</string>
     <string name="other">Alte</string>
     <string name="daily_title">Curăţare zilnică</string>
@@ -63,6 +46,7 @@
     <string name="permission_needed">Permisiune necesară!</string>
     <string name="failed_scan">Scanare eşuată.</string>
     <string name="are_you_sure_deletion">Sunteţi sigur? Fişierele şterse nu pot fi restaurate</string>
+    <string name="are_you_sure_deletion_title">Confirmă ștergerea</string>
     <string name="aggressive_filter_what_title">Ce filtru agresiv face</string>
     <string name="adds_the_following">Adaugă următoarele filtre:</string>
     <string name="samsung_not_work">Nu funcţionează pe dispozitive samsung</string>
@@ -102,9 +86,12 @@
         <item>bugreporturi</item>
         <item>.Coş de gunoi</item>
         <item>cache</item>
+        <item>splashad</item>
     </string-array>
     <string-array name="aggressive_filter_files">
         <item>.exo</item>
         <item>thm? .db</item>
+        <item>.degetul mare[0-9]</item>
+        <item>splashad</item>
     </string-array>
 </resources>

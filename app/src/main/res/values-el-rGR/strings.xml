@@ -4,21 +4,14 @@
   -->
 <resources>
     <string name="app_name">LTE Cleaner</string>
-    <string name="lte_cleaner">Το LTE Cleaner!</string>
-    <string name="no_files_found">Δεν βρέθηκαν αρχεία.</string>
     <string name="delete_empty_folders">Διαγραφή κενών φακέλων</string>
     <string name="aggressive_filter">Ενεργοποίηση επιθετικού φίλτρου</string>
-    <string name="Save">Αποθήκευση:</string>
-    <string name="filter">Φίλτρο:</string>
     <string name="whitelist">-Whitelist</string>
     <string name="privacy_policy">Πολιτική απορρήτου:</string>
     <string name="add_to_whitelist">Προσθήκη στη λίστα επιτρεπών</string>
     <string name="add">Προσθήκη</string>
     <string name="cancel">Ακύρωση.</string>
     <string name="enter_file_name">Καταχωρήστε το όνομα αρχείου/φακέλου στη λίστα επιτρεπών</string>
-    <string name="make_suggestion">Κάντε Πρόταση.</string>
-    <string name="select_task">Επιλογή εργασίας:</string>
-    <string name="do_you_want_to">Θέλετε να διαγράψετε (Εκκαθάριση) όλα τα αρχεία που βρέθηκαν ή να εμφανιστούν μόνο (Ανάλυση);</string>
     <string name="clean">Καθαρό.</string>
     <string name="analyze">Ανάλυση:</string>
     <string name="enable_generic_filter">Ενεργοποίηση γενικού φίλτρου</string>
@@ -30,16 +23,10 @@
     <string name="are_you_reset_whitelist">Είστε σίγουροι ότι θέλετε να καθαρίσετε τη λευκή λίστα?</string>
     <string name="reset">\' Εκκαθάριση</string>
     <string name="delete_apk_files">Διαγραφή αρχείων .apk</string>
-    <string name="lte_threading">Threading (Γρηγορότερα)</string>
-    <string name="default_whitelist">Προεπιλεγμένη Whitelist</string>
-    <string name="add_defaults">Προσθήκη συνιστώμενων Whitelists</string>
-    <string name="nothing_found">-Τίποτα.</string>
     <string name="status_idle">Κατάσταση: Σε αδράνεια</string>
     <string name="progress_0">0 %</string>
     <string name="status_running">Κατάσταση: Εκτέλεση</string>
     <string name="privacy_sum">Προβολή της πολιτικής απορρήτου (εξωτερική διασύνδεση)</string>
-    <string name="whitelist_sum">Εμφανίζει τις διαδρομές για εξαίρεση από τις σαρώσεις.</string>
-    <string name="suggestion_sum">Ανοίξτε ένα θέμα στο GitHub από την εφαρμογή. Δεν απαιτείται λογαριασμός</string>
     <string name="generic_sum">.tmp, .log, Logs, logs</string>
     <string name="aggressive_sum">Πολλή λίστα εδώ.</string>
     <string name="apk_sum">Αρχεία του προγράμματος εγκατάστασης για το Android</string>
@@ -47,13 +34,9 @@
     <string name="autowhite_sum">Εντοπισμός φακέλων που πρέπει να προστατεύονται αυτόματα</string>
     <string name="prompt_string">Προσθέστε δικαιώματα πρόσβασης στο αρχείο.</string>
     <string name="settings_string">Ρυθμίσεις:</string>
-    <string name="hello_blank_fragment">Hello κενό τμήμα</string>
     <string name="title_activity_prompt">Προτροπή /</string>
     <string name="corpse_summary">Αρχεία που απομένουν από απεγκατάσταση εφαρμογών.</string>
     <string name="corpse_title">Διαγραφή αρχείων πτωμάτων</string>
-    <string name="donate">Δότη!</string>
-    <string name="donate_sum">Κέρασέ με ένα καφέ! Ή να επιλέξετε πόσο να δωρίσουν χρησιμοποιώντας PayPal έτσι μπορώ να κρατήσει την υποστήριξη αυτής της εφαρμογής</string>
-    <string name="recommended">Συνιστάται.</string>
     <string name="defaultwhitelist">Προεπιλογή:</string>
     <string name="other">\' Αλλα</string>
     <string name="daily_title">Καθημερινή καθαριότητα</string>
@@ -63,6 +46,7 @@
     <string name="permission_needed">Χρειάζεται άδεια!</string>
     <string name="failed_scan">Η Σάρτη απέτυχε.</string>
     <string name="are_you_sure_deletion">-Σίγουρα; Δεν είναι δυνατή η επαναφορά των αρχείων</string>
+    <string name="are_you_sure_deletion_title">Επιβεβαίωση διαγραφής</string>
     <string name="aggressive_filter_what_title">Τι κάνει το φίλτρο;</string>
     <string name="adds_the_following">Προσθέτει τα ακόλουθα φίλτρα:</string>
     <string name="samsung_not_work">Δεν λειτουργεί σε συσκευές samsung</string>
@@ -102,9 +86,12 @@
         <item>τα bugreports</item>
         <item>.Trash</item>
         <item>-cache</item>
+        <item>Splashad</item>
     </string-array>
     <string-array name="aggressive_filter_files">
         <item>.exo</item>
         <item>-Ταμπς;</item>
+        <item>αντίχειρα[0-9]</item>
+        <item>Splashad</item>
     </string-array>
 </resources>

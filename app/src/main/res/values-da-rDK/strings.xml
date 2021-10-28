@@ -4,21 +4,14 @@
   -->
 <resources>
     <string name="app_name">LTE Cleaner</string>
-    <string name="lte_cleaner">LTE Cleaner!</string>
-    <string name="no_files_found">Ingen filer er fundet</string>
     <string name="delete_empty_folders">Slet tomme foldere</string>
     <string name="aggressive_filter">Aktivér aggressivt filter</string>
-    <string name="Save">Gem</string>
-    <string name="filter">Filtrér</string>
     <string name="whitelist">Whitelist</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="add_to_whitelist">Tilføj til hvidliste</string>
     <string name="add">Tilføj</string>
     <string name="cancel">Annullér</string>
     <string name="enter_file_name">Angiv navn på fil / folder til hvidliste</string>
-    <string name="make_suggestion">Forslag til forslag</string>
-    <string name="select_task">Vælg en opgave</string>
-    <string name="do_you_want_to">Vil du slette (Ryd) alle de filer, der er fundet, eller kun blive vist (Analysér) dem?</string>
     <string name="clean">Rens</string>
     <string name="analyze">Analysér</string>
     <string name="enable_generic_filter">Aktivér generisk filter</string>
@@ -30,16 +23,10 @@
     <string name="are_you_reset_whitelist">Er du sikker på, at du vil rydde hvidlisten?</string>
     <string name="reset">Ryd</string>
     <string name="delete_apk_files">Slet .apk-filer</string>
-    <string name="lte_threading">LTE Threading (hurtigere)</string>
-    <string name="default_whitelist">Standardhvidliste</string>
-    <string name="add_defaults">Anbefalede Whitelister</string>
-    <string name="nothing_found">Intet fundet</string>
     <string name="status_idle">Status: Idle</string>
     <string name="progress_0">0%</string>
     <string name="status_running">Status: Udførelse</string>
     <string name="privacy_sum">Vis fortrolighedspolitikken (eksternt link)</string>
-    <string name="whitelist_sum">Viser de stier, der skal udelades fra scanninger</string>
-    <string name="suggestion_sum">Åbn et problem på GitHub fra appen. Der kræves ingen konto</string>
     <string name="generic_sum">.tmp, .log, Logs, logge</string>
     <string name="aggressive_sum">Der er for meget at liste her</string>
     <string name="apk_sum">Installer-filer til android</string>
@@ -47,13 +34,9 @@
     <string name="autowhite_sum">Registrér foldere, der skal beskyttes automatisk</string>
     <string name="prompt_string">Tilføj adgangstilladelser til fil</string>
     <string name="settings_string">Indstillinger</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_prompt">PromptAktivitet</string>
     <string name="corpse_summary">Filer, der er udelod fra installerede apps</string>
     <string name="corpse_title">Slet lig-filer</string>
-    <string name="donate">Donér</string>
-    <string name="donate_sum">Køb mig en kop kaffe! Eller vælg, hvor meget der skal doneres ved hjælp af PayPal, så jeg kan fortsætte med at støtte denne app.</string>
-    <string name="recommended">Anbefales</string>
     <string name="defaultwhitelist">Standard</string>
     <string name="other">Andet</string>
     <string name="daily_title">Daglig ren</string>
@@ -63,6 +46,7 @@
     <string name="permission_needed">Tilladelse nødvendig!</string>
     <string name="failed_scan">Scanning mislykkedes.</string>
     <string name="are_you_sure_deletion">-Er du sikker? Slettede filer kan ikke gendannes</string>
+    <string name="are_you_sure_deletion_title">Bekræft sletning</string>
     <string name="aggressive_filter_what_title">Hvilket aggressivt filter gør</string>
     <string name="adds_the_following">Tilføjer følgende filtre:</string>
     <string name="samsung_not_work">Virker ikke på samsung-udstyr</string>
@@ -102,9 +86,12 @@
         <item>bugreports</item>
         <item>.Papirkurv</item>
         <item>cache</item>
+        <item>plashad</item>
     </string-array>
     <string-array name="aggressive_filter_files">
         <item>.exo</item>
         <item>tommelfingre? .db</item>
+        <item>.Tomt[0-9]</item>
+        <item>plashad</item>
     </string-array>
 </resources>

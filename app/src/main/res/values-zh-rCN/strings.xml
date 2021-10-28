@@ -4,21 +4,14 @@
   -->
 <resources>
     <string name="app_name">LTE 清除器</string>
-    <string name="lte_cleaner">LTE 清除器 !</string>
-    <string name="no_files_found">找不到文件</string>
     <string name="delete_empty_folders">删除空文件夹</string>
     <string name="aggressive_filter">启用攻击性过滤器</string>
-    <string name="Save">保存</string>
-    <string name="filter">过滤器</string>
     <string name="whitelist">白名单</string>
     <string name="privacy_policy">隐私策略</string>
     <string name="add_to_whitelist">添加到白名单</string>
     <string name="add">加添</string>
     <string name="cancel">取消</string>
     <string name="enter_file_name">输入文件/文件夹名称以白名单</string>
-    <string name="make_suggestion">提出建议</string>
-    <string name="select_task">选择任务</string>
-    <string name="do_you_want_to">要删除 (清除) 所有找到的文件，还是只显示 (分析) 它们?</string>
     <string name="clean">清洁</string>
     <string name="analyze">分析</string>
     <string name="enable_generic_filter">启用通用过滤器</string>
@@ -30,16 +23,10 @@
     <string name="are_you_reset_whitelist">确定要清除白名单吗 ?</string>
     <string name="reset">清除</string>
     <string name="delete_apk_files">删除 .apk 文件</string>
-    <string name="lte_threading">LTE 线程技术 ( 更快)</string>
-    <string name="default_whitelist">缺省白名单</string>
-    <string name="add_defaults">添加建议的白名单</string>
-    <string name="nothing_found">找不到任何内容</string>
     <string name="status_idle">状态: 空闲</string>
     <string name="progress_0">0%</string>
     <string name="status_running">状态: 正在运行</string>
     <string name="privacy_sum">查看隐私策略 (外部链接)</string>
-    <string name="whitelist_sum">显示从扫描中排除的路径</string>
-    <string name="suggestion_sum">从应用程序打开 GitHub 的问题。 不需要帐户</string>
     <string name="generic_sum">.tmp， .log，日志和日志</string>
     <string name="aggressive_sum">此处列表太多</string>
     <string name="apk_sum">Android 的安装程序文件</string>
@@ -47,13 +34,9 @@
     <string name="autowhite_sum">检测应该自动保护的文件夹</string>
     <string name="prompt_string">请添加文件访问许可权</string>
     <string name="settings_string">设置</string>
-    <string name="hello_blank_fragment">Hello 空白片段</string>
     <string name="title_activity_prompt">提示活动</string>
     <string name="corpse_summary">从已卸载应用程序遗留的文件</string>
     <string name="corpse_title">删除尸体文件</string>
-    <string name="donate">捐赠</string>
-    <string name="donate_sum">给我买杯咖啡 或者选择使用 PayPal 捐款多少，这样我就可以继续支持这个应用</string>
-    <string name="recommended">建议的</string>
     <string name="defaultwhitelist">缺省值</string>
     <string name="other">其他</string>
     <string name="daily_title">每日清理</string>
@@ -63,6 +46,7 @@
     <string name="permission_needed">需要许可 !</string>
     <string name="failed_scan">扫描失败。</string>
     <string name="are_you_sure_deletion">你确定吗 无法复原删除的文件</string>
+    <string name="are_you_sure_deletion_title">确认删除</string>
     <string name="aggressive_filter_what_title">什么好的过滤器</string>
     <string name="adds_the_following">添加以下过滤器:</string>
     <string name="samsung_not_work">在 samsung 设备上不行</string>
@@ -89,7 +73,7 @@
         <item>分析</item>
         <item>大拇指</item>
         <item>莫维斯塔</item>
-        <item>UnityAdsVideoCache</item>
+        <item>Unity广告视频缓存</item>
         <item>阿尔布姆森斯</item>
         <item>LOST.DIR</item>
         <item>. 废纸篓</item>
@@ -102,9 +86,12 @@
         <item>布格汇报</item>
         <item>. 废纸篓</item>
         <item>高速缓存</item>
+        <item>splashad</item>
     </string-array>
     <string-array name="aggressive_filter_files">
         <item>.exo</item>
         <item>拇指?.db</item>
+        <item>.thumb[0-9]</item>
+        <item>splashad</item>
     </string-array>
 </resources>

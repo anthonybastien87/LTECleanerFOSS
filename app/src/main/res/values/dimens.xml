@@ -1,6 +1,4 @@
 <!--
   ~ Copyright 2020 Hunter J Drum
   -->
-<resources>
-    <dimen name="fab_margin">16dp</dimen>
-</resources>
+<resources></resources>

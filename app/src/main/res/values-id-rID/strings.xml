@@ -4,21 +4,14 @@
   -->
 <resources>
     <string name="app_name">LTE Cleaner</string>
-    <string name="lte_cleaner">LTE Cleaner!</string>
-    <string name="no_files_found">Tidak ada file ditemukan</string>
     <string name="delete_empty_folders">Hapus folder kosong</string>
     <string name="aggressive_filter">Aktifkan filter aggresif</string>
-    <string name="Save">Simpan</string>
-    <string name="filter">Filter</string>
     <string name="whitelist">Daftar putih</string>
     <string name="privacy_policy">Kebijakan privasi</string>
     <string name="add_to_whitelist">Tambahkan ke daftar putih</string>
     <string name="add">Tambah</string>
     <string name="cancel">Batal</string>
     <string name="enter_file_name">Masukkan nama file/folder ke daftar putih</string>
-    <string name="make_suggestion">Buat saran</string>
-    <string name="select_task">Pilih tugas</string>
-    <string name="do_you_want_to">Apakah Anda ingin menghapus (membersihkan) semua file yang ditemukan, atau hanya menampilkan (Analisa) mereka?</string>
     <string name="clean">Bersihkan</string>
     <string name="analyze">Analisa</string>
     <string name="enable_generic_filter">Aktifkan filter generik</string>
@@ -30,16 +23,10 @@
     <string name="are_you_reset_whitelist">Apakah Anda yakin ingin menghapus daftar putih?</string>
     <string name="reset">Kosongkan</string>
     <string name="delete_apk_files">Hapus file .apk</string>
-    <string name="lte_threading">LTE Threading (Lebih cepat)</string>
-    <string name="default_whitelist">Daftar putih bawaan</string>
-    <string name="add_defaults">Tambahkan daftar putih yang disarankan</string>
-    <string name="nothing_found">Tidak ada yang ditemukan</string>
     <string name="status_idle">Status: Idle</string>
     <string name="progress_0">0%</string>
     <string name="status_running">Status: Berjalan</string>
     <string name="privacy_sum">Lihat Kebijakan Privasi (Tautan Eksternal)</string>
-    <string name="whitelist_sum">Tampilkan jalur untuk dikecualikan dari pemindaian</string>
-    <string name="suggestion_sum">Buka masalah di GitHub dari aplikasi. Tidak perlu akun</string>
     <string name="generic_sum">.tmp, .log, Logs, logs</string>
     <string name="aggressive_sum">Terlalu banyak untuk dicantumkan disini</string>
     <string name="apk_sum">File Installer untuk Android</string>
@@ -47,13 +34,9 @@
     <string name="autowhite_sum">Mendeteksi folder yang harus dilindungi secara otomatis</string>
     <string name="prompt_string">Silakan tambahkan izin akses file</string>
     <string name="settings_string">Setelan</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_prompt">PromptActivity</string>
     <string name="corpse_summary">File yang tersisa dari aplikasi yang dihapus</string>
     <string name="corpse_title">Hapus file Corpse</string>
-    <string name="donate">Donasi</string>
-    <string name="donate_sum">Belikan saya kopi! Atau pilih berapa banyak untuk disumbangkan menggunakan PayPal sehingga Saya dapat terus mendukung aplikasi ini</string>
-    <string name="recommended">Direkomendasikan</string>
     <string name="defaultwhitelist">Bawaan</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>

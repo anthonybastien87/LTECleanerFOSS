@@ -4,21 +4,14 @@
   -->
 <resources>
     <string name="app_name">LTE Temizleyici</string>
-    <string name="lte_cleaner">LTE Cleaner!</string>
-    <string name="no_files_found">Dosya bulunamadı</string>
     <string name="delete_empty_folders">Boş klasörleri sil</string>
     <string name="aggressive_filter">Agresif süzgeci etkinleştir</string>
-    <string name="Save">Kaydet</string>
-    <string name="filter">Süzgeç Uygula</string>
     <string name="whitelist">Beyaz Liste</string>
     <string name="privacy_policy">Gizlilik İlkesi</string>
     <string name="add_to_whitelist">Beyaz listeye ekle</string>
     <string name="add">Ekle</string>
     <string name="cancel">İptal</string>
     <string name="enter_file_name">Dosya/klasör adını beyaz listeye girin</string>
-    <string name="make_suggestion">Öneri yap</string>
-    <string name="select_task">Bir görev seçin</string>
-    <string name="do_you_want_to">Bulunan tüm dosyaları silmek (Temizle) ya da yalnızca görüntülemek (Çözümle) silmek istiyor musunuz?</string>
     <string name="clean">Temizle</string>
     <string name="analyze">Çözümle</string>
     <string name="enable_generic_filter">Soysal süzgeci etkinleştir</string>
@@ -30,16 +23,10 @@
     <string name="are_you_reset_whitelist">Beyaz listeyi temizlemek istediğinizden emin misiniz?</string>
     <string name="reset">Temizle</string>
     <string name="delete_apk_files">.apk dosyalarını sil</string>
-    <string name="lte_threading">LTE Threading (Daha Hızlı)</string>
-    <string name="default_whitelist">Varsayılan Beyaz Liste</string>
-    <string name="add_defaults">Önerilen Whitelists Ekle</string>
-    <string name="nothing_found">Hiçbir şey bulunamadı</string>
     <string name="status_idle">Durum: Boşta</string>
     <string name="progress_0">%0</string>
     <string name="status_running">Durum: Çalışıyor</string>
     <string name="privacy_sum">Gizlilik ilkesini görüntüle (dış bağlantı)</string>
-    <string name="whitelist_sum">Taramalardan dışlanacak yolları gösterir</string>
-    <string name="suggestion_sum">Uygulamadaki GitHub \'da bir sorunu açın. Hesap gerekli değil</string>
     <string name="generic_sum">.tmp, .log, Günlükler, günlükler</string>
     <string name="aggressive_sum">Burada listelemek için çok fazla</string>
     <string name="apk_sum">android için kuruluş programı dosyaları</string>
@@ -47,13 +34,9 @@
     <string name="autowhite_sum">Otomatik olarak korunması gereken klasörleri sapta</string>
     <string name="prompt_string">Lütfen dosya erişimi izinlerini ekleyin</string>
     <string name="settings_string">Ayarlar</string>
-    <string name="hello_blank_fragment">Merhaba boş parça</string>
     <string name="title_activity_prompt">Etkinlik PromptEtkinliği</string>
     <string name="corpse_summary">Kaldırılan uygulamalardan kalan dosyalar</string>
     <string name="corpse_title">Ceset dosyalarını sil</string>
-    <string name="donate">Bağışta</string>
-    <string name="donate_sum">Bana bir kahve ısmarla! Veya PayPal kullanarak bu uygulamayı desteklemeye devam edebilmem için ne kadar bağışta bulunacağımı seçin</string>
-    <string name="recommended">Önerilen</string>
     <string name="defaultwhitelist">Varsayılan</string>
     <string name="other">Diğer</string>
     <string name="daily_title">Günlük Temiz</string>
@@ -63,6 +46,7 @@
     <string name="permission_needed">İzin gerekli!</string>
     <string name="failed_scan">Tarama başarısız oldu.</string>
     <string name="are_you_sure_deletion">Emin misin? Silinen dosyalar geri yüklenemez</string>
+    <string name="are_you_sure_deletion_title">Silmeyi Doğrulayın</string>
     <string name="aggressive_filter_what_title">Hangi agresif süzgeç uygur</string>
     <string name="adds_the_following">Aşağıdaki süzgeçleri ekler:</string>
     <string name="samsung_not_work">Samsung aygıtlarında çalışmıyor</string>
@@ -102,9 +86,12 @@
         <item>bugreports</item>
         <item>.Çöp Kutusu</item>
         <item>önbellek</item>
+        <item>splass</item>
     </string-array>
     <string-array name="aggressive_filter_files">
         <item>.exo</item>
         <item>başparmak? .db</item>
+        <item>.thumb[0-9]</item>
+        <item>splass</item>
     </string-array>
 </resources>

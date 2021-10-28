@@ -4,22 +4,15 @@
   -->
 <resources>
     <string name="app_name">LTE Cleaner</string>
-    <string name="lte_cleaner">LTE Cleaner!</string>
-    <string name="no_files_found">Nie znaleziono plików</string>
     <string name="delete_empty_folders">Usuń puste foldery</string>
     <string name="aggressive_filter">Włącz agresywny filtr</string>
-    <string name="Save">Zapisz</string>
-    <string name="filter">Filtr</string>
     <string name="whitelist">Wykluczone</string>
     <string name="privacy_policy">Polityka prywatności</string>
     <string name="add_to_whitelist">Dodaj do wykluczonych</string>
     <string name="add">Dodaj</string>
     <string name="cancel">Anuluj</string>
     <string name="enter_file_name">Wprowadź nazwę pliku/folderu do wykluczenia</string>
-    <string name="make_suggestion">Zasugeruj pomysł</string>
-    <string name="select_task">Wybierz działanie</string>
-    <string name="do_you_want_to">Czy chcesz usunąć (Wyszyść) wszystkie znalezione pliki, czy tylko je wyświetlić (Analizuj)?</string>
-    <string name="clean">Wyszyść</string>
+    <string name="clean">Wyczyść</string>
     <string name="analyze">Analizuj</string>
     <string name="enable_generic_filter">Włącz filtr ogólny</string>
     <string name="one_click_clean">Czyszczenie jednym kliknięciem</string>
@@ -30,16 +23,10 @@
     <string name="are_you_reset_whitelist">Czy na pewno chcesz wyzerować listę wykluczeń?</string>
     <string name="reset">Wyzeruj</string>
     <string name="delete_apk_files">Usuń pliki .apk</string>
-    <string name="lte_threading">Lektura LTE Threading (Faster)</string>
-    <string name="default_whitelist">Uwzględnij domyślne</string>
-    <string name="add_defaults">Dodaj rekomendowane listy nazw dozwolonych</string>
-    <string name="nothing_found">Nic nie znaleziono</string>
     <string name="status_idle">Status: bezczynny</string>
     <string name="progress_0">0%</string>
     <string name="status_running">Status: Uruchomiony</string>
     <string name="privacy_sum">Wyświetl politykę prywatności (odnośnik zewnętrzny)</string>
-    <string name="whitelist_sum">Ścieżki wykluczone ze skanowania</string>
-    <string name="suggestion_sum">Zasugeruj pomysł na GitHub prosto z aplikacji. Nie jest wymagane konto</string>
     <string name="generic_sum">.tmp, .log, Dzienniki, dzienniki</string>
     <string name="aggressive_sum">Zbyt wiele do wyświetlenia tutaj</string>
     <string name="apk_sum">Pliki instalacji aplikacji dla Androida</string>
@@ -47,28 +34,25 @@
     <string name="autowhite_sum">Automatycznie wykryj foldery, które powinny zostać wykluczone</string>
     <string name="prompt_string">Aplikacja wymaga dostępu do plików</string>
     <string name="settings_string">Ustawienia</string>
-    <string name="hello_blank_fragment">Pusty fragment</string>
     <string name="title_activity_prompt">Działanie promptActivity</string>
     <string name="corpse_summary">Pliki pozostałe po odinstalowanych aplikacjach</string>
     <string name="corpse_title">Usuń ostałe pliki</string>
-    <string name="donate">Wesprzyj</string>
-    <string name="donate_sum">Postaw mi kawę! Lub wybierz, jak dużo chcesz przekazać poprzez PayPal, aby wesprzeć rozwój tej aplikacji</string>
-    <string name="recommended">Zalecane</string>
     <string name="defaultwhitelist">Domyślne</string>
     <string name="other">Inne</string>
     <string name="daily_title">Czyszczenie codzienne</string>
     <string name="daily_sum">Automatyczne uruchamianie codziennie, bez konieczności otwierania aplikacji. Nie będzie działać na niektórych urządzeniach, o ile nie zostanie otwarte w tle z powodu ograniczeń OEM</string>
     <string name="other_apps">Sprawdź inne moje aplikacje!</string>
-    <string name="other_apps_sum">Staram się mieć coś nowego co tydzień lub tak</string>
+    <string name="other_apps_sum">Staram się mieć coś nowego raz na tydzień</string>
     <string name="permission_needed">Wymagane uprawnienie!</string>
     <string name="failed_scan">Skanowanie nie powiodło się.</string>
     <string name="are_you_sure_deletion">Czy na pewno? Nie można odtworzyć usuniętych plików</string>
+    <string name="are_you_sure_deletion_title">Potwierdź usuwanie</string>
     <string name="aggressive_filter_what_title">Jaki jest agresywny filtr</string>
     <string name="adds_the_following">Dodaje następujące filtry:</string>
-    <string name="samsung_not_work">Nie działa na urządzeniach samsung</string>
+    <string name="samsung_not_work">Nie działa na urządzeniach firmy Samsung</string>
     <string name="clear_clipboard">Wyczyść schowek</string>
     <string name="double_check_sum">Skanowanie będzie ponownie uruchamiane za każdym razem, gdy znajdzie się coś z limitem dziesięciu skanów.</string>
-    <string name="double_check_title">Double Checker</string>
+    <string name="double_check_title">Podwójne sprawdzanie</string>
     <string name="notification_title">Czyszczenie procesu roboczego LTE zakończone</string>
     <string name="clean_notification">Oczyszczone:</string>
     <string-array name="generic_filter_files">
@@ -102,9 +86,12 @@
         <item>bugreports</item>
         <item>.Kosz</item>
         <item>pamięć podręczna</item>
+        <item>splashad</item>
     </string-array>
     <string-array name="aggressive_filter_files">
         <item>.exo</item>
         <item>thumbs? .db</item>
+        <item>.thumb[0-9]</item>
+        <item>splashad</item>
     </string-array>
 </resources>

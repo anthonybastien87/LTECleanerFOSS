@@ -4,21 +4,14 @@
   -->
 <resources>
     <string name="app_name">LTE Cleaner</string>
-    <string name="lte_cleaner">LTE Cleaner!</string>
-    <string name="no_files_found">Geen bestanden gevonden</string>
     <string name="delete_empty_folders">Lege mappen wissen</string>
     <string name="aggressive_filter">Agressief filter inschakelen</string>
-    <string name="Save">Opslaan</string>
-    <string name="filter">Filteren</string>
     <string name="whitelist">Goedgekeurde lijst</string>
     <string name="privacy_policy">Privacybeleid</string>
     <string name="add_to_whitelist">Toevoegen aan goedgekeurde lijst</string>
     <string name="add">Toevoegen</string>
     <string name="cancel">Annuleren</string>
     <string name="enter_file_name">Geef de naam van het bestand of de map op in de goedgekeurde lijst</string>
-    <string name="make_suggestion">Suggestie maken</string>
-    <string name="select_task">Een taak selecteren</string>
-    <string name="do_you_want_to">Wilt u alle gevonden bestanden wissen of alleen afbeelden (analyseren)?</string>
     <string name="clean">Opschonen</string>
     <string name="analyze">Analyseren</string>
     <string name="enable_generic_filter">Generiek filter inschakelen</string>
@@ -30,16 +23,10 @@
     <string name="are_you_reset_whitelist">Weet u zeker dat u de goedgekeurde lijst wilt wissen?</string>
     <string name="reset">Leegmaken</string>
     <string name="delete_apk_files">.apk-bestanden wissen</string>
-    <string name="lte_threading">LTE Threading (Faster)</string>
-    <string name="default_whitelist">Standaard goedgekeurde lijst</string>
-    <string name="add_defaults">Aanbevolen Whitelists toevoegen</string>
-    <string name="nothing_found">Niets gevonden</string>
     <string name="status_idle">Status: Idle</string>
     <string name="progress_0">0%</string>
     <string name="status_running">Status: Actief</string>
     <string name="privacy_sum">Het privacybeleid bekijken (externe link)</string>
-    <string name="whitelist_sum">Hiermee worden de paden afgebeeld die moeten worden uitgesloten van scans</string>
-    <string name="suggestion_sum">Open een probleem op GitHub van de app. Geen rekening nodig</string>
     <string name="generic_sum">.tmp, .log, logboeken, logboeken</string>
     <string name="aggressive_sum">Te veel om hier te vermelden</string>
     <string name="apk_sum">Installer-bestanden voor android</string>
@@ -47,13 +34,9 @@
     <string name="autowhite_sum">Detecteren van mappen die automatisch moeten worden beschermd</string>
     <string name="prompt_string">Voeg bestandstoegangsmachtigingen toe</string>
     <string name="settings_string">Instellingen</string>
-    <string name="hello_blank_fragment">Hallo blanco fragment</string>
     <string name="title_activity_prompt">PromptActiviteit</string>
     <string name="corpse_summary">Bestanden over van niet geïnstalleerde apps</string>
     <string name="corpse_title">Dode bestanden verwijderen</string>
-    <string name="donate">Doneren</string>
-    <string name="donate_sum">Koop een koffie voor me! Of kies hoeveel te doneren met PayPal, zodat ik deze app kan blijven ondersteunen</string>
-    <string name="recommended">Aanbevolen</string>
     <string name="defaultwhitelist">Standaard</string>
     <string name="other">Andere</string>
     <string name="daily_title">Dagelijks schoon</string>
@@ -63,6 +46,7 @@
     <string name="permission_needed">Toestemming nodig!</string>
     <string name="failed_scan">Scan is mislukt.</string>
     <string name="are_you_sure_deletion">Weet je het zeker? Verwijderde bestanden kunnen niet worden hersteld</string>
+    <string name="are_you_sure_deletion_title">Wissen bevestigen</string>
     <string name="aggressive_filter_what_title">Wat agressieve filter doet</string>
     <string name="adds_the_following">Hiermee voegt u de volgende filters toe:</string>
     <string name="samsung_not_work">Werkt niet op samsung-apparaten</string>
@@ -102,9 +86,12 @@
         <item>bugreports</item>
         <item>.Prullenbak</item>
         <item>cache</item>
+        <item>splashad</item>
     </string-array>
     <string-array name="aggressive_filter_files">
         <item>.exo</item>
         <item>thumbs? .db</item>
+        <item>.thumb[0-9]</item>
+        <item>splashad</item>
     </string-array>
 </resources>

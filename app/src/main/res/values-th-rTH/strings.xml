@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2020 Hunter J Drum
+  -->
+<resources>
+    <string name="app_name">ตัวล้างข้อมูล LTE</string>
+    <string name="delete_empty_folders">ลบโฟลเดอร์ว่าง</string>
+    <string name="aggressive_filter">เปิดใช้งานตัวกรองที่รุนแรง</string>
+    <string name="whitelist">รายการที่อนุญาต</string>
+    <string name="privacy_policy">นโยบายความเป็นส่วนตัว</string>
+    <string name="add_to_whitelist">เพิ่มใน white list</string>
+    <string name="add">เพิ่ม</string>
+    <string name="cancel">ยกเลิก</string>
+    <string name="enter_file_name">ป้อนชื่อไฟล์/ชื่อโฟลเดอร์ลงใน white list</string>
+    <string name="clean">ล้างข้อมูล</string>
+    <string name="analyze">การวิเคราะห์</string>
+    <string name="enable_generic_filter">เปิดใช้งานตัวกรองทั่วไป</string>
+    <string name="one_click_clean">หนึ่งคลิกล้างข้อมูล</string>
+    <string name="freed">อิสระ: </string>
+    <string name="found">พบ: </string>
+    <string name="auto_whitelist">รายการไวท์ไวท์</string>
+    <string name="reset_whitelist">White list ว่างหรือไม่?</string>
+    <string name="are_you_reset_whitelist">คุณแน่ใจว่าต้องการเคลียร์ white listหรือไม่?</string>
+    <string name="reset">เคลียร์</string>
+    <string name="delete_apk_files">ลบไฟล์. Apk</string>
+    <string name="status_idle">สถานะ: ไม่ได้ทำงาน</string>
+    <string name="progress_0">0 %</string>
+    <string name="status_running">สถานะ: กำลังรัน</string>
+    <string name="privacy_sum">ดูนโยบายความเป็นส่วนตัว (ลิงก์ภายนอก)</string>
+    <string name="generic_sum">. Tmp,. Log, บันทึกการทำงาน, บันทึกการทำงาน</string>
+    <string name="aggressive_sum">มากเกินกว่าจะแสดงที่นี่</string>
+    <string name="apk_sum">ไฟล์โปรแกรมติดตั้งสำหรับ android</string>
+    <string name="oneclick_sum">ไม่มีไดอะล็อกการยืนยันเมื่อกดปุ่ม clean</string>
+    <string name="autowhite_sum">ตรวจพบโฟลเดอร์ที่ควรถูกป้องกันแบบอัตโนมัติ</string>
+    <string name="prompt_string">โปรดเพิ่มสิทธิ์การเข้าถึงไฟล์</string>
+    <string name="settings_string">การตั้งค่า</string>
+    <string name="title_activity_prompt">กิจกรรมพร้อมต์</string>
+    <string name="corpse_summary">ไฟล์ที่เหลือจากแอ็พที่ถอนการติดตั้ง</string>
+    <string name="corpse_title">ลบไฟล์ศพ</string>
+    <string name="defaultwhitelist">ดีฟอลต์</string>
+    <string name="other">อื่นๆ</string>
+    <string name="daily_title">ล้างข้อมูลรายวัน</string>
+    <string name="daily_sum">รันโดยอัตโนมัติทุกวันโดยคุณไม่ต้องเปิดแอ็พพลิเคชัน จะไม่ทำงานบนอุปกรณ์บางตัวยกเว้นเปิดอยู่ในพื้นหลังเนื่องจากข้อจำกัด OEM</string>
+    <string name="other_apps">ตรวจสอบแอพอื่นๆของฉัน!</string>
+    <string name="other_apps_sum">ฉันพยายามที่จะมีคนใหม่ออกทุกสัปดาห์หรือดังนั้น</string>
+    <string name="permission_needed">ต้องการสิทธิ์!</string>
+    <string name="failed_scan">การสแกนล้มเหลว</string>
+    <string name="are_you_sure_deletion">คุณแน่ใจนะ ไฟล์ที่ลบไม่สามารถเรียกคืนได้</string>
+    <string name="are_you_sure_deletion_title">ยืนยันการลบ</string>
+    <string name="aggressive_filter_what_title">ตัวกรองที่รุนแรงทำอะไร</string>
+    <string name="adds_the_following">เพิ่มตัวกรองต่อไปนี้:</string>
+    <string name="samsung_not_work">ใช้ไม่ได้กับอุปกรณ์ samsung</string>
+    <string name="clear_clipboard">ลบคลิปบอร์ด</string>
+    <string name="double_check_sum">จะทำการสแกนอีกครั้งในแต่ละครั้งที่พบบางสิ่งที่มีการจำกัดสิบครั้ง</string>
+    <string name="double_check_title">การตรวจสอบสองครั้ง</string>
+    <string name="notification_title">LTE Worker เสร็จสิ้นแล้ว</string>
+    <string name="clean_notification">ทำความสะอาดแล้ว:</string>
+    <string-array name="generic_filter_files">
+        <item>. Tmp</item>
+        <item>. Log</item>
+    </string-array>
+    <string-array name="generic_filter_folders">
+        <item>บันทึกการทำงาน</item>
+        <item>บันทึกการทำงาน</item>
+        <item>ชั่วคราว</item>
+        <item>ชั่วคราว</item>
+        <item>ชั่วคราว</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="aggressive_filter_folders">
+        <item>Isperson ads (โฆษณา)</item>
+        <item>แคช</item>
+        <item>การวิเคราะห์</item>
+        <item>รูปย่อเหรอ?</item>
+        <item>โมบายล์</item>
+        <item>Uncity AdsVideo Cache</item>
+        <item>อัลบัมโป้ง?</item>
+        <item>LOST. DIR</item>
+        <item>ในถังขยะ</item>
+        <item>Desktop. I ni</item>
+        <item>Leakcanary</item>
+        <item>. DS _ Store</item>
+        <item>. Spot-V 100</item>
+        <item>ช์ใช้งานได้</item>
+        <item>พอร์ต Bugreport</item>
+        <item>แต่ละพอร์ต</item>
+        <item>ในถังขยะ</item>
+        <item>แคช</item>
+        <item>สาดมี</item>
+    </string-array>
+    <string-array name="aggressive_filter_files">
+        <item>. เอ็กโซ</item>
+        <item>นิ้วหัวแม่มือ?. Db</item>
+        <item>.thumb[0-9]</item>
+        <item>สาดมี</item>
+    </string-array>
+</resources>

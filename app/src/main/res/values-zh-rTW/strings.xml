@@ -4,21 +4,14 @@
   -->
 <resources>
     <string name="app_name">LTE 清除程式</string>
-    <string name="lte_cleaner">LTE 清除器！</string>
-    <string name="no_files_found">找不到檔案</string>
     <string name="delete_empty_folders">刪除空資料夾</string>
     <string name="aggressive_filter">啟用侵略過濾器</string>
-    <string name="Save">儲存</string>
-    <string name="filter">過濾</string>
     <string name="whitelist">白名單</string>
     <string name="privacy_policy">隱私權原則</string>
     <string name="add_to_whitelist">新增至白名單</string>
     <string name="add">新增</string>
     <string name="cancel">取消</string>
     <string name="enter_file_name">輸入檔案/資料夾名稱至白名單</string>
-    <string name="make_suggestion">進行建議</string>
-    <string name="select_task">選取作業</string>
-    <string name="do_you_want_to">您要刪除（清除）所有找到的檔案，或只顯示（分析）它們嗎？</string>
     <string name="clean">Clean</string>
     <string name="analyze">分析</string>
     <string name="enable_generic_filter">啟用通用過濾器</string>
@@ -30,16 +23,10 @@
     <string name="are_you_reset_whitelist">您確定要清除白名單嗎？</string>
     <string name="reset">清除</string>
     <string name="delete_apk_files">刪除 .apk 檔</string>
-    <string name="lte_threading">LTE Threading （更快）</string>
-    <string name="default_whitelist">預設白名單</string>
-    <string name="add_defaults">新增建議的白名單</string>
-    <string name="nothing_found">找不到項目</string>
     <string name="status_idle">Status： Idle</string>
     <string name="progress_0">0%</string>
     <string name="status_running">狀態：執行中</string>
     <string name="privacy_sum">檢視隱私權原則（外部鏈結）</string>
-    <string name="whitelist_sum">顯示要從掃描排除的路徑</string>
-    <string name="suggestion_sum">從應用程式開啟 GitHub 上的問題。 不需要帳戶</string>
     <string name="generic_sum">.tmp、 .log、日誌、日誌</string>
     <string name="aggressive_sum">這裡列出太多</string>
     <string name="apk_sum">Android 的安裝程式檔案</string>
@@ -47,13 +34,9 @@
     <string name="autowhite_sum">偵測應該自動保護的資料夾</string>
     <string name="prompt_string">請新增檔案存取許可權</string>
     <string name="settings_string">設定</string>
-    <string name="hello_blank_fragment">Hello 空白片段</string>
     <string name="title_activity_prompt">提示活動</string>
     <string name="corpse_summary">已解除安裝應用程式遺留的檔案數</string>
     <string name="corpse_title">刪除屍體檔案</string>
-    <string name="donate">多納特</string>
-    <string name="donate_sum">給我買杯咖啡 或選擇使用 PayPal 捐贈多少，讓我可以繼續支援此應用程式</string>
-    <string name="recommended">建議的</string>
     <string name="defaultwhitelist">預設</string>
     <string name="other">其他</string>
     <string name="daily_title">每日清除</string>
@@ -63,6 +46,7 @@
     <string name="permission_needed">請求批准</string>
     <string name="failed_scan">掃描失敗。</string>
     <string name="are_you_sure_deletion">你確定嗎？ 無法還原已刪除的檔案</string>
+    <string name="are_you_sure_deletion_title">確認刪除</string>
     <string name="aggressive_filter_what_title">有哪些侵略性的過濾器</string>
     <string name="adds_the_following">新增下列過濾器：</string>
     <string name="samsung_not_work">在 samsung 裝置上不起作用</string>
@@ -102,9 +86,12 @@
         <item>bugreports</item>
         <item>.Trash</item>
         <item>快取</item>
+        <item>斯潑斯哈德</item>
     </string-array>
     <string-array name="aggressive_filter_files">
         <item>.exo</item>
         <item>thumbs？.db</item>
+        <item>.thumb[0-9]</item>
+        <item>斯潑斯哈德</item>
     </string-array>
 </resources>
