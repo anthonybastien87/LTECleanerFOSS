@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         WhitelistActivity.getWhiteList();
 
-        loadAdData();
+        //loadAdData();
     }
 
     @Override public void onStart() {

@@ -5,6 +5,7 @@
 package theredspy15.ltecleanerfoss.controllers;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +22,9 @@ import theredspy15.ltecleanerfoss.R;
 import theredspy15.ltecleanerfoss.workers.CleanWorker;
 
 public class SettingsActivity extends AppCompatActivity {
+
+    private static final int PERIOD=900000; // 15 minutes
+    private static final int INITIAL_DELAY=5000; // 5 seconds
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +63,12 @@ public class SettingsActivity extends AppCompatActivity {
                     PeriodicWorkRequest.Builder builder = new PeriodicWorkRequest.Builder(CleanWorker.class, 24, TimeUnit.HOURS);
                     PeriodicWorkRequest periodicWorkRequest = builder
                             .build();
-                    WorkManager.getInstance().enqueueUniquePeriodicWork("Cleaner Worker",  ExistingPeriodicWorkPolicy.KEEP,periodicWorkRequest);
+                    WorkManager.getInstance(requireContext()).enqueueUniquePeriodicWork("Cleaner Worker",  ExistingPeriodicWorkPolicy.KEEP,periodicWorkRequest);
+
+                    CleanReceiver.scheduleAlarms(requireContext());
+
+                    Toast.makeText(requireContext(), "Scheduled", Toast.LENGTH_LONG)
+                            .show();
                 }
 
                 return true;
