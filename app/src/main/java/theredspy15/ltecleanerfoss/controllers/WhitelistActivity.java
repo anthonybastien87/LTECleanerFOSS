@@ -4,12 +4,17 @@
 
 package theredspy15.ltecleanerfoss.controllers;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
-import android.widget.EditText;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -25,7 +30,6 @@ import theredspy15.ltecleanerfoss.databinding.ActivityWhitelistBinding;
 
 public class WhitelistActivity extends AppCompatActivity {
 
-    BaseAdapter adapter;
     private static List<String> whiteList;
 
     ActivityWhitelistBinding binding;
@@ -39,12 +43,38 @@ public class WhitelistActivity extends AppCompatActivity {
         binding = ActivityWhitelistBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.resetWhiteList.setOnClickListener(this::emptyWhitelist);
-        binding.recommendedButton.setOnClickListener(this::addRecommended);
-        binding.addWhiteList.setOnClickListener(this::addToWhiteList);
+        binding.newButton.setOnClickListener(this::addToWhiteList);
 
-        adapter = new ArrayAdapter<>(this, R.layout.custom_textview, getWhiteList(MainActivity.prefs));
-        binding.whitelistView.setAdapter(adapter);
+        getWhiteList(MainActivity.prefs);
+        loadViews();
+    }
+
+    void loadViews() {
+        LinearLayout.LayoutParams layout = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        layout.setMargins(0, 20, 0, 20);
+
+        if (whiteList != null) {
+            for (String path : whiteList) {
+                Button button = new Button(this);
+                button.setText(path);
+                button.setTextSize(18);
+                button.setAllCaps(false);
+                button.setOnClickListener(v -> {});
+                button.setPadding(50,50,50,50);
+                layout.setMargins(0,20,0,20);
+                button.setBackgroundResource(R.drawable.rounded_view);
+                GradientDrawable drawable = (GradientDrawable) button.getBackground();
+                drawable.setColor(Color.GRAY);
+                drawable.setAlpha(30);
+                runOnUiThread(()->binding.pathsLayout.addView(button,layout));
+            }
+        } else if (whiteList == null || whiteList.isEmpty()) {
+            TextView textView = new TextView(this); // no news feeds selected
+            textView.setText("Nothing in whitelist");
+            textView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            textView.setTextSize(18);
+            runOnUiThread(() -> binding.pathsLayout.addView(textView, layout));
+        }
     }
 
     /**
@@ -59,7 +89,6 @@ public class WhitelistActivity extends AppCompatActivity {
                 .setPositiveButton(R.string.reset, (dialog, whichButton) -> {
                     whiteList.clear();
                     MainActivity.prefs.edit().putStringSet("whitelist", new HashSet<>(whiteList)).apply();
-                    refreshListView();
                 })
                 .setNegativeButton(R.string.cancel, (dialog, whichButton) -> { }).show();
     }
@@ -80,7 +109,6 @@ public class WhitelistActivity extends AppCompatActivity {
             whiteList.add(new File(externalDir, "DCIM").getPath());
             whiteList.add(new File(externalDir, "Documents").getPath());
             MainActivity.prefs.edit().putStringSet("whitelist", new HashSet<>(whiteList)).apply();
-            refreshListView();
         } else
             Toast.makeText(this, "Already added",
                     Toast.LENGTH_LONG).show();
@@ -91,26 +119,20 @@ public class WhitelistActivity extends AppCompatActivity {
      * @param view the view that is clicked
      */
     public final void addToWhiteList(View view) {
-        final EditText input = new EditText(WhitelistActivity.this);
-
-        new AlertDialog.Builder(WhitelistActivity.this,R.style.MyAlertDialogTheme)
-                .setTitle(R.string.add_to_whitelist)
-                .setMessage(R.string.enter_file_name)
-                .setView(input)
-                .setPositiveButton(R.string.add, (dialog, whichButton) -> {
-                    whiteList.add(String.valueOf(input.getText()));
-                    MainActivity.prefs.edit().putStringSet("whitelist", new HashSet<>(whiteList)).apply();
-                    refreshListView();
-                })
-                .setNegativeButton(R.string.cancel, (dialog, whichButton) -> { }).show();
+        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
+        startActivityForResult(intent, 107);
     }
 
-    public void refreshListView() {
-        runOnUiThread(() -> {
-            adapter.notifyDataSetChanged();
-            binding.whitelistView.invalidateViews();
-            binding.whitelistView.refreshDrawableState();
-        });
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            case 107:
+                if (resultCode == Activity.RESULT_OK) {
+                    Toast.makeText(this, ""+data.getData(), Toast.LENGTH_SHORT).show();
+                }
+                break;
+        }
     }
 
     public static synchronized List<String> getWhiteList(SharedPreferences prefs) {

@@ -13,99 +13,24 @@
     android:weightSum="3"
     tools:context=".controllers.WhitelistActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/whitelist"
-        android:layout_gravity="center"
-        android:textColor="@color/colorAccent"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ListView
-        android:id="@+id/whitelistView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="8dp"
+    <ScrollView
         android:layout_weight="3"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/recommendedButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
 
-    <LinearLayout
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/pathsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/newButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/resetWhiteList"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:paddingLeft="20dp"
-            android:paddingTop="1dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="1dp"
-            android:minHeight="0dp"
-            android:minWidth="0dp"
-            app:icon="@drawable/ic_baseline_delete_24"
-            app:backgroundTint="@android:color/transparent"
-            style="?android:attr/borderlessButtonStyle"
-            android:textColor="#FFF"
-            app:cornerRadius="15dp"
-            app:layout_constraintBottom_toBottomOf="@+id/recommendedButton"
-            app:layout_constraintEnd_toStartOf="@+id/recommendedButton" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/recommendedButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="12dp"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="10dp"
-            android:text="@string/defaultwhitelist"
-            android:textColor="#FFF"
-            app:cornerRadius="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/addWhiteList"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:paddingLeft="20dp"
-            android:paddingTop="1dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="1dp"
-            android:minHeight="0dp"
-            android:minWidth="0dp"
-            app:icon="@drawable/ic_baseline_add_24"
-            app:backgroundTint="@android:color/transparent"
-            style="?android:attr/borderlessButtonStyle"
-            android:textColor="#FFF"
-            app:cornerRadius="15dp"
-            app:layout_constraintBottom_toBottomOf="@+id/recommendedButton"
-            app:layout_constraintStart_toEndOf="@+id/recommendedButton" />
-
-    </LinearLayout>
-
+        android:text="@string/add_to_whitelist"
+        android:layout_gravity="bottom"/>
 </LinearLayout>
