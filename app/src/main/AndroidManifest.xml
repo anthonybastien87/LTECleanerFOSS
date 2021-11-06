@@ -55,7 +55,7 @@
             android:parentActivityName="theredspy15.ltecleanerfoss.controllers.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SettingsTheme" />
-        <receiver android:name="theredspy15.ltecleanerfoss.controllers.CleanReceiver"
+        <receiver android:name="theredspy15.ltecleanerfoss.CleanReceiver"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -63,7 +63,7 @@
         </receiver>
 
         <service
-            android:name="theredspy15.ltecleanerfoss.controllers.ScheduledService"
+            android:name="theredspy15.ltecleanerfoss.ScheduledService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
     </application>
 

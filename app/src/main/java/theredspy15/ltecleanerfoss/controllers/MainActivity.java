@@ -34,17 +34,13 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
 import androidx.viewbinding.BuildConfig;
 
-import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.RequestConfiguration;
 
 import java.io.File;
 import java.text.DecimalFormat;
-import java.util.Arrays;
 
 import theredspy15.ltecleanerfoss.FileScanner;
 import theredspy15.ltecleanerfoss.R;
@@ -72,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         binding.analyzeBtn.setOnClickListener(this::analyze);
 
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        WhitelistActivity.getWhiteList();
+        WhitelistActivity.getWhiteList(prefs);
 
         //loadAdData();
     }

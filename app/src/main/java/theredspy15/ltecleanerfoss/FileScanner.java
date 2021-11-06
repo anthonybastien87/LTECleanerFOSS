@@ -28,7 +28,7 @@ import theredspy15.ltecleanerfoss.controllers.MainActivity;
 import theredspy15.ltecleanerfoss.controllers.WhitelistActivity;
 import theredspy15.ltecleanerfoss.databinding.ActivityMainBinding;
 
-public class FileScanner {
+public class FileScanner { // TODO remove local prefs objects, create setter for one instead
 
     public static boolean isRunning = false;
 
@@ -50,7 +50,7 @@ public class FileScanner {
     public FileScanner(File path, Context context) {
         this.path = path;
         prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        WhitelistActivity.getWhiteList();
+        WhitelistActivity.getWhiteList(prefs);
     }
 
     private List<File> getListFiles() {
@@ -96,7 +96,7 @@ public class FileScanner {
      * @return true if is the file is in the white list, false if not
      */
     private synchronized boolean isWhiteListed(File file) {
-        for (String path : getWhiteList())
+        for (String path : getWhiteList(prefs))
             if (path.equalsIgnoreCase(file.getAbsolutePath())
                     || path.equalsIgnoreCase(file.getName()))
                 return true;
@@ -112,9 +112,9 @@ public class FileScanner {
 
         for (String protectedFile : protectedFileList) {
             if (file.getName().toLowerCase().contains(protectedFile) &&
-                    !getWhiteList().contains(file.getAbsolutePath().toLowerCase())) {
-                getWhiteList().add(file.getAbsolutePath().toLowerCase());
-                prefs.edit().putStringSet("whitelist", new HashSet<>(getWhiteList())).apply();
+                    !getWhiteList(prefs).contains(file.getAbsolutePath().toLowerCase())) {
+                getWhiteList(prefs).add(file.getAbsolutePath().toLowerCase());
+                prefs.edit().putStringSet("whitelist", new HashSet<>(getWhiteList(prefs))).apply();
                 return true;
             }
         }
@@ -217,7 +217,7 @@ public class FileScanner {
         byte cycles = 0;
         byte maxCycles = 1;
         List<File> foundFiles;
-        if (MainActivity.prefs.getBoolean("multirun", false)) maxCycles = 10;
+        if (prefs.getBoolean("multirun", false)) maxCycles = 10;
         if (!delete) maxCycles = 1; // when nothing is being deleted. Stops duplicates from being found
 
         // removes the need to 'clean' multiple times to get everything

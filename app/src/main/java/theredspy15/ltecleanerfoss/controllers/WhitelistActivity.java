@@ -4,6 +4,7 @@
 
 package theredspy15.ltecleanerfoss.controllers;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -42,7 +43,7 @@ public class WhitelistActivity extends AppCompatActivity {
         binding.recommendedButton.setOnClickListener(this::addRecommended);
         binding.addWhiteList.setOnClickListener(this::addToWhiteList);
 
-        adapter = new ArrayAdapter<>(this, R.layout.custom_textview, getWhiteList());
+        adapter = new ArrayAdapter<>(this, R.layout.custom_textview, getWhiteList(MainActivity.prefs));
         binding.whitelistView.setAdapter(adapter);
     }
 
@@ -112,9 +113,9 @@ public class WhitelistActivity extends AppCompatActivity {
         });
     }
 
-    public static synchronized List<String> getWhiteList() {
+    public static synchronized List<String> getWhiteList(SharedPreferences prefs) {
         if (whiteList == null) {
-            whiteList = new ArrayList<>(MainActivity.prefs.getStringSet("whitelist",new HashSet<>()));
+            whiteList = new ArrayList<>(prefs.getStringSet("whitelist",new HashSet<>()));
             whiteList.remove("[");
             whiteList.remove("]");
         }

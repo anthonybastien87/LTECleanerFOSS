@@ -40,7 +40,7 @@
     <string name="defaultwhitelist">Default</string>
     <string name="other">Other</string>
     <string name="daily_title">Daily Clean</string>
-    <string name="daily_sum">Automatically runs daily, without you having to open the app. Will not work on some devices unless left open in background due to OEM restrictions</string>
+    <string name="daily_sum">Automatically runs daily, without you having to open the app.</string>
     <string name="other_apps">Check out my other apps!</string>
     <string name="other_apps_sum">I try to have a new one out every week or so</string>
     <string name="permission_needed">Permission needed!</string>
