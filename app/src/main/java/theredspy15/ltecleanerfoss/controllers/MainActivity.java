@@ -23,12 +23,12 @@ import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
@@ -42,6 +42,7 @@ import com.google.android.gms.ads.MobileAds;
 import java.io.File;
 import java.text.DecimalFormat;
 
+import dev.shreyaspatil.MaterialDialog.MaterialDialog;
 import theredspy15.ltecleanerfoss.FileScanner;
 import theredspy15.ltecleanerfoss.R;
 import theredspy15.ltecleanerfoss.databinding.ActivityMainBinding;
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         WhitelistActivity.getWhiteList(prefs);
 
-        //loadAdData();
+        loadAdData();
     }
 
     @Override public void onStart() {
@@ -89,7 +90,10 @@ public class MainActivity extends AppCompatActivity {
         String unitId;
         if (BuildConfig.BUILD_TYPE.contentEquals("debug")) {
             unitId = "ca-app-pub-3940256099942544/6300978111";
-        } else unitId = "ca-app-pub-5128547878021429/8516214533"; // production only!
+        } else {
+            unitId = "ca-app-pub-5128547878021429/8516214533"; // production only!
+            Toast.makeText(this, "Debug mode active", Toast.LENGTH_SHORT).show();
+        }
 
         MobileAds.initialize(this, initializationStatus -> { });
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -144,15 +148,24 @@ public class MainActivity extends AppCompatActivity {
         requestWriteExternalPermission();
 
         if (!FileScanner.isRunning) {
-            if (!prefs.getBoolean("one_click", false)) // one-click disabled
-                new AlertDialog.Builder(this,R.style.MyAlertDialogTheme)
-                        .setTitle(R.string.are_you_sure_deletion_title)
-                        .setMessage(R.string.are_you_sure_deletion)
-                        .setPositiveButton(R.string.clean, (dialog, whichButton) -> { // clean
+            if (prefs.getBoolean("one_click", false)) // one-click disabled
+            {
+                new Thread(()-> scan(true)).start(); // one-click enabled
+            } else {
+                MaterialDialog mDialog = new MaterialDialog.Builder(this)
+                        .setTitle(getString(R.string.are_you_sure_deletion_title))
+                        .setAnimation("5453-shred-paper.json")
+                        .setMessage(getString(R.string.are_you_sure_deletion))
+                        .setCancelable(false)
+                        .setPositiveButton(getString(R.string.clean), (dialogInterface, which) -> {
+                            dialogInterface.dismiss();
                             new Thread(()-> scan(true)).start();
                         })
-                        .setNegativeButton(R.string.cancel, (dialog, whichButton) -> dialog.dismiss()).show();
-            else new Thread(()-> scan(true)).start(); // one-click enabled
+                        .setNegativeButton(getString(R.string.cancel), (dialogInterface, which) -> dialogInterface.dismiss())
+                        .build();
+                mDialog.getAnimationView().setScaleType(ImageView.ScaleType.FIT_CENTER);
+                mDialog.show();
+            }
         }
     }
 
