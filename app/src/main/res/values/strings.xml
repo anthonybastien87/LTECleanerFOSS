@@ -97,4 +97,9 @@
         <item>.thumb[0-9]</item>
         <item>splashad</item>
     </string-array>
+    <string-array name="themes">
+        <item>Auto</item>
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
 </resources>
