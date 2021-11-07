@@ -4,12 +4,12 @@
 
 package theredspy15.ltecleanerfoss.controllers;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -17,14 +17,18 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
+import dev.shreyaspatil.MaterialDialog.MaterialDialog;
 import theredspy15.ltecleanerfoss.R;
 import theredspy15.ltecleanerfoss.databinding.ActivityWhitelistBinding;
 
@@ -57,9 +61,10 @@ public class WhitelistActivity extends AppCompatActivity {
             for (String path : whiteList) {
                 Button button = new Button(this);
                 button.setText(path);
+                button.setTextColor(ResourcesCompat.getColor(getResources(), R.color.colorAccent, null));
                 button.setTextSize(18);
                 button.setAllCaps(false);
-                button.setOnClickListener(v -> {});
+                button.setOnClickListener(v -> removePath(path, button));
                 button.setPadding(50,50,50,50);
                 layout.setMargins(0,20,0,20);
                 button.setBackgroundResource(R.drawable.rounded_view);
@@ -70,11 +75,26 @@ public class WhitelistActivity extends AppCompatActivity {
             }
         } else if (whiteList == null || whiteList.isEmpty()) {
             TextView textView = new TextView(this); // no news feeds selected
-            textView.setText("Nothing in whitelist");
+            textView.setText(R.string.empty_whitelist);
             textView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
             textView.setTextSize(18);
             runOnUiThread(() -> binding.pathsLayout.addView(textView, layout));
         }
+    }
+
+    void removePath(String path, Button button) {
+        MaterialDialog mDialog = new MaterialDialog.Builder(this)
+                .setTitle("Remove from whitelist?")
+                .setMessage(path)
+                .setCancelable(false)
+                .setPositiveButton("Delete", (dialogInterface, which) -> {
+                    dialogInterface.dismiss();
+                    whiteList.remove(path);
+                    binding.pathsLayout.removeView(button);
+                })
+                .setNegativeButton(getString(R.string.cancel), (dialogInterface, which) -> dialogInterface.dismiss())
+                .build();
+        mDialog.show();
     }
 
     /**
@@ -119,21 +139,17 @@ public class WhitelistActivity extends AppCompatActivity {
      * @param view the view that is clicked
      */
     public final void addToWhiteList(View view) {
-        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
-        startActivityForResult(intent, 107);
+        mGetContent.launch(Uri.fromFile(Environment.getDataDirectory()));
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        switch (requestCode) {
-            case 107:
-                if (resultCode == Activity.RESULT_OK) {
-                    Toast.makeText(this, ""+data.getData(), Toast.LENGTH_SHORT).show();
+    ActivityResultLauncher<Uri> mGetContent = registerForActivityResult(new ActivityResultContracts.OpenDocumentTree(),
+            uri -> {
+                if (uri != null) {
+                    Toast.makeText(this, ""+uri.getPath(), Toast.LENGTH_LONG).show();
+                    whiteList.add(uri.getPath().substring(uri.getPath().indexOf(":")+1)); // TODO create file from uri, then just add its path once sd card support is finished
+                    MainActivity.prefs.edit().putStringSet("whitelist", new HashSet<>(whiteList)).apply();
                 }
-                break;
-        }
-    }
+            });
 
     public static synchronized List<String> getWhiteList(SharedPreferences prefs) {
         if (whiteList == null) {

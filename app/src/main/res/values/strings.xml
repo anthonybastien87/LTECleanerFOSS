@@ -55,6 +55,7 @@
     <string name="double_check_title">Double Checker</string>
     <string name="notification_title">LTE Clean Worker Finished</string>
     <string name="clean_notification">Cleaned:</string>
+    <string name="empty_whitelist">Nothing in whitelist</string>
 
 
     <string-array name="generic_filter_files">
