@@ -14,8 +14,8 @@ android {
         applicationId "theredspy15.ltecleanerfoss"
         minSdkVersion 19
         targetSdkVersion 31
-        versionCode 51
-        versionName "4.8.7-playstore"
+        versionCode 54
+        versionName "4.9.2-playstore"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
@@ -45,6 +45,8 @@ android {
 }
 
 dependencies {
+    implementation "com.android.billingclient:billing:4.0.0"
+
     implementation 'dev.shreyaspatil.MaterialDialog:MaterialDialog:2.2.2'
     implementation 'com.airbnb.android:lottie:4.2.0'
 
