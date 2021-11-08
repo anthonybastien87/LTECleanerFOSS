@@ -37,7 +37,7 @@
     <string name="corpse_title">Poista ruumistiedostot</string>
     <string name="other">Muut</string>
     <string name="daily_title">Daily Clean</string>
-    <string name="daily_sum">Automaattisesti kulkee päivittäin, ilman että sinun täytyy avata sovellus. Ei toimi joidenkin laitteiden kanssa, ellei OEM-rajoituksista johtuen ole avoimia taustatietoja</string>
+    <string name="daily_sum">Automaattisesti kulkee päivittäin, ilman että sinun täytyy avata sovellus.</string>
     <string name="other_apps">Katsokaa muita sovelluksia!</string>
     <string name="other_apps_sum">Yritän saada uuden ulos joka viikko tai niin</string>
     <string name="permission_needed">Lupa tarvitaan!</string>
@@ -52,6 +52,16 @@
     <string name="double_check_title">Double Checker</string>
     <string name="notification_title">LTE-puhdas käsittelijä on valmis</string>
     <string name="clean_notification">Puhdistettu:</string>
+    <string name="empty_whitelist">Ei mitään valkoisesta</string>
+    <string name="theme_sum">Muussa tapauksessa seuraa järjestelmän asetuksia. Aloita sovellus uudelleen</string>
+    <string name="theme_title">Valitse teema</string>
+    <string name="filters_category_title">Suodattimet</string>
+    <string name="scanner_category_title">Skanneri</string>
+    <string name="links_category_title">Linkit</string>
+    <string name="settings_page_title">Asetukset</string>
+    <string name="remove_from_whitelist">Poistaa valkoisesta?</string>
+    <string name="delete">Poista</string>
+    <string name="clipboard_clear_failed">Leikepöydän poisto ei onnistunut</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -90,5 +100,10 @@
         <item>Peukalot?</item>
         <item>Peukalo[0-9]</item>
         <item>Splashad</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Auto</item>
+        <item>Light</item>
+        <item>Dark</item>
     </string-array>
 </resources>
