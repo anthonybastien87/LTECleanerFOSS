@@ -37,7 +37,7 @@
     <string name="corpse_title">残骸ファイルの削除</string>
     <string name="other">その他</string>
     <string name="daily_title">日次クリーニング</string>
-    <string name="daily_sum">アプリケーションを開くことなく、毎日自動的に実行されます。 一部のデバイスでは、 OEM 制限により、バックグラウンドに残されていない場合には実行できません。</string>
+    <string name="daily_sum">アプリケーションを開くことなく、毎日自動的に実行されます。</string>
     <string name="other_apps">他のアプリを確認してください。</string>
     <string name="other_apps_sum">ほぼ毎週新作をリリースすることを目標にしています</string>
     <string name="permission_needed">許可が必要です。</string>
@@ -52,6 +52,16 @@
     <string name="double_check_title">ダブル・チェッカー</string>
     <string name="notification_title">LTE クリーン・ワーカー完了</string>
     <string name="clean_notification">クリーンアップ:</string>
+    <string name="empty_whitelist">ホワイトリストにない</string>
+    <string name="theme_sum">それ以外はシステム設定に従います。 アプリを再始動して有効にする</string>
+    <string name="theme_title">テーマの選択</string>
+    <string name="filters_category_title">フィルター</string>
+    <string name="scanner_category_title">スキャナ</string>
+    <string name="links_category_title">リンク</string>
+    <string name="settings_page_title">設定</string>
+    <string name="remove_from_whitelist">ホワイトリストから削除しますか</string>
+    <string name="delete">削除</string>
+    <string name="clipboard_clear_failed">クリップボードをクリアできません</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -90,5 +100,10 @@
         <item>thumbs?.db</item>
         <item>.サム[0-9]</item>
         <item>スプラズド</item>
+    </string-array>
+    <string-array name="themes">
+        <item>オート</item>
+        <item>ライト</item>
+        <item>ダーク</item>
     </string-array>
 </resources>
