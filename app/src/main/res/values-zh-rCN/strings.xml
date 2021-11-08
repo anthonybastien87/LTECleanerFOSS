@@ -37,7 +37,7 @@
     <string name="corpse_title">删除尸体文件</string>
     <string name="other">其他</string>
     <string name="daily_title">每日清理</string>
-    <string name="daily_sum">每天自动运行，无需您打开应用程序。 将不会在某些设备上工作，除非由于 OEM 限制而在后台打开</string>
+    <string name="daily_sum">每天自动运行，无需您打开应用程序。</string>
     <string name="other_apps">看看我的其他应用！</string>
     <string name="other_apps_sum">我试着大约每周发布一个新的</string>
     <string name="permission_needed">需要许可 !</string>
@@ -52,6 +52,16 @@
     <string name="double_check_title">双校验器</string>
     <string name="notification_title">LTE 清除工作程序已完成</string>
     <string name="clean_notification">已清除:</string>
+    <string name="empty_whitelist">白名单中没有任何内容</string>
+    <string name="theme_sum">否则将遵循系统设置。 重新启动应用程序以生效</string>
+    <string name="theme_title">选择主题</string>
+    <string name="filters_category_title">过滤器</string>
+    <string name="scanner_category_title">扫描仪</string>
+    <string name="links_category_title">链接</string>
+    <string name="settings_page_title">设置</string>
+    <string name="remove_from_whitelist">从白名单中除去 ?</string>
+    <string name="delete">删除</string>
+    <string name="clipboard_clear_failed">无法清除剪贴板</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -90,5 +100,10 @@
         <item>拇指?.db</item>
         <item>.thumb[0-9]</item>
         <item>splashad</item>
+    </string-array>
+    <string-array name="themes">
+        <item>自动</item>
+        <item>灯光</item>
+        <item>黑</item>
     </string-array>
 </resources>
