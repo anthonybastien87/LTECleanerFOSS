@@ -37,7 +37,7 @@
     <string name="corpse_title">Corpse-Dateien löschen</string>
     <string name="other">Sonstige</string>
     <string name="daily_title">Tägliche Reinigung</string>
-    <string name="daily_sum">Wird automatisch täglich ausgeführt, ohne dass Sie die App öffnen müssen. Wird auf einigen Geräten nicht funktionieren, es sei denn, der Hintergrund ist aufgrund von OEM-Einschränkungen offen.</string>
+    <string name="daily_sum">Wird automatisch täglich ausgeführt, ohne dass Sie die App öffnen müssen.</string>
     <string name="other_apps">Schauen Sie sich meine anderen Apps an!</string>
     <string name="other_apps_sum">Ich versuche, jede Woche einen neuen zu haben, oder so</string>
     <string name="permission_needed">Berechtigung erforderlich!</string>
@@ -52,6 +52,16 @@
     <string name="double_check_title">Doppelter Checker</string>
     <string name="notification_title">LTE Clean Worker Beendet</string>
     <string name="clean_notification">Bereinigt:</string>
+    <string name="empty_whitelist">Nichts in Whitelist</string>
+    <string name="theme_sum">Andernfalls folgen Sie den Systemeinstellungen. App erneut starten, um wirksam zu werden</string>
+    <string name="theme_title">Thema auswählen</string>
+    <string name="filters_category_title">Filter</string>
+    <string name="scanner_category_title">Scanner</string>
+    <string name="links_category_title">Links</string>
+    <string name="settings_page_title">Einstellungen</string>
+    <string name="remove_from_whitelist">Aus Whitelist entfernen?</string>
+    <string name="delete">Löschen</string>
+    <string name="clipboard_clear_failed">Fehler beim Löschen der Zwischenablage</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -90,5 +100,10 @@
         <item>thumbs? .db</item>
         <item>.thumb[0-9]</item>
         <item>Splashad</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Automatisch</item>
+        <item>Licht</item>
+        <item>Dunkel</item>
     </string-array>
 </resources>
