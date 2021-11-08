@@ -53,6 +53,7 @@ public class WhitelistActivity extends AppCompatActivity {
     }
 
     void loadViews() {
+        binding.pathsLayout.removeAllViews();
         LinearLayout.LayoutParams layout = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         layout.setMargins(0, 20, 0, 20);
 
@@ -101,7 +102,6 @@ public class WhitelistActivity extends AppCompatActivity {
      * @param view the view that is clicked
      */
     public final void emptyWhitelist(View view) {
-
         new AlertDialog.Builder(WhitelistActivity.this)
                 .setTitle(R.string.reset_whitelist)
                 .setMessage(R.string.are_you_reset_whitelist)
@@ -146,6 +146,7 @@ public class WhitelistActivity extends AppCompatActivity {
                 if (uri != null) {
                     whiteList.add(uri.getPath().substring(uri.getPath().indexOf(":")+1)); // TODO create file from uri, then just add its path once sd card support is finished
                     MainActivity.prefs.edit().putStringSet("whitelist", new HashSet<>(whiteList)).apply();
+                    loadViews();
                 }
             });
 
