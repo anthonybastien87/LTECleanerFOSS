@@ -37,7 +37,7 @@
     <string name="corpse_title">Удалить остатки</string>
     <string name="other">Прочее</string>
     <string name="daily_title">Ежедневная очистка</string>
-    <string name="daily_sum">Очистка автоматически запускается ежедневно без необходимости вручную открывать приложение. Не будет работать на некоторых устройствах, если приложение не открыто в фоновом режиме, ввиду ограничений OEM</string>
+    <string name="daily_sum">Автоматически запускается ежедневно, без необходимости открывать приложение.</string>
     <string name="other_apps">Зацени мои другие приложения!</string>
     <string name="other_apps_sum">Я стараюсь, чтобы у меня была новая жизнь каждую неделю, или так</string>
     <string name="permission_needed">Необходимы разрешения!</string>
@@ -52,6 +52,16 @@
     <string name="double_check_title">Двойная проверка</string>
     <string name="notification_title">Приемка очистки LTE завершена</string>
     <string name="clean_notification">Очищено:</string>
+    <string name="empty_whitelist">В белом списке нет ничего</string>
+    <string name="theme_sum">В противном случае последуют параметры системы. Перезапустить приложение, чтобы выполнить действие</string>
+    <string name="theme_title">Выбрать тему</string>
+    <string name="filters_category_title">Фильтры</string>
+    <string name="scanner_category_title">Сканер</string>
+    <string name="links_category_title">Ссылки</string>
+    <string name="settings_page_title">Параметры</string>
+    <string name="remove_from_whitelist">Удалить из белого списка?</string>
+    <string name="delete">Удалить</string>
+    <string name="clipboard_clear_failed">Не удалось очистить буфер обмена</string>
     <string-array name="generic_filter_files">
         <item>Tmp</item>
         <item>.log</item>
@@ -90,5 +100,10 @@
         <item>thumbs? .db</item>
         <item>.thumb[0-9]</item>
         <item>Плазмод</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Автоматически</item>
+        <item>Свет</item>
+        <item>Темный</item>
     </string-array>
 </resources>
