@@ -31,6 +31,30 @@
     <PreferenceCategory android:title="Scanner" app:iconSpaceReserved="false">
         <CheckBoxPreference
             app:iconSpaceReserved="false"
+            android:defaultValue="false"
+            android:textColor="#FFF"
+            android:key="one_click"
+            android:persistent="true"
+            android:summary="@string/oneclick_sum"
+            android:title="@string/one_click_clean" />
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            android:defaultValue="false"
+            android:textColor="#FFF"
+            android:key="dailyclean"
+            android:persistent="true"
+            android:summary="@string/daily_sum"
+            android:title="@string/daily_title" />
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            android:defaultValue="false"
+            android:textColor="#FFF"
+            android:key="clipboard"
+            android:persistent="true"
+            android:summary="@string/samsung_not_work"
+            android:title="@string/clear_clipboard" />
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
             android:defaultValue="true"
             android:textColor="#FFF"
             android:key="auto_white"
@@ -88,7 +112,6 @@
             android:summary="@string/apk_sum"
             android:title="@string/delete_apk_files" />
     </PreferenceCategory>
-
     <PreferenceCategory android:title="@string/other" app:iconSpaceReserved="false">
         <ListPreference
             app:iconSpaceReserved="false"
@@ -99,30 +122,5 @@
             android:summary="Will otherwise follow system settings. Restart app to take effect"
             android:persistent="true"
             android:title="Select Theme" />
-        <CheckBoxPreference
-            app:iconSpaceReserved="false"
-            android:defaultValue="false"
-            android:textColor="#FFF"
-            android:key="one_click"
-            android:persistent="true"
-            android:summary="@string/oneclick_sum"
-            android:title="@string/one_click_clean" />
-        <CheckBoxPreference
-            app:iconSpaceReserved="false"
-            android:defaultValue="false"
-            android:textColor="#FFF"
-            android:key="dailyclean"
-            android:persistent="true"
-            android:summary="@string/daily_sum"
-            android:title="@string/daily_title" />
-        <CheckBoxPreference
-            app:iconSpaceReserved="false"
-            android:defaultValue="false"
-            android:textColor="#FFF"
-            android:key="clipboard"
-            android:persistent="true"
-            android:summary="@string/samsung_not_work"
-            android:title="@string/clear_clipboard" />
     </PreferenceCategory>
-
 </PreferenceScreen>
