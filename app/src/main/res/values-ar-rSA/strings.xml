@@ -9,9 +9,7 @@
     <string name="whitelist">القائمة البيضاء</string>
     <string name="privacy_policy">سياسة الخصوصية</string>
     <string name="add_to_whitelist">إضافة للقائمة البيضاء</string>
-    <string name="add">اضافة</string>
     <string name="cancel">الغاء</string>
-    <string name="enter_file_name">أدخل اسم الملف/المجلد إلى القائمة البيضاء</string>
     <string name="clean">تنظيف</string>
     <string name="analyze">تحليل</string>
     <string name="enable_generic_filter">اتاحة مرشح بيانات عام</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">رسالة حث</string>
     <string name="corpse_summary">الملفات المتبقية من التطبيقات غير المثبتة</string>
     <string name="corpse_title">حذف الملفات الميتة</string>
-    <string name="defaultwhitelist">الافتراضي</string>
     <string name="other">أخرى</string>
     <string name="daily_title">تنظيف يومي</string>
     <string name="daily_sum">تشغيل تلقائي يوميا، بدون الحاجة إلى فتح التطبيق. لن تعمل على بعض الأجهزة ما لم تترك مفتوحة في الخلفية بسبب القيود المفروضة على المصنع</string>

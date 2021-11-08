@@ -9,9 +9,7 @@
     <string name="whitelist">Whitelist</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="add_to_whitelist">Tilføj til hvidliste</string>
-    <string name="add">Tilføj</string>
     <string name="cancel">Annullér</string>
-    <string name="enter_file_name">Angiv navn på fil / folder til hvidliste</string>
     <string name="clean">Rens</string>
     <string name="analyze">Analysér</string>
     <string name="enable_generic_filter">Aktivér generisk filter</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">PromptAktivitet</string>
     <string name="corpse_summary">Filer, der er udelod fra installerede apps</string>
     <string name="corpse_title">Slet lig-filer</string>
-    <string name="defaultwhitelist">Standard</string>
     <string name="other">Andet</string>
     <string name="daily_title">Daglig ren</string>
     <string name="daily_sum">Automatisk kører dagligt, uden at du skal åbne appen. Vil ikke arbejde på nogle enheder, medmindre venstre i baggrunden er åben på grund af OEM-begrænsninger</string>

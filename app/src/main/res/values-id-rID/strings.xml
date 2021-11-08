@@ -9,9 +9,7 @@
     <string name="whitelist">Daftar putih</string>
     <string name="privacy_policy">Kebijakan privasi</string>
     <string name="add_to_whitelist">Tambahkan ke daftar putih</string>
-    <string name="add">Tambah</string>
     <string name="cancel">Batal</string>
-    <string name="enter_file_name">Masukkan nama file/folder ke daftar putih</string>
     <string name="clean">Bersihkan</string>
     <string name="analyze">Analisa</string>
     <string name="enable_generic_filter">Aktifkan filter generik</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">PromptActivity</string>
     <string name="corpse_summary">File yang tersisa dari aplikasi yang dihapus</string>
     <string name="corpse_title">Hapus file Corpse</string>
-    <string name="defaultwhitelist">Bawaan</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

@@ -178,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
                 clipService.setPrimaryClip(clipData);
             }
         } catch (NullPointerException e) {
-            runOnUiThread(()->Toast.makeText(this, "Failed to clear clipboard", Toast.LENGTH_SHORT).show());
+            runOnUiThread(()->Toast.makeText(this, R.string.clipboard_clear_failed, Toast.LENGTH_SHORT).show());
         }
     }
 

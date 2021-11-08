@@ -9,9 +9,7 @@
     <string name="whitelist">Whitelist</string>
     <string name="privacy_policy">Datenschutzrichtlinie</string>
     <string name="add_to_whitelist">Zur Whitelist hinzufügen</string>
-    <string name="add">Hinzufügen</string>
     <string name="cancel">Abbrechen</string>
-    <string name="enter_file_name">Datei-/Ordnernamen in Whitelist eingeben</string>
     <string name="clean">Bereinigen</string>
     <string name="analyze">Analysieren</string>
     <string name="enable_generic_filter">Generischen Filter aktivieren</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">PromptActivity</string>
     <string name="corpse_summary">Dateien, die von deinstallierten Apps übrig bleiben</string>
     <string name="corpse_title">Corpse-Dateien löschen</string>
-    <string name="defaultwhitelist">Standard</string>
     <string name="other">Sonstige</string>
     <string name="daily_title">Tägliche Reinigung</string>
     <string name="daily_sum">Wird automatisch täglich ausgeführt, ohne dass Sie die App öffnen müssen. Wird auf einigen Geräten nicht funktionieren, es sei denn, der Hintergrund ist aufgrund von OEM-Einschränkungen offen.</string>

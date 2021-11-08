@@ -82,10 +82,10 @@ public class WhitelistActivity extends AppCompatActivity {
 
     void removePath(String path, Button button) {
         MaterialDialog mDialog = new MaterialDialog.Builder(this)
-                .setTitle("Remove from whitelist?")
+                .setTitle(getString(R.string.remove_from_whitelist))
                 .setMessage(path)
                 .setCancelable(false)
-                .setPositiveButton("Delete", (dialogInterface, which) -> {
+                .setPositiveButton(getString(R.string.delete), (dialogInterface, which) -> {
                     dialogInterface.dismiss();
                     whiteList.remove(path);
                     MainActivity.prefs.edit().putStringSet("whitelist", new HashSet<>(whiteList)).apply();

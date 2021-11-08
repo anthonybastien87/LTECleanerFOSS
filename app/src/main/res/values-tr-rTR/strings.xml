@@ -9,9 +9,7 @@
     <string name="whitelist">Beyaz Liste</string>
     <string name="privacy_policy">Gizlilik İlkesi</string>
     <string name="add_to_whitelist">Beyaz listeye ekle</string>
-    <string name="add">Ekle</string>
     <string name="cancel">İptal</string>
-    <string name="enter_file_name">Dosya/klasör adını beyaz listeye girin</string>
     <string name="clean">Temizle</string>
     <string name="analyze">Çözümle</string>
     <string name="enable_generic_filter">Soysal süzgeci etkinleştir</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">Etkinlik PromptEtkinliği</string>
     <string name="corpse_summary">Kaldırılan uygulamalardan kalan dosyalar</string>
     <string name="corpse_title">Ceset dosyalarını sil</string>
-    <string name="defaultwhitelist">Varsayılan</string>
     <string name="other">Diğer</string>
     <string name="daily_title">Günlük Temiz</string>
     <string name="daily_sum">Uygulamayı açmanıza gerek kalmadan her gün otomatik olarak çalışır. OEM kısıtlamaları nedeniyle arka planda açık bırakılmadıkça, bazı aygıtlar üzerinde çalışmayacaktır.</string>

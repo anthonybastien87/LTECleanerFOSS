@@ -9,9 +9,7 @@
     <string name="whitelist">-Whitelist</string>
     <string name="privacy_policy">Πολιτική απορρήτου:</string>
     <string name="add_to_whitelist">Προσθήκη στη λίστα επιτρεπών</string>
-    <string name="add">Προσθήκη</string>
     <string name="cancel">Ακύρωση.</string>
-    <string name="enter_file_name">Καταχωρήστε το όνομα αρχείου/φακέλου στη λίστα επιτρεπών</string>
     <string name="clean">Καθαρό.</string>
     <string name="analyze">Ανάλυση:</string>
     <string name="enable_generic_filter">Ενεργοποίηση γενικού φίλτρου</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">Προτροπή /</string>
     <string name="corpse_summary">Αρχεία που απομένουν από απεγκατάσταση εφαρμογών.</string>
     <string name="corpse_title">Διαγραφή αρχείων πτωμάτων</string>
-    <string name="defaultwhitelist">Προεπιλογή:</string>
     <string name="other">\' Αλλα</string>
     <string name="daily_title">Καθημερινή καθαριότητα</string>
     <string name="daily_sum">Λειτουργεί αυτόματα καθημερινά, χωρίς να χρειάζεται να ανοίξετε την εφαρμογή. Δεν θα λειτουργήσει σε ορισμένες συσκευές αν δεν αφεθεί ανοικτή στο παρασκήνιο λόγω των περιορισμών OEM</string>

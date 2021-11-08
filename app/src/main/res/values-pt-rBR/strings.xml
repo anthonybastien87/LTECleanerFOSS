@@ -9,9 +9,7 @@
     <string name="whitelist">Whitelist</string>
     <string name="privacy_policy">Política de privacidade</string>
     <string name="add_to_whitelist">Adicionar ao whitelist</string>
-    <string name="add">Adicionar</string>
     <string name="cancel">Cancelar</string>
-    <string name="enter_file_name">Inserir nome do arquivo / pasta para whitelist</string>
     <string name="clean">Limpar</string>
     <string name="analyze">Analisar</string>
     <string name="enable_generic_filter">Ativar filtro genérico</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">PromptAtividade</string>
     <string name="corpse_summary">Arquivos sobem a partir de apps não instalados</string>
     <string name="corpse_title">Excluir arquivos de cadáver</string>
-    <string name="defaultwhitelist">Padrão</string>
     <string name="other">Outro</string>
     <string name="daily_title">Limpeza Diária</string>
     <string name="daily_sum">Executa automaticamente diariamente, sem que você tenha que abrir o app. Não funcionará em alguns dispositivos a menos que seja deixado em aberto em segundo plano devido a restrições de OEM</string>

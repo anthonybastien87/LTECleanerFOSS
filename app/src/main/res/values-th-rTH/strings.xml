@@ -9,9 +9,7 @@
     <string name="whitelist">รายการที่อนุญาต</string>
     <string name="privacy_policy">นโยบายความเป็นส่วนตัว</string>
     <string name="add_to_whitelist">เพิ่มใน white list</string>
-    <string name="add">เพิ่ม</string>
     <string name="cancel">ยกเลิก</string>
-    <string name="enter_file_name">ป้อนชื่อไฟล์/ชื่อโฟลเดอร์ลงใน white list</string>
     <string name="clean">ล้างข้อมูล</string>
     <string name="analyze">การวิเคราะห์</string>
     <string name="enable_generic_filter">เปิดใช้งานตัวกรองทั่วไป</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">กิจกรรมพร้อมต์</string>
     <string name="corpse_summary">ไฟล์ที่เหลือจากแอ็พที่ถอนการติดตั้ง</string>
     <string name="corpse_title">ลบไฟล์ศพ</string>
-    <string name="defaultwhitelist">ดีฟอลต์</string>
     <string name="other">อื่นๆ</string>
     <string name="daily_title">ล้างข้อมูลรายวัน</string>
     <string name="daily_sum">รันโดยอัตโนมัติทุกวันโดยคุณไม่ต้องเปิดแอ็พพลิเคชัน จะไม่ทำงานบนอุปกรณ์บางตัวยกเว้นเปิดอยู่ในพื้นหลังเนื่องจากข้อจำกัด OEM</string>

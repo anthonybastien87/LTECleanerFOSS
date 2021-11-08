@@ -9,9 +9,7 @@
     <string name="whitelist">Trắng</string>
     <string name="privacy_policy">Chính sách riêng</string>
     <string name="add_to_whitelist">Thêm vào danh sách trắng</string>
-    <string name="add">Thêm</string>
     <string name="cancel">Hủy</string>
-    <string name="enter_file_name">Nhập vào tên tập tin/thư mục để làm trắng</string>
     <string name="clean">Sạch</string>
     <string name="analyze">Phân tích</string>
     <string name="enable_generic_filter">Bật bộ lọc chung</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">Lời nhắc</string>
     <string name="corpse_summary">Tập tin bị bỏ qua các ứng dụng không cài đặt</string>
     <string name="corpse_title">Xoá tập tin xác chết</string>
-    <string name="defaultwhitelist">Mặc định</string>
     <string name="other">Khác</string>
     <string name="daily_title">Sạch hàng ngày</string>
     <string name="daily_sum">Tự động chạy hàng ngày, không có bạn phải mở ứng dụng. Sẽ không làm việc trên một sô ́ thiết bị trư ̀ khi không được mở trong nền do hạn chê ́ OEM</string>

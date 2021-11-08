@@ -9,9 +9,7 @@
     <string name="whitelist">白名单</string>
     <string name="privacy_policy">隐私策略</string>
     <string name="add_to_whitelist">添加到白名单</string>
-    <string name="add">加添</string>
     <string name="cancel">取消</string>
-    <string name="enter_file_name">输入文件/文件夹名称以白名单</string>
     <string name="clean">清洁</string>
     <string name="analyze">分析</string>
     <string name="enable_generic_filter">启用通用过滤器</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">提示活动</string>
     <string name="corpse_summary">从已卸载应用程序遗留的文件</string>
     <string name="corpse_title">删除尸体文件</string>
-    <string name="defaultwhitelist">缺省值</string>
     <string name="other">其他</string>
     <string name="daily_title">每日清理</string>
     <string name="daily_sum">每天自动运行，无需您打开应用程序。 将不会在某些设备上工作，除非由于 OEM 限制而在后台打开</string>

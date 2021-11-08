@@ -9,9 +9,7 @@
     <string name="whitelist">화이트리스트</string>
     <string name="privacy_policy">개인정보 보호정책</string>
     <string name="add_to_whitelist">화이트리스트에 추가</string>
-    <string name="add">추가</string>
     <string name="cancel">취소</string>
-    <string name="enter_file_name">화이트리스트에 파일/폴더 이름을 입력하십시오.</string>
     <string name="clean">깨끗한</string>
     <string name="analyze">분석하기</string>
     <string name="enable_generic_filter">일반 필터 사용</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">프롬프트 액티비티</string>
     <string name="corpse_summary">설치 제거된 앱에서 남겨진 파일</string>
     <string name="corpse_title">시체 파일 삭제하기</string>
-    <string name="defaultwhitelist">기본값</string>
     <string name="other">기타</string>
     <string name="daily_title">데일리 클린</string>
     <string name="daily_sum">앱을 열 필요 없이 매일 자동으로 실행됩니다. OEM 제한사항으로 인해 백그라운드에서 열린 상태가 아니면 일부 장치에서 작동하지 않습니다.</string>

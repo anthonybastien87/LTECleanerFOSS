@@ -9,9 +9,7 @@
     <string name="whitelist">Whitelist</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="add_to_whitelist">Add to whitelist</string>
-    <string name="add">Add</string>
     <string name="cancel">Cancel</string>
-    <string name="enter_file_name">Enter file/folder name to whitelist</string>
     <string name="clean">Clean</string>
     <string name="analyze">Analyze</string>
     <string name="enable_generic_filter">Enable generic filter</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">PromptActivity</string>
     <string name="corpse_summary">Files left over from uninstalled apps</string>
     <string name="corpse_title">Delete corpse files</string>
-    <string name="defaultwhitelist">Default</string>
     <string name="other">Other</string>
     <string name="daily_title">Daily Clean</string>
     <string name="daily_sum">Automatically runs daily, without you having to open the app. Will not work on some devices unless left open in background due to OEM restrictions</string>

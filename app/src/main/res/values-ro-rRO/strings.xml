@@ -9,9 +9,7 @@
     <string name="whitelist">Listă albă</string>
     <string name="privacy_policy">Politică de confidenţialitate</string>
     <string name="add_to_whitelist">Adăugare la lista albă</string>
-    <string name="add">Adăugare</string>
     <string name="cancel">Anulare</string>
-    <string name="enter_file_name">Introduceţi numele fişierului/folderului în lista albă</string>
     <string name="clean">Curat</string>
     <string name="analyze">Analiză</string>
     <string name="enable_generic_filter">Activare filtru generic</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">PromptActivitate</string>
     <string name="corpse_summary">Fişiere rămase de la aplicaţii neinstalate</string>
     <string name="corpse_title">Ştergere fişiere cadavru</string>
-    <string name="defaultwhitelist">Implicit</string>
     <string name="other">Alte</string>
     <string name="daily_title">Curăţare zilnică</string>
     <string name="daily_sum">Rulează automat zilnic, fără a fi nevoie să deschideţi aplicaţia. Nu va funcţiona pe unele dispozitive decât dacă este lăsat deschis în fundal din cauza restricţiilor OEM</string>

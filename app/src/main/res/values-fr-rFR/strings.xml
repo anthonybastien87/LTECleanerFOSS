@@ -9,9 +9,7 @@
     <string name="whitelist">Liste blanche</string>
     <string name="privacy_policy">Politique de confidentialité</string>
     <string name="add_to_whitelist">Ajouter à la liste blanche</string>
-    <string name="add">Ajouter</string>
     <string name="cancel">Annuler</string>
-    <string name="enter_file_name">Entrez le nom du fichier / dossier à la liste blanche</string>
     <string name="clean">Nettoyer</string>
     <string name="analyze">Analyser</string>
     <string name="enable_generic_filter">Activer le filtre générique</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">Activité PromptActivité</string>
     <string name="corpse_summary">Fichiers laissés par les applications non installées</string>
     <string name="corpse_title">Supprimer les fichiers de dépouille</string>
-    <string name="defaultwhitelist">Par défaut</string>
     <string name="other">Autres</string>
     <string name="daily_title">Nettoyage quotidien</string>
     <string name="daily_sum">Exécuter automatiquement tous les jours, sans avoir à ouvrir l\'application. Ne fonctionne pas sur certains périphériques, sauf s\'il reste ouvert en arrière-plan en raison de restrictions OEM</string>

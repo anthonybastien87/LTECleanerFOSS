@@ -9,9 +9,7 @@
     <string name="whitelist">רשימה לבנה</string>
     <string name="privacy_policy">מדיניות פרטיות</string>
     <string name="add_to_whitelist">הוספה לרשימה הלבנה</string>
-    <string name="add">הוספה</string>
     <string name="cancel">ביטול</string>
-    <string name="enter_file_name">ציון שם קובץ/תיקיה לרשימה הלבנה</string>
     <string name="clean">ניקוי</string>
     <string name="analyze">ניתוח</string>
     <string name="enable_generic_filter">הפעלת מסנן גנרי</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">הנחיות מונחות</string>
     <string name="corpse_summary">קבצים שנשארו מאפליקציות לא מותקנות</string>
     <string name="corpse_title">מחיקת קובצי גופה</string>
-    <string name="defaultwhitelist">ברירת מחדל</string>
     <string name="other">אחר</string>
     <string name="daily_title">ניקוי יומי</string>
     <string name="daily_sum">הרצה אוטומטית של כל יום, ללא צורך לפתוח את היישום. לא יפעל על התקנים מסוימים אלא אם כן יישאר פתוח ברקע בשל מגבלות OEM</string>

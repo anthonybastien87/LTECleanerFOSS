@@ -9,9 +9,7 @@
     <string name="whitelist">Белый список</string>
     <string name="privacy_policy">Политика конфиденциальности</string>
     <string name="add_to_whitelist">Добавить в белый список</string>
-    <string name="add">Добавить</string>
     <string name="cancel">Отмена</string>
-    <string name="enter_file_name">Введите имя файла/папки в белый список</string>
     <string name="clean">Очистка</string>
     <string name="analyze">Анализ</string>
     <string name="enable_generic_filter">Включить универсальный фильтр</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">Операция приглашения</string>
     <string name="corpse_summary">Файлы, оставшиеся от удалённых приложений</string>
     <string name="corpse_title">Удалить остатки</string>
-    <string name="defaultwhitelist">По умолчанию</string>
     <string name="other">Прочее</string>
     <string name="daily_title">Ежедневная очистка</string>
     <string name="daily_sum">Очистка автоматически запускается ежедневно без необходимости вручную открывать приложение. Не будет работать на некоторых устройствах, если приложение не открыто в фоновом режиме, ввиду ограничений OEM</string>

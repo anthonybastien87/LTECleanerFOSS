@@ -6,11 +6,11 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:title="Settings"
+    android:title="@string/settings_page_title"
     android:key="settings"
     app:iconSpaceReserved="false">
 
-    <PreferenceCategory android:title="Links" app:iconSpaceReserved="false">
+    <PreferenceCategory android:title="@string/links_category_title" app:iconSpaceReserved="false">
 
         <Preference android:title="@string/privacy_policy"
             android:key="privacyPolicy"
@@ -28,7 +28,7 @@
         </Preference>
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="Scanner" app:iconSpaceReserved="false">
+    <PreferenceCategory android:title="@string/scanner_category_title" app:iconSpaceReserved="false">
         <CheckBoxPreference
             app:iconSpaceReserved="false"
             android:defaultValue="false"
@@ -71,7 +71,7 @@
             android:title="@string/double_check_title" />
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="Filters" app:iconSpaceReserved="false">
+    <PreferenceCategory android:title="@string/filters_category_title" app:iconSpaceReserved="false">
         <CheckBoxPreference
             app:iconSpaceReserved="false"
             android:defaultValue="true"
@@ -119,8 +119,8 @@
             android:defaultValue="Auto"
             android:entries="@array/themes"
             android:entryValues="@array/themes"
-            android:summary="Will otherwise follow system settings. Restart app to take effect"
+            android:summary="@string/theme_sum"
             android:persistent="true"
-            android:title="Select Theme" />
+            android:title="@string/theme_title" />
     </PreferenceCategory>
 </PreferenceScreen>

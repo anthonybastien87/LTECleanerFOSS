@@ -9,9 +9,7 @@
     <string name="whitelist">Seznam povolených adres</string>
     <string name="privacy_policy">Ochrana osobních údajů</string>
     <string name="add_to_whitelist">Přidat do seznamu povolených</string>
-    <string name="add">Přidat</string>
     <string name="cancel">Storno</string>
-    <string name="enter_file_name">Zadejte název souboru/složky do seznamu povolených adres</string>
     <string name="clean">Vyčistit</string>
     <string name="analyze">Analyzovat</string>
     <string name="enable_generic_filter">Povolit generický filtr</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">Aktivita náznaku</string>
     <string name="corpse_summary">Soubory ponechané v odinstalovaných aplikacích</string>
     <string name="corpse_title">Odstranit soubory mrtvol</string>
-    <string name="defaultwhitelist">Výchozí</string>
     <string name="other">Další</string>
     <string name="daily_title">Denní vyčištění</string>
     <string name="daily_sum">Automaticky běží denně, aniž byste museli otevřít aplikaci. Nebude fungovat na některých zařízeních, pokud nebyla ponechána otevřená na pozadí kvůli omezením OEM</string>

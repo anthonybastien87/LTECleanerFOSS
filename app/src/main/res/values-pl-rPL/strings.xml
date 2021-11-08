@@ -9,9 +9,7 @@
     <string name="whitelist">Wykluczone</string>
     <string name="privacy_policy">Polityka prywatności</string>
     <string name="add_to_whitelist">Dodaj do wykluczonych</string>
-    <string name="add">Dodaj</string>
     <string name="cancel">Anuluj</string>
-    <string name="enter_file_name">Wprowadź nazwę pliku/folderu do wykluczenia</string>
     <string name="clean">Wyczyść</string>
     <string name="analyze">Analizuj</string>
     <string name="enable_generic_filter">Włącz filtr ogólny</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">Działanie promptActivity</string>
     <string name="corpse_summary">Pliki pozostałe po odinstalowanych aplikacjach</string>
     <string name="corpse_title">Usuń ostałe pliki</string>
-    <string name="defaultwhitelist">Domyślne</string>
     <string name="other">Inne</string>
     <string name="daily_title">Czyszczenie codzienne</string>
     <string name="daily_sum">Automatyczne uruchamianie codziennie, bez konieczności otwierania aplikacji. Nie będzie działać na niektórych urządzeniach, o ile nie zostanie otwarte w tle z powodu ograniczeń OEM</string>

@@ -9,9 +9,7 @@
     <string name="whitelist">Whitelist</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="add_to_whitelist">Add to whitelist</string>
-    <string name="add">Add</string>
     <string name="cancel">Cancel</string>
-    <string name="enter_file_name">Enter file/folder name to whitelist</string>
     <string name="clean">Clean</string>
     <string name="analyze">Analyze</string>
     <string name="enable_generic_filter">Enable generic filter</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">PromptActivity</string>
     <string name="corpse_summary">Files left over from uninstalled apps</string>
     <string name="corpse_title">Delete corpse files</string>
-    <string name="defaultwhitelist">Default</string>
     <string name="other">Other</string>
     <string name="daily_title">Daily Clean</string>
     <string name="daily_sum">Automatically runs daily, without you having to open the app.</string>
@@ -56,6 +53,15 @@
     <string name="notification_title">LTE Clean Worker Finished</string>
     <string name="clean_notification">Cleaned:</string>
     <string name="empty_whitelist">Nothing in whitelist</string>
+    <string name="theme_sum">Will otherwise follow system settings. Restart app to take effect</string>
+    <string name="theme_title">Select Theme</string>
+    <string name="filters_category_title">Filters</string>
+    <string name="scanner_category_title">Scanner</string>
+    <string name="links_category_title">Links</string>
+    <string name="settings_page_title">Settings</string>
+    <string name="remove_from_whitelist">Remove from whitelist?</string>
+    <string name="delete">Delete</string>
+    <string name="clipboard_clear_failed">Failed to clear clipboard</string>
 
 
     <string-array name="generic_filter_files">

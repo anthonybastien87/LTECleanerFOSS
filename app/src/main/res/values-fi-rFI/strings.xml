@@ -9,9 +9,7 @@
     <string name="whitelist">Whitelist</string>
     <string name="privacy_policy">Yksityisyyden suoja</string>
     <string name="add_to_whitelist">Lisää valkoiseen luetteloon</string>
-    <string name="add">Lisää</string>
     <string name="cancel">Peruuta</string>
-    <string name="enter_file_name">Anna tiedoston/kansion nimi valkoiseksi</string>
     <string name="clean">Puhdas</string>
     <string name="analyze">Analysoi</string>
     <string name="enable_generic_filter">Ota yleinen suodatin käyttöön</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">PromptAktiviteetti</string>
     <string name="corpse_summary">Asennemattomasta sovelluksesta jääneet tiedostot</string>
     <string name="corpse_title">Poista ruumistiedostot</string>
-    <string name="defaultwhitelist">Oletusarvo</string>
     <string name="other">Muut</string>
     <string name="daily_title">Daily Clean</string>
     <string name="daily_sum">Automaattisesti kulkee päivittäin, ilman että sinun täytyy avata sovellus. Ei toimi joidenkin laitteiden kanssa, ellei OEM-rajoituksista johtuen ole avoimia taustatietoja</string>

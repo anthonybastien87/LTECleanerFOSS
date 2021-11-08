@@ -9,9 +9,7 @@
     <string name="whitelist">ホワイトリスト</string>
     <string name="privacy_policy">プライバシー・ポリシー</string>
     <string name="add_to_whitelist">ホワイトリストに追加</string>
-    <string name="add">追加</string>
     <string name="cancel">キャンセル</string>
-    <string name="enter_file_name">ファイル /フォルダー名をホワイトリストに入力してください</string>
     <string name="clean">クリーン</string>
     <string name="analyze">分析</string>
     <string name="enable_generic_filter">汎用フィルターの使用</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">プロンプト・アクティビティー</string>
     <string name="corpse_summary">アプリケーションのアンインストール後に残されたファイル</string>
     <string name="corpse_title">残骸ファイルの削除</string>
-    <string name="defaultwhitelist">デフォルト</string>
     <string name="other">その他</string>
     <string name="daily_title">日次クリーニング</string>
     <string name="daily_sum">アプリケーションを開くことなく、毎日自動的に実行されます。 一部のデバイスでは、 OEM 制限により、バックグラウンドに残されていない場合には実行できません。</string>

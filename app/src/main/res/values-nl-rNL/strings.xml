@@ -9,9 +9,7 @@
     <string name="whitelist">Goedgekeurde lijst</string>
     <string name="privacy_policy">Privacybeleid</string>
     <string name="add_to_whitelist">Toevoegen aan goedgekeurde lijst</string>
-    <string name="add">Toevoegen</string>
     <string name="cancel">Annuleren</string>
-    <string name="enter_file_name">Geef de naam van het bestand of de map op in de goedgekeurde lijst</string>
     <string name="clean">Opschonen</string>
     <string name="analyze">Analyseren</string>
     <string name="enable_generic_filter">Generiek filter inschakelen</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">PromptActiviteit</string>
     <string name="corpse_summary">Bestanden over van niet geïnstalleerde apps</string>
     <string name="corpse_title">Dode bestanden verwijderen</string>
-    <string name="defaultwhitelist">Standaard</string>
     <string name="other">Andere</string>
     <string name="daily_title">Dagelijks schoon</string>
     <string name="daily_sum">Automatisch wordt dagelijks uitgevoerd, zonder dat u de app te openen. Zal niet werken op sommige apparaten, tenzij links open op de achtergrond als gevolg van OEM-beperkingen</string>

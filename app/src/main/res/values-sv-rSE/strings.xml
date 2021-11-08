@@ -9,9 +9,7 @@
     <string name="whitelist">Vitlista</string>
     <string name="privacy_policy">Privatpolicy</string>
     <string name="add_to_whitelist">Lägg till i vitlista</string>
-    <string name="add">Lägg till</string>
     <string name="cancel">Avbryt</string>
-    <string name="enter_file_name">Ange fil-/mappnamn till whitelist</string>
     <string name="clean">Rensning</string>
     <string name="analyze">Analysera</string>
     <string name="enable_generic_filter">Aktivera generiska filter</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">Promptaktivitet</string>
     <string name="corpse_summary">Filer som lämnas över från avinstallerade appar</string>
     <string name="corpse_title">Ta bort likfiler</string>
-    <string name="defaultwhitelist">Standard</string>
     <string name="other">Andra slag</string>
     <string name="daily_title">Dagligen rens</string>
     <string name="daily_sum">Kör automatiskt dagligen, utan att du behöver öppna appen. Kommer inte att fungera på vissa enheter om de inte lämnas öppna i bakgrunden på grund av OEM-begränsningar</string>

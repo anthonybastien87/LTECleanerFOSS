@@ -9,9 +9,7 @@
     <string name="whitelist">Esclusioni</string>
     <string name="privacy_policy">Politica sulla privacy</string>
     <string name="add_to_whitelist">Aggiungi alla lista delle esclusioni</string>
-    <string name="add">Aggiungi</string>
     <string name="cancel">Annulla</string>
-    <string name="enter_file_name">Inserisci il nome del file o della cartella da escludere</string>
     <string name="clean">Pulizia</string>
     <string name="analyze">Analisi</string>
     <string name="enable_generic_filter">Abilita filtro generico</string>
@@ -37,7 +35,6 @@
     <string name="title_activity_prompt">Richiesta attività</string>
     <string name="corpse_summary">File residui di app disinstallate</string>
     <string name="corpse_title">Elimina file obsoleti</string>
-    <string name="defaultwhitelist">Predefinito</string>
     <string name="other">Altro</string>
     <string name="daily_title">Pulizia Quotidiana</string>
     <string name="daily_sum">Viene eseguita automaticamente ogni giorno, anche con l\'app chiusa. Su alcuni dispositivi, a causa delle restrizioni imposte dal costruttore, potrebbe non funzionare a meno che l\'app non resti aperta in background</string>
