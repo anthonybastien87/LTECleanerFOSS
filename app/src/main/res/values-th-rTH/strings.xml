@@ -37,7 +37,7 @@
     <string name="corpse_title">ลบไฟล์ศพ</string>
     <string name="other">อื่นๆ</string>
     <string name="daily_title">ล้างข้อมูลรายวัน</string>
-    <string name="daily_sum">รันโดยอัตโนมัติทุกวันโดยคุณไม่ต้องเปิดแอ็พพลิเคชัน จะไม่ทำงานบนอุปกรณ์บางตัวยกเว้นเปิดอยู่ในพื้นหลังเนื่องจากข้อจำกัด OEM</string>
+    <string name="daily_sum">รันโดยอัตโนมัติทุกวันโดยคุณไม่ต้องเปิดแอ็พพลิเคชัน</string>
     <string name="other_apps">ตรวจสอบแอพอื่นๆของฉัน!</string>
     <string name="other_apps_sum">ฉันพยายามที่จะมีคนใหม่ออกทุกสัปดาห์หรือดังนั้น</string>
     <string name="permission_needed">ต้องการสิทธิ์!</string>
@@ -52,6 +52,16 @@
     <string name="double_check_title">การตรวจสอบสองครั้ง</string>
     <string name="notification_title">LTE Worker เสร็จสิ้นแล้ว</string>
     <string name="clean_notification">ทำความสะอาดแล้ว:</string>
+    <string name="empty_whitelist">ไม่มีสิ่งใดใน white list</string>
+    <string name="theme_sum">มิฉะนั้นจะติดตามการตั้งค่าระบบ รีสตาร์ทแอ็พเพื่อให้มีผลบังคับใช้</string>
+    <string name="theme_title">เลือกธีม</string>
+    <string name="filters_category_title">ตัวกรอง</string>
+    <string name="scanner_category_title">สแกนเนอร์</string>
+    <string name="links_category_title">ลิงก์</string>
+    <string name="settings_page_title">การตั้งค่า</string>
+    <string name="remove_from_whitelist">ลบออกจาก white listหรือไม่?</string>
+    <string name="delete">ลบ</string>
+    <string name="clipboard_clear_failed">ล้มเหลวในการลบคลิปบอร์ด</string>
     <string-array name="generic_filter_files">
         <item>. Tmp</item>
         <item>. Log</item>
@@ -90,5 +100,10 @@
         <item>นิ้วหัวแม่มือ?. Db</item>
         <item>.thumb[0-9]</item>
         <item>สาดมี</item>
+    </string-array>
+    <string-array name="themes">
+        <item>อัตโนมัติ</item>
+        <item>ไลท์</item>
+        <item>มืด</item>
     </string-array>
 </resources>
