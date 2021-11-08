@@ -37,7 +37,7 @@
     <string name="corpse_title">시체 파일 삭제하기</string>
     <string name="other">기타</string>
     <string name="daily_title">데일리 클린</string>
-    <string name="daily_sum">앱을 열 필요 없이 매일 자동으로 실행됩니다. OEM 제한사항으로 인해 백그라운드에서 열린 상태가 아니면 일부 장치에서 작동하지 않습니다.</string>
+    <string name="daily_sum">앱을 열 필요 없이 매일 자동으로 실행됩니다.</string>
     <string name="other_apps">다른 앱들을 확인해 보세요!</string>
     <string name="other_apps_sum">나는 매주 새로운 것을 가지려고 노력한다.</string>
     <string name="permission_needed">필요한 권한!</string>
@@ -52,6 +52,16 @@
     <string name="double_check_title">더블 체크 프로그램</string>
     <string name="notification_title">LTE 클린Worker 완료</string>
     <string name="clean_notification">정리:</string>
+    <string name="empty_whitelist">화이트리스트에 없는 것</string>
+    <string name="theme_sum">그렇지 않으면 시스템 설정을 따를 것입니다. 앱을 다시 시작하여 적용</string>
+    <string name="theme_title">테마 선택</string>
+    <string name="filters_category_title">필터</string>
+    <string name="scanner_category_title">스캐너</string>
+    <string name="links_category_title">링크</string>
+    <string name="settings_page_title">설정</string>
+    <string name="remove_from_whitelist">화이트리스트에서 제거하시겠습니까?</string>
+    <string name="delete">삭제</string>
+    <string name="clipboard_clear_failed">클립보드를 지우지 못했습니다.</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -90,5 +100,10 @@
         <item>엄지손가락? .db</item>
         <item>.엄지[0-9]</item>
         <item>splashad</item>
+    </string-array>
+    <string-array name="themes">
+        <item>자동</item>
+        <item>빛</item>
+        <item>암흑</item>
     </string-array>
 </resources>
