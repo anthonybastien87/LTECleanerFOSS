@@ -37,7 +37,7 @@
     <string name="corpse_title">Xoá tập tin xác chết</string>
     <string name="other">Khác</string>
     <string name="daily_title">Sạch hàng ngày</string>
-    <string name="daily_sum">Tự động chạy hàng ngày, không có bạn phải mở ứng dụng. Sẽ không làm việc trên một sô ́ thiết bị trư ̀ khi không được mở trong nền do hạn chê ́ OEM</string>
+    <string name="daily_sum">Tự động chạy hàng ngày, không có bạn phải mở ứng dụng.</string>
     <string name="other_apps">Kiểm tra các ứng dụng khác!</string>
     <string name="other_apps_sum">Mỗi tuần tôi lại có một người mới ra ngoài.</string>
     <string name="permission_needed">Cho phép!</string>
@@ -52,6 +52,16 @@
     <string name="double_check_title">Trình kiểm tra kép</string>
     <string name="notification_title">Công nhân sạch LTE kết thúc</string>
     <string name="clean_notification">Dọn dẹp:</string>
+    <string name="empty_whitelist">Không có gì trong trắng.</string>
+    <string name="theme_sum">Nếu không sẽ tuân theo thiết lập hệ thống Khởi động lại ứng dụng có hiệu lực</string>
+    <string name="theme_title">Chọn sắc thái</string>
+    <string name="filters_category_title">Bộ lọc</string>
+    <string name="scanner_category_title">Máy quét</string>
+    <string name="links_category_title">Liên kết</string>
+    <string name="settings_page_title">Thiết lập</string>
+    <string name="remove_from_whitelist">Rút khỏi danh sách trắng?</string>
+    <string name="delete">&amp; Xoá</string>
+    <string name="clipboard_clear_failed">Lỗi xóa bảng tạm</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -90,5 +100,10 @@
         <item>ngón tay cái? .db</item>
         <item>.ngón cái[0-9]</item>
         <item>Splenad</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Tự động</item>
+        <item>Ánh sáng</item>
+        <item>Đen</item>
     </string-array>
 </resources>
