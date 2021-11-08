@@ -37,7 +37,7 @@
     <string name="corpse_title">刪除屍體檔案</string>
     <string name="other">其他</string>
     <string name="daily_title">每日清除</string>
-    <string name="daily_sum">每日自動執行，而不需要開啟應用程式。 除非由於 OEM 限制而在背景中開啟，否則將不會在某些裝置上運作</string>
+    <string name="daily_sum">每日自動執行，而不需要開啟應用程式。</string>
     <string name="other_apps">移出我的其他應用程式！</string>
     <string name="other_apps_sum">我每周都試一次又一次</string>
     <string name="permission_needed">請求批准</string>
@@ -52,6 +52,16 @@
     <string name="double_check_title">雙重檢查程式</string>
     <string name="notification_title">LTE 清除工作者已完成</string>
     <string name="clean_notification">已清除：</string>
+    <string name="empty_whitelist">白名單中沒有任何項目</string>
+    <string name="theme_sum">否則將遵循系統設定。 重新啟動應用程式以生效</string>
+    <string name="theme_title">選取佈景主題</string>
+    <string name="filters_category_title">過濾器</string>
+    <string name="scanner_category_title">一種掃描器</string>
+    <string name="links_category_title">鏈結</string>
+    <string name="settings_page_title">設定</string>
+    <string name="remove_from_whitelist">從白名單中移除？</string>
+    <string name="delete">刪除</string>
+    <string name="clipboard_clear_failed">無法清除剪貼簿</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -90,5 +100,10 @@
         <item>thumbs？.db</item>
         <item>.thumb[0-9]</item>
         <item>斯潑斯哈德</item>
+    </string-array>
+    <string-array name="themes">
+        <item>自動</item>
+        <item>光明</item>
+        <item>黑暗</item>
     </string-array>
 </resources>
