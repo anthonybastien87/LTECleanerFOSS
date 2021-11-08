@@ -37,7 +37,7 @@
     <string name="corpse_title">Dode bestanden verwijderen</string>
     <string name="other">Andere</string>
     <string name="daily_title">Dagelijks schoon</string>
-    <string name="daily_sum">Automatisch wordt dagelijks uitgevoerd, zonder dat u de app te openen. Zal niet werken op sommige apparaten, tenzij links open op de achtergrond als gevolg van OEM-beperkingen</string>
+    <string name="daily_sum">Automatisch wordt dagelijks uitgevoerd, zonder dat u de app te openen.</string>
     <string name="other_apps">Bekijk mijn andere apps!</string>
     <string name="other_apps_sum">Ik probeer elke week een nieuwe uit te hebben.</string>
     <string name="permission_needed">Toestemming nodig!</string>
@@ -52,6 +52,16 @@
     <string name="double_check_title">Dubbele controle</string>
     <string name="notification_title">LTE Clean Worker Voltooid</string>
     <string name="clean_notification">Schoongemaakt:</string>
+    <string name="empty_whitelist">Niets in whitelist</string>
+    <string name="theme_sum">Volg anders de systeeminstellingen. App Opnieuw starten om van kracht te worden</string>
+    <string name="theme_title">Selecteer een thema</string>
+    <string name="filters_category_title">Filters</string>
+    <string name="scanner_category_title">Scanner</string>
+    <string name="links_category_title">Links</string>
+    <string name="settings_page_title">Instellingen</string>
+    <string name="remove_from_whitelist">Verwijderen uit whitelist?</string>
+    <string name="delete">Wissen</string>
+    <string name="clipboard_clear_failed">Wissen van klembord is mislukt</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -90,5 +100,10 @@
         <item>thumbs? .db</item>
         <item>.thumb[0-9]</item>
         <item>splashad</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Automatisch</item>
+        <item>Licht</item>
+        <item>Donker</item>
     </string-array>
 </resources>
