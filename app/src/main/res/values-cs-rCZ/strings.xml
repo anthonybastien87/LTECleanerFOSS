@@ -37,7 +37,7 @@
     <string name="corpse_title">Odstranit soubory mrtvol</string>
     <string name="other">Další</string>
     <string name="daily_title">Denní vyčištění</string>
-    <string name="daily_sum">Automaticky běží denně, aniž byste museli otevřít aplikaci. Nebude fungovat na některých zařízeních, pokud nebyla ponechána otevřená na pozadí kvůli omezením OEM</string>
+    <string name="daily_sum">Automaticky běží denně, aniž byste museli otevřít aplikaci.</string>
     <string name="other_apps">Podívejte se na moje další aplikace!</string>
     <string name="other_apps_sum">Snažím se mít nový každý týden, nebo tak.</string>
     <string name="permission_needed">Žádám o povolení!</string>
@@ -52,6 +52,16 @@
     <string name="double_check_title">Dvojitá kontrola</string>
     <string name="notification_title">Vyčištění LTE-dokončeno</string>
     <string name="clean_notification">Očištěné:</string>
+    <string name="empty_whitelist">Nic v seznamu povolených</string>
+    <string name="theme_sum">V opačném případě se řiďte systémovými nastaveními. Restartujte aplikaci, aby se projevila</string>
+    <string name="theme_title">Vybrat motiv</string>
+    <string name="filters_category_title">Filtry</string>
+    <string name="scanner_category_title">Skener</string>
+    <string name="links_category_title">Odkazy</string>
+    <string name="settings_page_title">NastaveníComment</string>
+    <string name="remove_from_whitelist">Odebrat ze seznamu povolených adres?</string>
+    <string name="delete">Odstranit</string>
+    <string name="clipboard_clear_failed">Nezdařilo se vymazat schránku</string>
     <string-array name="generic_filter_files">
         <item>.tmp.</item>
         <item>.log</item>
@@ -90,5 +100,10 @@
         <item>palce? .db</item>
         <item>.thumb[0-9]</item>
         <item>splashad</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Automatický</item>
+        <item>Světlé</item>
+        <item>Tmavé</item>
     </string-array>
 </resources>
