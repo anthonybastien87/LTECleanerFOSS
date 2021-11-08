@@ -37,7 +37,7 @@
     <string name="corpse_title">Eliminar archivos de cadáveres</string>
     <string name="other">Otros</string>
     <string name="daily_title">Limpieza diaria</string>
-    <string name="daily_sum">Se ejecuta automáticamente a diario, sin tener que abrir la aplicación. No funcionará en algunos dispositivos a menos que se deje abierto en segundo plano, debido a restricciones OEM</string>
+    <string name="daily_sum">Automáticamente se ejecuta diariamente, sin que tengas que abrir la aplicación.</string>
     <string name="other_apps">¡Eche un vistazo a mis otras aplicaciones!</string>
     <string name="other_apps_sum">Intento tener una nueva cada semana más o menos</string>
     <string name="permission_needed">¡Permiso necesario!</string>
@@ -52,6 +52,16 @@
     <string name="double_check_title">Doble verificador</string>
     <string name="notification_title">Trabajo del Limpiador LTE finalizado</string>
     <string name="clean_notification">Limpiado:</string>
+    <string name="empty_whitelist">Nada en lista blanca</string>
+    <string name="theme_sum">De lo contrario seguirá los valores del sistema. Reinicie la aplicación para que entre en vigor</string>
+    <string name="theme_title">Seleccione Tema</string>
+    <string name="filters_category_title">Filtros</string>
+    <string name="scanner_category_title">Escáner</string>
+    <string name="links_category_title">Enlaces</string>
+    <string name="settings_page_title">Configuración</string>
+    <string name="remove_from_whitelist">¿Eliminar de la lista blanca?</string>
+    <string name="delete">Suprimir</string>
+    <string name="clipboard_clear_failed">Error al borrar el portapapeles</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -90,5 +100,10 @@
         <item>¿miniaturas?.db</item>
         <item>.miniatura[0-9]</item>
         <item>splashad</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Auto</item>
+        <item>Luz</item>
+        <item>Oscuro</item>
     </string-array>
 </resources>
