@@ -37,7 +37,7 @@
     <string name="corpse_title">מחיקת קובצי גופה</string>
     <string name="other">אחר</string>
     <string name="daily_title">ניקוי יומי</string>
-    <string name="daily_sum">הרצה אוטומטית של כל יום, ללא צורך לפתוח את היישום. לא יפעל על התקנים מסוימים אלא אם כן יישאר פתוח ברקע בשל מגבלות OEM</string>
+    <string name="daily_sum">הרצה אוטומטית של כל יום, ללא צורך לפתוח את היישום.</string>
     <string name="other_apps">בדוק את האפליקציות האחרות שלי!</string>
     <string name="other_apps_sum">אני מנסה להוציא אחד חדש כל שבוע.</string>
     <string name="permission_needed">הרשאה דרושה!</string>
@@ -52,6 +52,16 @@
     <string name="double_check_title">בודק כפול</string>
     <string name="notification_title">עבודה נקייה של LTE הסתיימה</string>
     <string name="clean_notification">ניקוי:</string>
+    <string name="empty_whitelist">אין פריטים ברשימה הלבנה</string>
+    <string name="theme_sum">במקרים אחרים, בצעו את הגדרות המערכת. הפעלה מחדש של יישום לביצוע</string>
+    <string name="theme_title">בחירת ערכה</string>
+    <string name="filters_category_title">מסננים</string>
+    <string name="scanner_category_title">סורק</string>
+    <string name="links_category_title">קישורים</string>
+    <string name="settings_page_title">הגדרות</string>
+    <string name="remove_from_whitelist">לסלק מרשימת הרשימות?</string>
+    <string name="delete">מחיקה</string>
+    <string name="clipboard_clear_failed">כשל בלנקות את לוח הגזירים</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -90,5 +100,10 @@
         <item>אגודלים? .db</item>
         <item>.אגודל[0-9]</item>
         <item>ניתז</item>
+    </string-array>
+    <string-array name="themes">
+        <item>אוטומטי</item>
+        <item>אור</item>
+        <item>כהה</item>
     </string-array>
 </resources>
