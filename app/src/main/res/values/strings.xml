@@ -63,7 +63,6 @@
     <string name="delete">Delete</string>
     <string name="clipboard_clear_failed">Failed to clear clipboard</string>
 
-
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

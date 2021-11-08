@@ -366,9 +366,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void updateTheme() {
-        String selectedTheme = prefs.getString("theme","Auto");
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
         final String dark = getResources().getStringArray(R.array.themes)[2];
         final String light = getResources().getStringArray(R.array.themes)[1];
+        String selectedTheme = prefs.getString("theme",dark);
 
         if (dark.equals(selectedTheme)) { // dark
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);

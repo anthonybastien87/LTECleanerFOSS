@@ -116,7 +116,7 @@
         <ListPreference
             app:iconSpaceReserved="false"
             android:key="theme"
-            android:defaultValue="Auto"
+            android:defaultValue="Dark"
             android:entries="@array/themes"
             android:entryValues="@array/themes"
             android:summary="@string/theme_sum"
