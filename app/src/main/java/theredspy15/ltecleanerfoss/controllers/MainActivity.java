@@ -30,6 +30,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
 import androidx.viewbinding.BuildConfig;
 
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("LogConditional")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (prefs == null) updateTheme();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -66,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
         binding.whitelistBtn.setOnClickListener(this::whitelist);
         binding.analyzeBtn.setOnClickListener(this::analyze);
 
-        prefs = PreferenceManager.getDefaultSharedPreferences(this);
         WhitelistActivity.getWhiteList(prefs);
 
         loadAdData();
@@ -362,5 +363,17 @@ public class MainActivity extends AppCompatActivity {
     public final void prompt() {
         Intent intent = new Intent(this, PromptActivity.class);
         startActivity(intent);
+    }
+
+    public void updateTheme() {
+        String selectedTheme = prefs.getString("theme","Auto");
+        final String dark = getResources().getStringArray(R.array.themes)[2];
+        final String light = getResources().getStringArray(R.array.themes)[1];
+
+        if (dark.equals(selectedTheme)) { // dark
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else if (light.equals(selectedTheme)) { // light
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        } // auto
     }
 }
