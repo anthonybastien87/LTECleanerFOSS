@@ -31,14 +31,12 @@
         <activity
             android:exported="true"
             android:name="theredspy15.ltecleanerfoss.controllers.PromptActivity"
-            android:label="@string/title_activity_prompt"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_prompt" />
         <activity
             android:exported="true"
             android:name="theredspy15.ltecleanerfoss.controllers.WhitelistActivity"
             android:parentActivityName="theredspy15.ltecleanerfoss.controllers.SettingsActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/SettingsTheme" />
+            android:screenOrientation="unspecified" />
         <activity
             android:name="theredspy15.ltecleanerfoss.controllers.MainActivity"
             android:screenOrientation="portrait"
@@ -53,8 +51,7 @@
             android:exported="true"
             android:name="theredspy15.ltecleanerfoss.controllers.SettingsActivity"
             android:parentActivityName="theredspy15.ltecleanerfoss.controllers.MainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/SettingsTheme" />
+            android:screenOrientation="unspecified" />
         <receiver android:name="theredspy15.ltecleanerfoss.CleanReceiver"
             android:exported="false">
             <intent-filter>

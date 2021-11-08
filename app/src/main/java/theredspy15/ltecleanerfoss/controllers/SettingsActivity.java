@@ -38,7 +38,7 @@ public class SettingsActivity extends AppCompatActivity {
                 if (!checked) {
                     String[] filtersFiles = getResources().getStringArray(R.array.aggressive_filter_folders);
 
-                    AlertDialog alertDialog = new AlertDialog.Builder(requireContext(),R.style.MyAlertDialogTheme).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(requireContext()).create();
                     alertDialog.setTitle(getString(R.string.aggressive_filter_what_title));
                     alertDialog.setMessage(getString(R.string.adds_the_following)+" "+ Arrays.toString(filtersFiles));
                     alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",

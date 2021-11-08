@@ -2,31 +2,24 @@
   ~ Copyright 2020 Hunter J Drum
   -->
 
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColorSecondary">#B8B8B8</item>
-        <item name="android:textColorPrimary">#fff</item>
-    </style>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/legendary</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/legendary</item>
+        <item name="colorSecondaryVariant">@color/legendary</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
 
-    <!-- Settings theme. -->
-    <style name="SettingsTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="colorPrimary">@color/colorPrimaryDark</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColorSecondary">#B8B8B8</item>
-        <item name="android:textColorPrimary">#fff</item>
-    </style>
-
-    <!-- Alert Dialog -->
-    <style name="MyAlertDialogTheme" parent="Theme.AppCompat.Dialog.Alert">
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:colorBackground">@color/colorPrimaryDark</item>
-        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="CircleBackground">@color/rare</item>
+        <item name="Accents">@color/legendary</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

@@ -1,0 +1,25 @@
+<!--
+  ~ Copyright 2020 Hunter J Drum
+  -->
+
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorSecondary">#B8B8B8</item>
+        <item name="android:textColorPrimary">#fff</item>
+
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="Accents">@color/colorAccent</item>
+        <item name="CircleBackground">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>

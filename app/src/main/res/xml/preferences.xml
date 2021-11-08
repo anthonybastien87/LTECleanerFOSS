@@ -10,16 +10,6 @@
     android:key="settings"
     app:iconSpaceReserved="false">
 
-    <ListPreference
-        app:iconSpaceReserved="false"
-        android:key="theme"
-        android:defaultValue="Auto"
-        android:entries="@array/themes"
-        android:entryValues="@array/themes"
-        android:summary="Will otherwise follow system settings. Restart app to take effect"
-        android:persistent="true"
-        android:title="Select Theme" />
-
     <PreferenceCategory android:title="Links" app:iconSpaceReserved="false">
 
         <Preference android:title="@string/privacy_policy"
@@ -100,6 +90,15 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/other" app:iconSpaceReserved="false">
+        <ListPreference
+            app:iconSpaceReserved="false"
+            android:key="theme"
+            android:defaultValue="Auto"
+            android:entries="@array/themes"
+            android:entryValues="@array/themes"
+            android:summary="Will otherwise follow system settings. Restart app to take effect"
+            android:persistent="true"
+            android:title="Select Theme" />
         <CheckBoxPreference
             app:iconSpaceReserved="false"
             android:defaultValue="false"

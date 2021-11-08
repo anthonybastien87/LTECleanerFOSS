@@ -21,7 +21,6 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.res.ResourcesCompat;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -61,7 +60,6 @@ public class WhitelistActivity extends AppCompatActivity {
             for (String path : whiteList) {
                 Button button = new Button(this);
                 button.setText(path);
-                button.setTextColor(ResourcesCompat.getColor(getResources(), R.color.colorAccent, null));
                 button.setTextSize(18);
                 button.setAllCaps(false);
                 button.setOnClickListener(v -> removePath(path, button));
@@ -90,6 +88,7 @@ public class WhitelistActivity extends AppCompatActivity {
                 .setPositiveButton("Delete", (dialogInterface, which) -> {
                     dialogInterface.dismiss();
                     whiteList.remove(path);
+                    MainActivity.prefs.edit().putStringSet("whitelist", new HashSet<>(whiteList)).apply();
                     binding.pathsLayout.removeView(button);
                 })
                 .setNegativeButton(getString(R.string.cancel), (dialogInterface, which) -> dialogInterface.dismiss())
@@ -103,7 +102,7 @@ public class WhitelistActivity extends AppCompatActivity {
      */
     public final void emptyWhitelist(View view) {
 
-        new AlertDialog.Builder(WhitelistActivity.this,R.style.MyAlertDialogTheme)
+        new AlertDialog.Builder(WhitelistActivity.this)
                 .setTitle(R.string.reset_whitelist)
                 .setMessage(R.string.are_you_reset_whitelist)
                 .setPositiveButton(R.string.reset, (dialog, whichButton) -> {
@@ -145,7 +144,6 @@ public class WhitelistActivity extends AppCompatActivity {
     ActivityResultLauncher<Uri> mGetContent = registerForActivityResult(new ActivityResultContracts.OpenDocumentTree(),
             uri -> {
                 if (uri != null) {
-                    Toast.makeText(this, ""+uri.getPath(), Toast.LENGTH_LONG).show();
                     whiteList.add(uri.getPath().substring(uri.getPath().indexOf(":")+1)); // TODO create file from uri, then just add its path once sd card support is finished
                     MainActivity.prefs.edit().putStringSet("whitelist", new HashSet<>(whiteList)).apply();
                 }
