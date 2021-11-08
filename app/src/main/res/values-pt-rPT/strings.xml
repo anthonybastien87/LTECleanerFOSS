@@ -37,7 +37,7 @@
     <string name="corpse_title">Excluir arquivos de cadáver</string>
     <string name="other">Outro</string>
     <string name="daily_title">Limpeza Diária</string>
-    <string name="daily_sum">Executa automaticamente diariamente, sem que você tenha que abrir o app. Não funcionará em alguns dispositivos a menos que seja deixado em aberto em segundo plano devido a restrições de OEM</string>
+    <string name="daily_sum">Executa automaticamente diariamente, sem que você tenha que abrir o app.</string>
     <string name="other_apps">Confira os meus outros apps!</string>
     <string name="other_apps_sum">Eu tento ter um novo fora a cada semana ou mais</string>
     <string name="permission_needed">Permissão necessária!</string>
@@ -52,6 +52,16 @@
     <string name="double_check_title">Checador duplo</string>
     <string name="notification_title">LTE Trabalhador Limpo Concluído</string>
     <string name="clean_notification">Limpo:</string>
+    <string name="empty_whitelist">Nada em whitelist</string>
+    <string name="theme_sum">Caso contrário, seguirá configurações do sistema. Reiniciar app para fazer efeito</string>
+    <string name="theme_title">Selecionar Tema</string>
+    <string name="filters_category_title">Filtros</string>
+    <string name="scanner_category_title">Scanner</string>
+    <string name="links_category_title">Links</string>
+    <string name="settings_page_title">Configurações</string>
+    <string name="remove_from_whitelist">Remover do whitelist?</string>
+    <string name="delete">Excluir</string>
+    <string name="clipboard_clear_failed">Falha ao limpar a prancheta</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -90,5 +100,10 @@
         <item>polegar? .db</item>
         <item>.thumb[0-9]</item>
         <item>splastinha</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Auto</item>
+        <item>Luz</item>
+        <item>Escuro</item>
     </string-array>
 </resources>
