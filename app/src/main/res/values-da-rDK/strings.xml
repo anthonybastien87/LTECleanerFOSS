@@ -37,7 +37,7 @@
     <string name="corpse_title">Slet lig-filer</string>
     <string name="other">Andet</string>
     <string name="daily_title">Daglig ren</string>
-    <string name="daily_sum">Automatisk kører dagligt, uden at du skal åbne appen. Vil ikke arbejde på nogle enheder, medmindre venstre i baggrunden er åben på grund af OEM-begrænsninger</string>
+    <string name="daily_sum">Automatisk kører dagligt, uden at du skal åbne appen.</string>
     <string name="other_apps">Tjek mine andre apps!</string>
     <string name="other_apps_sum">Jeg prøver at få en ny ud hver uge eller sådan noget.</string>
     <string name="permission_needed">Tilladelse nødvendig!</string>
@@ -52,6 +52,16 @@
     <string name="double_check_title">Dobbelttekker</string>
     <string name="notification_title">LTE Clean Worker Finished</string>
     <string name="clean_notification">Rengøring:</string>
+    <string name="empty_whitelist">Intet i hvidlisten</string>
+    <string name="theme_sum">Vil ellers følge systemindstillingerne. Genstart applikation, der skal træde i kraft</string>
+    <string name="theme_title">Vælg tema</string>
+    <string name="filters_category_title">Filtre</string>
+    <string name="scanner_category_title">Scanner</string>
+    <string name="links_category_title">Link</string>
+    <string name="settings_page_title">Indstillinger</string>
+    <string name="remove_from_whitelist">Fjern fra hvidliste?</string>
+    <string name="delete">Slet</string>
+    <string name="clipboard_clear_failed">Kan ikke rydde udklipsholderen</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -90,5 +100,10 @@
         <item>tommelfingre? .db</item>
         <item>.Tomt[0-9]</item>
         <item>plashad</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Auto</item>
+        <item>Lys</item>
+        <item>Mørk</item>
     </string-array>
 </resources>
