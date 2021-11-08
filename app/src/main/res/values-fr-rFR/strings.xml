@@ -37,7 +37,7 @@
     <string name="corpse_title">Supprimer les fichiers de dépouille</string>
     <string name="other">Autres</string>
     <string name="daily_title">Nettoyage quotidien</string>
-    <string name="daily_sum">Exécuter automatiquement tous les jours, sans avoir à ouvrir l\'application. Ne fonctionne pas sur certains périphériques, sauf s\'il reste ouvert en arrière-plan en raison de restrictions OEM</string>
+    <string name="daily_sum">Exécuter automatiquement tous les jours, sans avoir à ouvrir l\'application.</string>
     <string name="other_apps">Regardez mes autres applications !</string>
     <string name="other_apps_sum">J\'essaie d\'en avoir une nouvelle chaque semaine.</string>
     <string name="permission_needed">Autorisation requise !</string>
@@ -52,6 +52,16 @@
     <string name="double_check_title">Vérificateur double</string>
     <string name="notification_title">Travailleur propre LTE terminé</string>
     <string name="clean_notification">Nettoyage:</string>
+    <string name="empty_whitelist">Rien dans la liste blanche</string>
+    <string name="theme_sum">Sinon, suivez les paramètres du système. Redémarrer l\'application pour qu\'il prenne effet</string>
+    <string name="theme_title">Sélectionner le thème</string>
+    <string name="filters_category_title">Filtres</string>
+    <string name="scanner_category_title">Scanner</string>
+    <string name="links_category_title">Liens</string>
+    <string name="settings_page_title">Paramètres</string>
+    <string name="remove_from_whitelist">Retirer de la liste blanche?</string>
+    <string name="delete">Supprimer</string>
+    <string name="clipboard_clear_failed">Impossible d\'effacer le presse-papiers</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -90,5 +100,10 @@
         <item>Pouces? .db</item>
         <item>.pouce[0-9]</item>
         <item>Splashad</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Auto</item>
+        <item>Lumière</item>
+        <item>Dark</item>
     </string-array>
 </resources>
