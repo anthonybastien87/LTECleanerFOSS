@@ -37,7 +37,7 @@
     <string name="corpse_title">Usuń ostałe pliki</string>
     <string name="other">Inne</string>
     <string name="daily_title">Czyszczenie codzienne</string>
-    <string name="daily_sum">Automatyczne uruchamianie codziennie, bez konieczności otwierania aplikacji. Nie będzie działać na niektórych urządzeniach, o ile nie zostanie otwarte w tle z powodu ograniczeń OEM</string>
+    <string name="daily_sum">Automatyczne uruchamianie codziennie, bez konieczności otwierania aplikacji.</string>
     <string name="other_apps">Sprawdź inne moje aplikacje!</string>
     <string name="other_apps_sum">Staram się mieć coś nowego raz na tydzień</string>
     <string name="permission_needed">Wymagane uprawnienie!</string>
@@ -52,6 +52,16 @@
     <string name="double_check_title">Podwójne sprawdzanie</string>
     <string name="notification_title">Czyszczenie procesu roboczego LTE zakończone</string>
     <string name="clean_notification">Oczyszczone:</string>
+    <string name="empty_whitelist">Nic w białej liście</string>
+    <string name="theme_sum">W przeciwnym razie będą następować ustawienia systemowe. Zrestartuj aplikację, aby rozpocząć działanie</string>
+    <string name="theme_title">Wybierz kompozycję</string>
+    <string name="filters_category_title">Filtry</string>
+    <string name="scanner_category_title">Skaner</string>
+    <string name="links_category_title">Odsyłacze</string>
+    <string name="settings_page_title">Ustawienia</string>
+    <string name="remove_from_whitelist">Czy usunąć z białej listy?</string>
+    <string name="delete">Usuń</string>
+    <string name="clipboard_clear_failed">Nie powiodło się skasowanie schowka</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -90,5 +100,10 @@
         <item>thumbs? .db</item>
         <item>.thumb[0-9]</item>
         <item>splashad</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Automatycznie</item>
+        <item>Światło</item>
+        <item>Ciemny</item>
     </string-array>
 </resources>
