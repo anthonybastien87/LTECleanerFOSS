@@ -37,7 +37,7 @@
     <string name="corpse_title">Ceset dosyalarını sil</string>
     <string name="other">Diğer</string>
     <string name="daily_title">Günlük Temiz</string>
-    <string name="daily_sum">Uygulamayı açmanıza gerek kalmadan her gün otomatik olarak çalışır. OEM kısıtlamaları nedeniyle arka planda açık bırakılmadıkça, bazı aygıtlar üzerinde çalışmayacaktır.</string>
+    <string name="daily_sum">Uygulamayı açmanıza gerek kalmadan her gün otomatik olarak çalışır.</string>
     <string name="other_apps">Diğer uygulamalarımı kontrol et!</string>
     <string name="other_apps_sum">Her hafta yeni bir tane yapmaya çalışıyorum.</string>
     <string name="permission_needed">İzin gerekli!</string>
@@ -52,6 +52,16 @@
     <string name="double_check_title">Çift Denetleyici</string>
     <string name="notification_title">LTE Clean Worker Bitti</string>
     <string name="clean_notification">Temizlendi:</string>
+    <string name="empty_whitelist">Beyaz liste içinde hiçbir şey yok</string>
+    <string name="theme_sum">Tersi durumda, sistem ayarları da izlenecektir. Etkiyi yürürlüğe almak için uygulamayı yeniden başlat</string>
+    <string name="theme_title">Tema Seçin</string>
+    <string name="filters_category_title">Süzgeçler</string>
+    <string name="scanner_category_title">Tarayıcı</string>
+    <string name="links_category_title">Bağlantılar</string>
+    <string name="settings_page_title">Ayarlar</string>
+    <string name="remove_from_whitelist">Beyaz listeden kaldırılsın mı?</string>
+    <string name="delete">Sil</string>
+    <string name="clipboard_clear_failed">Pano temizlenemedi</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -90,5 +100,10 @@
         <item>başparmak? .db</item>
         <item>.thumb[0-9]</item>
         <item>splass</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Otomatik</item>
+        <item>Açık</item>
+        <item>Koyu</item>
     </string-array>
 </resources>
