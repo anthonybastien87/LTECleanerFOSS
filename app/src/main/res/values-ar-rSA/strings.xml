@@ -37,7 +37,7 @@
     <string name="corpse_title">حذف الملفات الميتة</string>
     <string name="other">أخرى</string>
     <string name="daily_title">تنظيف يومي</string>
-    <string name="daily_sum">تشغيل تلقائي يوميا، بدون الحاجة إلى فتح التطبيق. لن تعمل على بعض الأجهزة ما لم تترك مفتوحة في الخلفية بسبب القيود المفروضة على المصنع</string>
+    <string name="daily_sum">يتم تشغيله آليا بطريقة يومية ، بدون أن يكون عليك فتح التطبيق.</string>
     <string name="other_apps">تحقق من التطبيقات الأخرى الخاصة بي !</string>
     <string name="other_apps_sum">أحاول أن يكون عندي واحد جديد كل إسبوع أو لذا</string>
     <string name="permission_needed">الإذن مطلوب!</string>
@@ -52,6 +52,16 @@
     <string name="double_check_title">الفحص المزدوج</string>
     <string name="notification_title">إنتهى عمل تطبيق منظف LTE</string>
     <string name="clean_notification">تم تنظيفه:</string>
+    <string name="empty_whitelist">لا شيء في البياض</string>
+    <string name="theme_sum">سيتم اتباع محددات النظام بطريقة أخرى. قم باعادة بدء التطبيق ليصبح فعال</string>
+    <string name="theme_title">اختيار نسق رئيسي</string>
+    <string name="filters_category_title">مرشحات</string>
+    <string name="scanner_category_title">وحدة المسح الضوئي</string>
+    <string name="links_category_title">وصلات</string>
+    <string name="settings_page_title">المحددات</string>
+    <string name="remove_from_whitelist">إزالة من البيضلي ؟</string>
+    <string name="delete">حذف</string>
+    <string name="clipboard_clear_failed">فشل في اخلاء المسودة</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.السجلات</item>
@@ -90,5 +100,10 @@
         <item>thumbs ؟ .db</item>
         <item>.مصغرة[0-9]</item>
         <item>متناثرة</item>
+    </string-array>
+    <string-array name="themes">
+        <item>آلي</item>
+        <item>خفيف</item>
+        <item>ظلام</item>
     </string-array>
 </resources>
