@@ -6,18 +6,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:weightSum="4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".controllers.MainActivity"
-    android:id="@+id/main_layout"
-    android:background="@color/colorPrimary">
+    android:id="@+id/main_layout">
+
+    <ScrollView
+        android:animateLayoutChanges="true"
+        android:layout_weight="2"
+        android:id="@+id/fileScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_view">
+
+        <LinearLayout
+            android:id="@+id/fileListView"
+            android:animateLayoutChanges="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:orientation="vertical" />
+    </ScrollView>
 
     <FrameLayout
         android:id="@+id/frameLayout"
         android:visibility="visible"
-        android:layout_weight="4"
+        android:layout_weight="2"
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -43,34 +63,8 @@
             android:textSize="30sp" />
     </FrameLayout>
 
-    <ScrollView
-        android:animateLayoutChanges="true"
-        android:layout_weight="4"
-        android:id="@+id/fileScrollView"
-        android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/rounded_view">
-
-        <LinearLayout
-            android:id="@+id/fileListView"
-            android:animateLayoutChanges="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
-            android:orientation="vertical" />
-    </ScrollView>
-
-    <Space
-        android:layout_weight="2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
     <TextView
+        android:visibility="gone"
         android:id="@+id/statusTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -86,31 +80,31 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <androidx.gridlayout.widget.GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
         android:layout_gravity="center|bottom"
         app:columnCount="4"
+        android:weightSum="4"
         app:rowCount="1">
 
         <com.google.android.material.button.MaterialButton
             style="?android:attr/borderlessButtonStyle"
             android:id="@+id/cleanBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_columnWeight="1"
             android:minWidth="0dp"
-            app:layout_rowWeight="1"
+            android:layout_weight="1"
             app:iconGravity="top"
             app:icon="@drawable/ic_baseline_cleaning_services_24"
             android:text="@string/clean" />
 
         <com.google.android.material.button.MaterialButton
             style="?android:attr/borderlessButtonStyle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
+            android:layout_weight="1"
             android:id="@+id/analyzeBtn"
             app:iconGravity="top"
             app:icon="@drawable/ic_baseline_search_24"
@@ -120,11 +114,10 @@
 
         <com.google.android.material.button.MaterialButton
             style="?android:attr/borderlessButtonStyle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/whitelistBtn"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
+            android:layout_weight="1"
             app:iconGravity="top"
             app:icon="@drawable/ic_baseline_list_24"
             android:text="@string/whitelist"
@@ -133,17 +126,16 @@
 
         <com.google.android.material.button.MaterialButton
             style="?android:attr/borderlessButtonStyle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_rowWeight="1"
+            android:layout_weight="1"
             android:id="@+id/settingsBtn"
-            app:layout_columnWeight="1"
             app:icon="@drawable/ic_baseline_settings_24"
             app:iconGravity="top"
             android:text="@string/settings_string"
             android:minWidth="0dp"
             app:backgroundTint="@android:color/transparent" />
 
-    </androidx.gridlayout.widget.GridLayout>
+    </LinearLayout>
 
 </LinearLayout>
