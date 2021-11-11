@@ -34,6 +34,7 @@
             android:name="theredspy15.ltecleanerfoss.controllers.PromptActivity"
             android:label="@string/title_activity_prompt" />
         <activity
+            android:label="@string/whitelist"
             android:exported="true"
             android:name="theredspy15.ltecleanerfoss.controllers.WhitelistActivity"
             android:parentActivityName="theredspy15.ltecleanerfoss.controllers.SettingsActivity"

@@ -72,7 +72,7 @@ public class WhitelistActivity extends AppCompatActivity {
                 drawable.setAlpha(30);
                 runOnUiThread(()->binding.pathsLayout.addView(button,layout));
             }
-        } else if (whiteList == null || whiteList.isEmpty()) {
+        } if (whiteList == null || whiteList.isEmpty()) {
             TextView textView = new TextView(this); // no news feeds selected
             textView.setText(R.string.empty_whitelist);
             textView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
