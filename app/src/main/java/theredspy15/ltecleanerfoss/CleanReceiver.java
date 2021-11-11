@@ -9,7 +9,7 @@ import android.os.SystemClock;
 
 public class CleanReceiver extends BroadcastReceiver {
     private static final int PERIOD = 86400000;
-    private static final int INITIAL_DELAY = 60000; // 60 seconds
+    private static final int INITIAL_DELAY = 3600000; // 60 seconds
 
     @Override
     public void onReceive(Context ctxt, Intent i) {
@@ -31,7 +31,7 @@ public class CleanReceiver extends BroadcastReceiver {
             pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_UPDATE_CURRENT);
         }
 
-        mgr.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, // TODO remove wakeup
+        mgr.setRepeating(AlarmManager.ELAPSED_REALTIME,
                 SystemClock.elapsedRealtime() + INITIAL_DELAY,
                 PERIOD, pi);
     }

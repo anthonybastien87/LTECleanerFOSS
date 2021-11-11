@@ -15,14 +15,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -95,42 +92,6 @@ public class WhitelistActivity extends AppCompatActivity {
                 .setNegativeButton(getString(R.string.cancel), (dialogInterface, which) -> dialogInterface.dismiss())
                 .build();
         mDialog.show();
-    }
-
-    /**
-     * Clears the whitelist, then sets it up again without loading saved one from stash
-     * @param view the view that is clicked
-     */
-    public final void emptyWhitelist(View view) {
-        new AlertDialog.Builder(WhitelistActivity.this)
-                .setTitle(R.string.reset_whitelist)
-                .setMessage(R.string.are_you_reset_whitelist)
-                .setPositiveButton(R.string.reset, (dialog, whichButton) -> {
-                    whiteList.clear();
-                    MainActivity.prefs.edit().putStringSet("whitelist", new HashSet<>(whiteList)).apply();
-                })
-                .setNegativeButton(R.string.cancel, (dialog, whichButton) -> { }).show();
-    }
-
-    public void addRecommended(View view) {
-        String externalDir = this.getExternalFilesDir(null).getPath();
-        externalDir = externalDir.substring(0, externalDir.indexOf("Android"));
-
-        if (!whiteList.contains(new File(externalDir, "Music").getPath())) {
-            whiteList.add(new File(externalDir, "Music").getPath());
-            whiteList.add(new File(externalDir, "Podcasts").getPath());
-            whiteList.add(new File(externalDir, "Ringtones").getPath());
-            whiteList.add(new File(externalDir, "Alarms").getPath());
-            whiteList.add(new File(externalDir, "Notifications").getPath());
-            whiteList.add(new File(externalDir, "Pictures").getPath());
-            whiteList.add(new File(externalDir, "Movies").getPath());
-            whiteList.add(new File(externalDir, "Download").getPath());
-            whiteList.add(new File(externalDir, "DCIM").getPath());
-            whiteList.add(new File(externalDir, "Documents").getPath());
-            MainActivity.prefs.edit().putStringSet("whitelist", new HashSet<>(whiteList)).apply();
-        } else
-            Toast.makeText(this, "Already added",
-                    Toast.LENGTH_LONG).show();
     }
 
     /**

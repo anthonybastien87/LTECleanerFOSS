@@ -67,7 +67,7 @@ public class ScheduledService extends JobIntentService {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             // Create the NotificationChannel, but only on API 26+ because
             // the NotificationChannel class is new and not in the support library
-            int importance = NotificationManager.IMPORTANCE_HIGH;
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
             NotificationChannel channel =
                     new NotificationChannel(CHANNEL_ID, VERBOSE_NOTIFICATION_CHANNEL_NAME, importance);
             channel.setDescription(VERBOSE_NOTIFICATION_CHANNEL_DESCRIPTION);
@@ -87,7 +87,7 @@ public class ScheduledService extends JobIntentService {
                 .setContentTitle(NOTIFICATION_TITLE)
                 .setContentText(message)
                 .setAutoCancel(true)
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setVibrate(new long[0]);
 
         // Show the notification
