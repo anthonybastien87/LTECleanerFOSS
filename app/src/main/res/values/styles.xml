@@ -18,7 +18,7 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
 
-        <item name="CircleBackground">@color/rare</item>
+        <item name="CircleBackground">#E6E6E6</item>
         <item name="Accents">@color/legendary</item>
     </style>
 
