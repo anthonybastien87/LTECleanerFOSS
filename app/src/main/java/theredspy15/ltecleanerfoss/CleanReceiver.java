@@ -8,7 +8,7 @@ import android.content.Intent;
 import android.os.SystemClock;
 
 public class CleanReceiver extends BroadcastReceiver {
-    private static final int PERIOD = (int) AlarmManager.INTERVAL_DAY;
+    private static final int PERIOD = 86400000;
     private static final int INITIAL_DELAY = 60000; // 60 seconds
 
     @Override
@@ -25,7 +25,11 @@ public class CleanReceiver extends BroadcastReceiver {
                 (AlarmManager) ctxt.getSystemService(Context.ALARM_SERVICE);
         Intent i = new Intent(ctxt, CleanReceiver.class);
         PendingIntent pi;
-        pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_UPDATE_CURRENT);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+            pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_IMMUTABLE);
+        } else {
+            pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_UPDATE_CURRENT);
+        }
 
         mgr.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, // TODO remove wakeup
                 SystemClock.elapsedRealtime() + INITIAL_DELAY,
@@ -37,8 +41,11 @@ public class CleanReceiver extends BroadcastReceiver {
                 (AlarmManager) ctxt.getSystemService(Context.ALARM_SERVICE);
         Intent i = new Intent(ctxt, CleanReceiver.class);
         PendingIntent pi;
-        pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_CANCEL_CURRENT);
-
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+            pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_IMMUTABLE);
+        } else {
+            pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_CANCEL_CURRENT);
+        }
         mgr.cancel(pi);
     }
 }
