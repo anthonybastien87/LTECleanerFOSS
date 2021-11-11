@@ -4,7 +4,6 @@
 
 package theredspy15.ltecleanerfoss.controllers;
 
-
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.ClipData;
@@ -31,7 +30,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
-import androidx.viewbinding.BuildConfig;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
@@ -42,6 +40,7 @@ import java.io.File;
 import java.text.DecimalFormat;
 
 import dev.shreyaspatil.MaterialDialog.MaterialDialog;
+import theredspy15.ltecleanerfoss.BuildConfig;
 import theredspy15.ltecleanerfoss.FileScanner;
 import theredspy15.ltecleanerfoss.R;
 import theredspy15.ltecleanerfoss.databinding.ActivityMainBinding;
@@ -74,11 +73,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadAdData() {
         String unitId;
-        if (BuildConfig.BUILD_TYPE.contentEquals("debug")) {
+        if (BuildConfig.DEBUG) {
             unitId = "ca-app-pub-3940256099942544/6300978111";
+            Toast.makeText(this, "Debug mode active", Toast.LENGTH_SHORT).show();
         } else {
             unitId = "ca-app-pub-5128547878021429/8516214533"; // production only!
-            Toast.makeText(this, "Debug mode active", Toast.LENGTH_SHORT).show();
         }
 
         MobileAds.initialize(this, initializationStatus -> { });
