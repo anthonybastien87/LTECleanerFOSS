@@ -283,7 +283,7 @@ public class MainActivity extends AppCompatActivity {
         return textView;
     }
 
-    public synchronized TextView displayText(String text) {
+    public synchronized void displayText(String text) {
         // creating and adding a text view to the scroll view with path to file
         TextView textView = printTextView(text, Color.YELLOW);
 
@@ -293,7 +293,6 @@ public class MainActivity extends AppCompatActivity {
         // scroll to bottom
         binding.fileScrollView.post(() -> binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
 
-        return textView;
     }
 
 
