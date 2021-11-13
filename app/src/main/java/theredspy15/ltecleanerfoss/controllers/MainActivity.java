@@ -363,9 +363,9 @@ public class MainActivity extends AppCompatActivity {
         final String light = getResources().getStringArray(R.array.themes)[1];
         String selectedTheme = prefs.getString("theme",dark);
 
-        if (dark.equals(selectedTheme)) { // dark
+        if (selectedTheme.equals(dark)) { // dark
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else if (light.equals(selectedTheme)) { // light
+        } else if (selectedTheme.equals(light)) { // light
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         } // auto
     }
