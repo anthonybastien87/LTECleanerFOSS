@@ -3,20 +3,20 @@
   ~ Copyright 2020 Hunter J Drum
   -->
 <resources>
-    <string name="app_name">LTE Cleaner</string>
-    <string name="delete_empty_folders">Delete empty folders</string>
-    <string name="aggressive_filter">Enable aggressive filter</string>
-    <string name="whitelist">Whitelist</string>
-    <string name="privacy_policy">Privacy Policy</string>
-    <string name="add_to_whitelist">Add to whitelist</string>
-    <string name="cancel">Cancel</string>
-    <string name="clean">Clean</string>
-    <string name="analyze">Analyze</string>
-    <string name="enable_generic_filter">Enable generic filter</string>
-    <string name="one_click_clean">One click clean</string>
-    <string name="freed">Freed: </string>
-    <string name="found">Found: </string>
-    <string name="auto_whitelist">Auto Whitelist</string>
+    <string name="app_name">LTE கிளீனர்</string>
+    <string name="delete_empty_folders">காலி கோப்புறைகளை நீக்கவும்</string>
+    <string name="aggressive_filter">சக்தி வாய்ந்த வடிகட்டியை இயக்கவும்</string>
+    <string name="whitelist">அனுமதிப்பட்டியல்</string>
+    <string name="privacy_policy">தனியுரிமை கொள்கை</string>
+    <string name="add_to_whitelist">அனுமதிப்பட்டியலில் சேர்க்கவும்</string>
+    <string name="cancel">ரத்து செய்</string>
+    <string name="clean">அழி</string>
+    <string name="analyze">ஆய்வு செய்</string>
+    <string name="enable_generic_filter">பொதுவான வடிகட்டியை இயக்கு</string>
+    <string name="one_click_clean">ஒரு கிளிக்கில் சுத்தம்</string>
+    <string name="freed">காலியாக்கப்பட்டது: </string>
+    <string name="found">கண்டறியப்பட்டது: </string>
+    <string name="auto_whitelist">தானியங்கு அனுமதிப்பட்டியல்</string>
     <string name="reset_whitelist">Empty whitelist?</string>
     <string name="are_you_reset_whitelist">Are you sure you want to clear the whitelist?</string>
     <string name="reset">Clear</string>
