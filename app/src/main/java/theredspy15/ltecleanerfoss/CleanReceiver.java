@@ -25,7 +25,11 @@ public class CleanReceiver extends BroadcastReceiver {
                 (AlarmManager) ctxt.getSystemService(Context.ALARM_SERVICE);
         Intent i = new Intent(ctxt, CleanReceiver.class);
         PendingIntent pi;
-        pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_UPDATE_CURRENT);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+            pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_IMMUTABLE);
+        } else {
+            pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_UPDATE_CURRENT);
+        }
 
         mgr.setRepeating(AlarmManager.ELAPSED_REALTIME,
                 SystemClock.elapsedRealtime() + INITIAL_DELAY,
@@ -37,8 +41,11 @@ public class CleanReceiver extends BroadcastReceiver {
                 (AlarmManager) ctxt.getSystemService(Context.ALARM_SERVICE);
         Intent i = new Intent(ctxt, CleanReceiver.class);
         PendingIntent pi;
-        pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_CANCEL_CURRENT);
-
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+            pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_IMMUTABLE);
+        } else {
+            pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_CANCEL_CURRENT);
+        }
         mgr.cancel(pi);
     }
 }

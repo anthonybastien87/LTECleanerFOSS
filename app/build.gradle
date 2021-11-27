@@ -46,12 +46,10 @@ android {
 }
 
 dependencies {
-    implementation "com.android.billingclient:billing:4.0.0"
-
     implementation 'dev.shreyaspatil.MaterialDialog:MaterialDialog:2.2.2'
     implementation 'com.airbnb.android:lottie:4.2.1'
 
-    implementation 'com.google.android.gms:play-services-ads:20.4.0'
+    implementation 'com.google.android.gms:play-services-ads:20.5.0'
     implementation platform('com.google.firebase:firebase-bom:28.4.1')
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-firestore'
