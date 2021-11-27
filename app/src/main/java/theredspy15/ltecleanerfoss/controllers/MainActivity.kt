@@ -119,6 +119,7 @@ class MainActivity : AppCompatActivity() {
     fun clean() {
         requestWriteExternalPermission()
         if (!FileScanner.isRunning) {
+            if (prefs == null) println("presssss is null")
             if (prefs!!.getBoolean("one_click", false)) // one-click disabled
             {
                 Thread { scan(true) }.start() // one-click enabled
@@ -240,7 +241,7 @@ class MainActivity : AppCompatActivity() {
      */
     fun displayDeletion(file: File): TextView {
         // creating and adding a text view to the scroll view with path to file
-        val textView = printTextView(file.absolutePath, resources.getColor(R.color.colorAccent))
+        val textView = printTextView(file.absolutePath, resources.getColor(R.color.colorAccent,resources.newTheme()))
 
         // adding to scroll view
         runOnUiThread { binding!!.fileListView.addView(textView) }
@@ -326,9 +327,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateTheme() {
+        prefs = PreferenceManager.getDefaultSharedPreferences(this)
         val dark = resources.getStringArray(R.array.themes)[2]
         val light = resources.getStringArray(R.array.themes)[1]
-        val selectedTheme = PreferenceManager.getDefaultSharedPreferences(this).getString("theme", dark)
+        val selectedTheme = prefs!!.getString("theme", dark)
         if (selectedTheme == dark) { // dark
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         } else if (selectedTheme == light) { // light

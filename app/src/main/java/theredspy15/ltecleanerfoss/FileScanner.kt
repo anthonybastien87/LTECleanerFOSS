@@ -63,7 +63,7 @@ class FileScanner(private val path: File, context: Context?) {
      * @return true if is the file is in the white list, false if not
      */
     private fun isWhiteListed(file: File): Boolean {
-        for (path in WhitelistActivity.getWhiteList(prefs)!!) when {
+        for (path in WhitelistActivity.getWhiteList(prefs)) when {
             path.equals(file.absolutePath, ignoreCase = true) ||
                     path.equals(file.name, ignoreCase = true) -> return true
         }
@@ -79,10 +79,10 @@ class FileScanner(private val path: File, context: Context?) {
         protectedFileList.forEach { protectedFile ->
             if (file.name.lowercase(Locale.getDefault()).contains(protectedFile) &&
                 !WhitelistActivity.getWhiteList(prefs)
-                    ?.contains(file.absolutePath.lowercase(Locale.getDefault()))!!
+                    .contains(file.absolutePath.lowercase(Locale.getDefault()))
             ) {
                 WhitelistActivity.getWhiteList(prefs)
-                    ?.toMutableList()?.add(file.absolutePath.lowercase(Locale.getDefault()))
+                    .toMutableList().add(file.absolutePath.lowercase(Locale.getDefault()))
                 prefs
                     .edit()
                     .putStringSet("whitelist", HashSet(WhitelistActivity.getWhiteList(prefs)))

@@ -76,7 +76,7 @@ class WhitelistActivity : AppCompatActivity() {
             .setCancelable(false)
             .setPositiveButton(getString(R.string.delete)) { dialogInterface: DialogInterface, _: Int ->
                 dialogInterface.dismiss()
-                whiteList!!.remove(path)
+                whiteList.remove(path)
                 MainActivity.prefs!!.edit().putStringSet("whitelist", HashSet(whiteList)).apply()
                 binding!!.pathsLayout.removeView(button)
             }
@@ -96,7 +96,7 @@ class WhitelistActivity : AppCompatActivity() {
         OpenDocumentTree()
     ) { uri: Uri? ->
         if (uri != null) {
-            whiteList!!.add(uri.path!!.substring(uri.path!!.indexOf(":") + 1)) // TODO create file from uri, then just add its path once sd card support is finished
+            whiteList.add(uri.path!!.substring(uri.path!!.indexOf(":") + 1)) // TODO create file from uri, then just add its path once sd card support is finished
             MainActivity.prefs!!.edit().putStringSet("whitelist", HashSet(whiteList)).apply()
             loadViews()
         }

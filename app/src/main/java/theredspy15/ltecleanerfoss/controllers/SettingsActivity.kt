@@ -1,72 +1,66 @@
 /*
  * Copyright 2021 Hunter J Drum
  */
+package theredspy15.ltecleanerfoss.controllers
 
-package theredspy15.ltecleanerfoss.controllers;
+import android.content.DialogInterface
+import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.CheckBoxPreference
+import androidx.preference.Preference
+import androidx.preference.PreferenceFragmentCompat
+import theredspy15.ltecleanerfoss.CleanReceiver.Companion.cancelAlarm
+import theredspy15.ltecleanerfoss.CleanReceiver.Companion.scheduleAlarm
+import theredspy15.ltecleanerfoss.R
 
-import android.os.Bundle;
-
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.preference.CheckBoxPreference;
-import androidx.preference.PreferenceFragmentCompat;
-
-import java.util.Arrays;
-
-import theredspy15.ltecleanerfoss.CleanReceiver;
-import theredspy15.ltecleanerfoss.R;
-
-public class SettingsActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
-
-        getSupportFragmentManager().beginTransaction().replace(R.id.layout, new MyPreferenceFragment()).commit();
+class SettingsActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_settings)
+        supportFragmentManager.beginTransaction().replace(R.id.layout, MyPreferenceFragment())
+            .commit()
     }
 
-    public static class MyPreferenceFragment extends PreferenceFragmentCompat {
-        @Override
-        public void onCreate(final Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            this.setHasOptionsMenu(true);
-
-            findPreference("aggressive").setOnPreferenceChangeListener((preference, newValue) -> {
-                boolean checked = ((CheckBoxPreference) preference).isChecked();
-                if (!checked) {
-                    String[] filtersFiles = getResources().getStringArray(R.array.aggressive_filter_folders);
-
-                    AlertDialog alertDialog = new AlertDialog.Builder(requireContext()).create();
-                    alertDialog.setTitle(getString(R.string.aggressive_filter_what_title));
-                    alertDialog.setMessage(getString(R.string.adds_the_following)+" "+ Arrays.toString(filtersFiles));
-                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
-                            (dialog, which) -> dialog.dismiss());
-                    alertDialog.show();
+    class MyPreferenceFragment : PreferenceFragmentCompat() {
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            setHasOptionsMenu(true)
+            findPreference<Preference>("aggressive")!!.onPreferenceChangeListener =
+                Preference.OnPreferenceChangeListener { preference: Preference, _: Any? ->
+                    val checked = (preference as CheckBoxPreference).isChecked
+                    if (!checked) {
+                        val filtersFiles =
+                            resources.getStringArray(R.array.aggressive_filter_folders)
+                        val alertDialog = AlertDialog.Builder(requireContext()).create()
+                        alertDialog.setTitle(getString(R.string.aggressive_filter_what_title))
+                        alertDialog.setMessage(
+                            getString(R.string.adds_the_following) + " " + filtersFiles.contentToString()
+                        )
+                        alertDialog.setButton(
+                            AlertDialog.BUTTON_NEUTRAL, "OK"
+                        ) { dialog: DialogInterface, _: Int -> dialog.dismiss() }
+                        alertDialog.show()
+                    }
+                    true
                 }
-
-                return true;
-            });
-
-            findPreference("dailyclean").setOnPreferenceChangeListener((preference, newValue) -> {
-                boolean checked = ((CheckBoxPreference) preference).isChecked();
-                if (!checked) {
-                    CleanReceiver.scheduleAlarm(requireContext().getApplicationContext());
-                } else {
-                    CleanReceiver.cancelAlarm(requireContext().getApplicationContext());
+            findPreference<Preference>("dailyclean")!!.onPreferenceChangeListener =
+                Preference.OnPreferenceChangeListener { preference: Preference, _: Any? ->
+                    val checked = (preference as CheckBoxPreference).isChecked
+                    if (!checked) {
+                        scheduleAlarm(requireContext().applicationContext)
+                    } else {
+                        cancelAlarm(requireContext().applicationContext)
+                    }
+                    true
                 }
-
-                return true;
-            });
         }
 
         /**
          * Inflate Preferences
          */
-        @Override
-        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-            addPreferencesFromResource(R.xml.preferences);
+        override fun onCreatePreferences(savedInstanceState: Bundle, rootKey: String) {
+            addPreferencesFromResource(R.xml.preferences)
         }
     }
 }
