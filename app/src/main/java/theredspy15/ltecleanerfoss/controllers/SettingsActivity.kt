@@ -59,7 +59,7 @@ class SettingsActivity : AppCompatActivity() {
         /**
          * Inflate Preferences
          */
-        override fun onCreatePreferences(savedInstanceState: Bundle, rootKey: String) {
+        override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             addPreferencesFromResource(R.xml.preferences)
         }
     }
