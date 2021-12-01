@@ -116,10 +116,11 @@ class FileScanner(private val path: File, context: Context?) {
                 if (file.isDirectory && isDirectoryEmpty(file) && emptyDir) return true
 
                 // file
-                for (filter in filters) when {
-                    file.absolutePath
-                        .lowercase(Locale.getDefault())
-                        .matches(filter.lowercase(Locale.getDefault()).toRegex()) -> return true
+                val filterIterator = filters.iterator()
+                while (filterIterator.hasNext()) {
+                    val filter = filterIterator.next()
+                    if (file.absolutePath.lowercase(Locale.getDefault()).matches(filter.lowercase(Locale.getDefault()).toRegex()))
+                        return true
                 }
             }
         } catch (e: NullPointerException) {
