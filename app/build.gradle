@@ -11,7 +11,7 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion 31
     defaultConfig {
-        applicationId "theredspy15.ltecleanerfoss"
+        applicationId "theredspy15.ltecleanerfosspro"
         minSdkVersion 23
         targetSdkVersion 31
         versionCode 60

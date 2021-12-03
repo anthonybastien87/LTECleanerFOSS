@@ -1,7 +1,7 @@
 /*
  * Copyright 2021 Hunter J Drum
  */
-package theredspy15.ltecleanerfoss.controllers
+package theredspy15.ltecleanerfosspro.controllers
 
 import android.content.SharedPreferences
 import android.graphics.Color
@@ -18,8 +18,8 @@ import androidx.activity.result.contract.ActivityResultContracts.OpenDocumentTre
 import androidx.appcompat.app.AppCompatActivity
 import dev.shreyaspatil.MaterialDialog.MaterialDialog
 import dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface
-import theredspy15.ltecleanerfoss.R
-import theredspy15.ltecleanerfoss.databinding.ActivityWhitelistBinding
+import theredspy15.ltecleanerfosspro.R
+import theredspy15.ltecleanerfosspro.databinding.ActivityWhitelistBinding
 import java.util.*
 import kotlin.collections.ArrayList
 

@@ -1,4 +1,4 @@
-package theredspy15.ltecleanerfoss
+package theredspy15.ltecleanerfosspro
 
 import android.app.AlarmManager
 import android.app.PendingIntent
@@ -7,7 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.SystemClock
-import theredspy15.ltecleanerfoss.ScheduledService.Companion.enqueueWork
+import theredspy15.ltecleanerfosspro.ScheduledService.Companion.enqueueWork
 
 class CleanReceiver : BroadcastReceiver() {
     override fun onReceive(ctxt: Context, i: Intent) {

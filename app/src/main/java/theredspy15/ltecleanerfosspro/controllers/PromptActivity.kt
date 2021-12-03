@@ -1,7 +1,7 @@
 /*
  * Copyright 2020 Hunter J Drum
  */
-package theredspy15.ltecleanerfoss.controllers
+package theredspy15.ltecleanerfosspro.controllers
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,7 +10,7 @@ import android.widget.Button
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
 import androidx.appcompat.app.AppCompatActivity
-import theredspy15.ltecleanerfoss.R
+import theredspy15.ltecleanerfosspro.R
 import kotlin.system.exitProcess
 
 class PromptActivity : AppCompatActivity() {

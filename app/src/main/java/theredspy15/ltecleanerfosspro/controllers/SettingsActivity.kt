@@ -1,7 +1,7 @@
 /*
  * Copyright 2021 Hunter J Drum
  */
-package theredspy15.ltecleanerfoss.controllers
+package theredspy15.ltecleanerfosspro.controllers
 
 import android.content.DialogInterface
 import android.os.Bundle
@@ -10,9 +10,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.CheckBoxPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
-import theredspy15.ltecleanerfoss.CleanReceiver.Companion.cancelAlarm
-import theredspy15.ltecleanerfoss.CleanReceiver.Companion.scheduleAlarm
-import theredspy15.ltecleanerfoss.R
+import theredspy15.ltecleanerfosspro.CleanReceiver.Companion.cancelAlarm
+import theredspy15.ltecleanerfosspro.CleanReceiver.Companion.scheduleAlarm
+import theredspy15.ltecleanerfosspro.R
 
 class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

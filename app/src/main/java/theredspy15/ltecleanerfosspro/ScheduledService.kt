@@ -1,4 +1,4 @@
-package theredspy15.ltecleanerfoss
+package theredspy15.ltecleanerfosspro
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -10,7 +10,7 @@ import androidx.core.app.JobIntentService
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.preference.PreferenceManager
-import theredspy15.ltecleanerfoss.controllers.MainActivity.Companion.convertSize
+import theredspy15.ltecleanerfosspro.controllers.MainActivity.Companion.convertSize
 
 class ScheduledService : JobIntentService() {
     public override fun onHandleWork(i: Intent) {

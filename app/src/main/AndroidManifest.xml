@@ -6,7 +6,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:installLocation="auto"
-    package="theredspy15.ltecleanerfoss">
+    package="theredspy15.ltecleanerfosspro">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -34,17 +34,17 @@
             android:value="ca-app-pub-5128547878021429~1249782813"/>
         <activity
             android:exported="true"
-            android:name="theredspy15.ltecleanerfoss.controllers.PromptActivity"
+            android:name="theredspy15.ltecleanerfosspro.controllers.PromptActivity"
             android:label="@string/title_activity_prompt" />
         <activity
             android:label="@string/whitelist"
             android:exported="true"
-            android:name="theredspy15.ltecleanerfoss.controllers.WhitelistActivity"
-            android:parentActivityName="theredspy15.ltecleanerfoss.controllers.SettingsActivity"
+            android:name="theredspy15.ltecleanerfosspro.controllers.WhitelistActivity"
+            android:parentActivityName="theredspy15.ltecleanerfosspro.controllers.SettingsActivity"
             android:screenOrientation="unspecified" />
         <activity
             android:theme="@style/AppTheme.NoActionBar"
-            android:name="theredspy15.ltecleanerfoss.controllers.MainActivity"
+            android:name="theredspy15.ltecleanerfosspro.controllers.MainActivity"
             android:screenOrientation="unspecified"
             android:exported="true">
             <intent-filter>
@@ -55,10 +55,10 @@
         </activity>
         <activity
             android:exported="true"
-            android:name="theredspy15.ltecleanerfoss.controllers.SettingsActivity"
-            android:parentActivityName="theredspy15.ltecleanerfoss.controllers.MainActivity"
+            android:name="theredspy15.ltecleanerfosspro.controllers.SettingsActivity"
+            android:parentActivityName="theredspy15.ltecleanerfosspro.controllers.MainActivity"
             android:screenOrientation="unspecified" />
-        <receiver android:name="theredspy15.ltecleanerfoss.CleanReceiver"
+        <receiver android:name="theredspy15.ltecleanerfosspro.CleanReceiver"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -66,7 +66,7 @@
         </receiver>
 
         <service
-            android:name="theredspy15.ltecleanerfoss.ScheduledService"
+            android:name="theredspy15.ltecleanerfosspro.ScheduledService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
     </application>
 

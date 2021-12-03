@@ -1,7 +1,7 @@
 /*
  * Copyright 2020 Hunter J Drum
  */
-package theredspy15.ltecleanerfoss.controllers
+package theredspy15.ltecleanerfosspro.controllers
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -29,9 +29,9 @@ import androidx.core.app.ActivityCompat
 import androidx.preference.PreferenceManager
 import dev.shreyaspatil.MaterialDialog.MaterialDialog
 import dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface
-import theredspy15.ltecleanerfoss.FileScanner
-import theredspy15.ltecleanerfoss.R
-import theredspy15.ltecleanerfoss.databinding.ActivityMainBinding
+import theredspy15.ltecleanerfosspro.FileScanner
+import theredspy15.ltecleanerfosspro.R
+import theredspy15.ltecleanerfosspro.databinding.ActivityMainBinding
 import java.io.File
 import java.text.DecimalFormat
 

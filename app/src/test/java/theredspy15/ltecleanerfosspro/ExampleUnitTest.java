@@ -2,7 +2,7 @@
  * Copyright 2020 Hunter J Drum
  */
 
-package theredspy15.ltecleanerfoss;
+package theredspy15.ltecleanerfosspro;
 
 import org.junit.Test;
 import static junit.framework.Assert.assertEquals;
