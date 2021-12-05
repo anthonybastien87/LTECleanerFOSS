@@ -263,9 +263,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Increments amount removed, then creates a text view to add to the scroll view.
-     * If there is any error while deleting, turns text view of path red
-     * @param file file to delete
+     * Displaying text for files that have been removed
      */
     fun displayDeletion(file: File): TextView {
         // creating and adding a text view to the scroll view with path to file
@@ -279,6 +277,9 @@ class MainActivity : AppCompatActivity() {
         return textView
     }
 
+    /**
+     * Displays generic text
+     */
     fun displayText(text: String) {
         // creating and adding a text view to the scroll view with path to file
         val textView = quickTextView(text, Color.YELLOW)

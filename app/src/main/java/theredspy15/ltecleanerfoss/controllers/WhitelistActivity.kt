@@ -50,8 +50,15 @@ class WhitelistActivity : AppCompatActivity() {
             ViewGroup.LayoutParams.MATCH_PARENT
         )
         layout.setMargins(0, 20, 0, 20)
-        if (whiteList != null) {
-            for (path in whiteList!!) {
+
+        if (whiteList.isEmpty()) {
+            val textView = TextView(this) // no news feeds selected
+            textView.setText(R.string.empty_whitelist)
+            textView.textAlignment = View.TEXT_ALIGNMENT_CENTER
+            textView.textSize = 18f
+            runOnUiThread { binding!!.pathsLayout.addView(textView, layout) }
+        } else {
+            for (path in whiteList) {
                 val button = Button(this)
                 button.text = path
                 button.textSize = 18f
@@ -65,13 +72,6 @@ class WhitelistActivity : AppCompatActivity() {
                 drawable.alpha = 30
                 runOnUiThread { binding!!.pathsLayout.addView(button, layout) }
             }
-        }
-        if (whiteList == null || whiteList!!.isEmpty()) {
-            val textView = TextView(this) // no news feeds selected
-            textView.setText(R.string.empty_whitelist)
-            textView.textAlignment = View.TEXT_ALIGNMENT_CENTER
-            textView.textSize = 18f
-            runOnUiThread { binding!!.pathsLayout.addView(textView, layout) }
         }
     }
 
