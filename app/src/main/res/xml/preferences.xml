@@ -15,8 +15,6 @@
         <Preference android:title="@string/remove_ads_title"
             android:key="removeads"
             app:iconSpaceReserved="false">
-            <intent android:action="android.intent.action.VIEW"
-                android:data="https://play.google.com/store/apps/details?id=theredspy15.ltecleanerfosspro" />
         </Preference>
 
         <Preference android:title="@string/privacy_policy"

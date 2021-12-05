@@ -4,16 +4,28 @@
 package theredspy15.ltecleanerfoss.controllers
 
 import android.content.DialogInterface
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.CheckBoxPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.analytics.ktx.analytics
 import com.google.firebase.crashlytics.FirebaseCrashlytics
+import com.google.firebase.ktx.Firebase
 import theredspy15.ltecleanerfoss.CleanReceiver.Companion.cancelAlarm
 import theredspy15.ltecleanerfoss.CleanReceiver.Companion.scheduleAlarm
 import theredspy15.ltecleanerfoss.R
+
+
+
+
+
+
 
 class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,6 +70,22 @@ class SettingsActivity : AppCompatActivity() {
                     }
                     true
                 }
+            findPreference<Preference>("removeads")!!.setOnPreferenceClickListener {
+                Toast.makeText(requireContext(),"clicked",Toast.LENGTH_LONG).show()
+
+                val firebaseAnalytics = Firebase.analytics
+                val bundle = Bundle()
+                bundle.putString(FirebaseAnalytics.Param.PROMOTION_ID, "115")
+                bundle.putString(FirebaseAnalytics.Param.PROMOTION_NAME, "lte_pro")
+                firebaseAnalytics.logEvent(FirebaseAnalytics.Event.VIEW_PROMOTION, bundle)
+
+                val url = "https://play.google.com/store/apps/details?id=theredspy15.ltecleanerfosspro"
+                val i = Intent(Intent.ACTION_VIEW)
+                i.data = Uri.parse(url)
+                startActivity(i)
+
+                true
+            }
         }
 
         /**
