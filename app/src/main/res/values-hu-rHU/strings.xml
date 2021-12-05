@@ -52,6 +52,19 @@
     <string name="double_check_title">Double Checker</string>
     <string name="notification_title">LTE Clean Worker Finished</string>
     <string name="clean_notification">Cleaned:</string>
+    <string name="empty_whitelist">Nothing in whitelist</string>
+    <string name="theme_sum">Will otherwise follow system settings. Restart app to take effect</string>
+    <string name="theme_title">Select Theme</string>
+    <string name="filters_category_title">Filters</string>
+    <string name="scanner_category_title">Scanner</string>
+    <string name="links_category_title">Links</string>
+    <string name="settings_page_title">Settings</string>
+    <string name="remove_from_whitelist">Remove from whitelist?</string>
+    <string name="delete">Delete</string>
+    <string name="clipboard_clear_failed">Failed to clear clipboard</string>
+    <string name="settings_notification_name">Daily Cleaner Notification</string>
+    <string name="settings_notification_sum">Shows notification of how much data was cleaned daily</string>
+    <string name="remove_ads_title">Remove Advertisements</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -90,5 +103,10 @@
         <item>thumbs?.db</item>
         <item>.thumb[0-9]</item>
         <item>splashad</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Auto</item>
+        <item>Light</item>
+        <item>Dark</item>
     </string-array>
 </resources>
