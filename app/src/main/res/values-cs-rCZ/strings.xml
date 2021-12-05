@@ -62,9 +62,9 @@
     <string name="remove_from_whitelist">Odebrat ze seznamu povolených adres?</string>
     <string name="delete">Odstranit</string>
     <string name="clipboard_clear_failed">Nezdařilo se vymazat schránku</string>
-    <string name="settings_notification_name">Daily Cleaner Notification</string>
-    <string name="settings_notification_sum">Shows notification of how much data was cleaned daily</string>
-    <string name="remove_ads_title">Remove Advertisements</string>
+    <string name="settings_notification_name">Denní oznámení čisticího modulu</string>
+    <string name="settings_notification_sum">Zobrazí oznámení o tom, kolik dat bylo vyčištěno denně</string>
+    <string name="remove_ads_title">Odebrat inzeráty</string>
     <string-array name="generic_filter_files">
         <item>.tmp.</item>
         <item>.log</item>
