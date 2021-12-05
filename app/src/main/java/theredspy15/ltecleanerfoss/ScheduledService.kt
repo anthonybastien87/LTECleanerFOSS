@@ -10,11 +10,14 @@ import androidx.core.app.JobIntentService
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.preference.PreferenceManager
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import theredspy15.ltecleanerfoss.controllers.MainActivity.Companion.convertSize
 
 class ScheduledService : JobIntentService() {
     public override fun onHandleWork(i: Intent) {
         try {
+            FirebaseCrashlytics.getInstance().log("Beginning background clean")
+
             val path = Environment.getExternalStorageDirectory()
             val prefs = PreferenceManager.getDefaultSharedPreferences(
                 applicationContext
@@ -41,7 +44,9 @@ class ScheduledService : JobIntentService() {
                     kilobytesTotal
                 )
             makeStatusNotification(title, applicationContext)
+            FirebaseCrashlytics.getInstance().log("Finished background clean")
         } catch (e: Exception) {
+            FirebaseCrashlytics.getInstance().recordException(e);
             makeStatusNotification(e.toString(), applicationContext)
         }
     }

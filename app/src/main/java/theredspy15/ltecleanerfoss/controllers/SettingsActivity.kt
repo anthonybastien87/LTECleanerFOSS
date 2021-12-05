@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.CheckBoxPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import theredspy15.ltecleanerfoss.CleanReceiver.Companion.cancelAlarm
 import theredspy15.ltecleanerfoss.CleanReceiver.Companion.scheduleAlarm
 import theredspy15.ltecleanerfoss.R
@@ -18,6 +19,9 @@ class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
+
+        FirebaseCrashlytics.getInstance().log("Displaying settings activity")
+
         supportFragmentManager.beginTransaction().replace(R.id.layout, MyPreferenceFragment())
             .commit()
     }

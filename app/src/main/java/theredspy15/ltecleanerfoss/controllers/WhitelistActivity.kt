@@ -16,6 +16,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts.OpenDocumentTree
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dev.shreyaspatil.MaterialDialog.MaterialDialog
 import dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface
 import theredspy15.ltecleanerfoss.R
@@ -28,6 +29,9 @@ class WhitelistActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_whitelist)
+
+        FirebaseCrashlytics.getInstance().log("Displaying whitelist activity")
+
         binding = ActivityWhitelistBinding.inflate(
             layoutInflater
         )
@@ -38,6 +42,8 @@ class WhitelistActivity : AppCompatActivity() {
     }
 
     private fun loadViews() {
+        FirebaseCrashlytics.getInstance().log("Loading whitelist views")
+
         binding!!.pathsLayout.removeAllViews()
         val layout = LinearLayout.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT,
@@ -79,6 +85,8 @@ class WhitelistActivity : AppCompatActivity() {
                 whiteList.remove(path)
                 MainActivity.prefs!!.edit().putStringSet("whitelist", HashSet(whiteList)).apply()
                 binding!!.pathsLayout.removeView(button)
+
+                FirebaseCrashlytics.getInstance().log("Removed $path from whitelist")
             }
             .setNegativeButton(getString(R.string.cancel)) { dialogInterface: DialogInterface, _: Int -> dialogInterface.dismiss() }
             .build()
@@ -89,6 +97,7 @@ class WhitelistActivity : AppCompatActivity() {
      * Creates a dialog asking for a file/folder name to add to the whitelist
      */
     private fun addToWhiteList() {
+        FirebaseCrashlytics.getInstance().log("Launching SAF for whitelist")
         mGetContent.launch(Uri.fromFile(Environment.getDataDirectory()))
     }
 
@@ -96,6 +105,8 @@ class WhitelistActivity : AppCompatActivity() {
         OpenDocumentTree()
     ) { uri: Uri? ->
         if (uri != null) {
+            val path = uri.path
+            FirebaseCrashlytics.getInstance().log("Whitelist SAF returned: $path")
             whiteList.add(uri.path!!.substring(uri.path!!.indexOf(":") + 1)) // TODO create file from uri, then just add its path once sd card support is finished
             MainActivity.prefs!!.edit().putStringSet("whitelist", HashSet(whiteList)).apply()
             loadViews()

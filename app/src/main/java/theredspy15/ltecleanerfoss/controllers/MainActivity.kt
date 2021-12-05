@@ -31,6 +31,10 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.tasks.Task
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.crashlytics.FirebaseCrashlytics
+import com.google.firebase.installations.FirebaseInstallations
 import dev.shreyaspatil.MaterialDialog.MaterialDialog
 import dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface
 import theredspy15.ltecleanerfoss.BuildConfig
@@ -54,9 +58,26 @@ class MainActivity : AppCompatActivity() {
         binding!!.analyzeBtn.setOnClickListener { analyze() }
         WhitelistActivity.getWhiteList(prefs)
         loadAdData()
+
+        // crashlytics
+        val crashlytics = FirebaseCrashlytics.getInstance()
+        crashlytics.setCustomKey("mode", BuildConfig.BUILD_TYPE)
+        crashlytics.setCustomKey("version_code", BuildConfig.VERSION_CODE)
+        crashlytics.setCustomKey("version_name", BuildConfig.VERSION_NAME)
+        FirebaseInstallations.getInstance().id
+            .addOnCompleteListener { task: Task<String?> ->
+                if (task.isSuccessful) {
+                    FirebaseCrashlytics.getInstance().setUserId(task.result!!)
+                    FirebaseAnalytics.getInstance(this).setUserId(task.result)
+                } else {
+                    FirebaseCrashlytics.getInstance().log("Failed to access FID")
+                }
+            }
     }
 
     private fun loadAdData() {
+        FirebaseCrashlytics.getInstance().log("Loading advertisement")
+
         val unitId: String
         if (BuildConfig.DEBUG) {
             unitId = "ca-app-pub-3940256099942544/6300978111"
@@ -100,6 +121,7 @@ class MainActivity : AppCompatActivity() {
     private fun arrangeForClean() {
         val orientation = resources.configuration.orientation
         if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            FirebaseCrashlytics.getInstance().log("Arranging view for clean")
             binding!!.frameLayout.visibility = View.VISIBLE
             binding!!.fileScrollView.visibility = View.GONE
         }
@@ -108,6 +130,7 @@ class MainActivity : AppCompatActivity() {
     private fun arrangeForAnalyze() {
         val orientation = resources.configuration.orientation
         if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            FirebaseCrashlytics.getInstance().log("Arranging view for Analyze")
             binding!!.frameLayout.visibility = View.GONE
             binding!!.fileScrollView.visibility = View.VISIBLE
         }
@@ -119,7 +142,6 @@ class MainActivity : AppCompatActivity() {
     fun clean() {
         requestWriteExternalPermission()
         if (!FileScanner.isRunning) {
-            if (prefs == null) println("presssss is null")
             if (prefs!!.getBoolean("one_click", false)) // one-click disabled
             {
                 Thread { scan(true) }.start() // one-click enabled
@@ -142,6 +164,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun clearClipboard() {
+        FirebaseCrashlytics.getInstance().log("Clearing clipboard")
+
         try {
             val mCbm = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
@@ -169,6 +193,8 @@ class MainActivity : AppCompatActivity() {
      */
     @SuppressLint("SetTextI18n")
     private fun scan(delete: Boolean) {
+        FirebaseCrashlytics.getInstance().log("Starting clean")
+
         Looper.prepare()
         runOnUiThread {
             findViewById<View>(R.id.cleanBtn).isEnabled = !FileScanner.isRunning
@@ -181,6 +207,7 @@ class MainActivity : AppCompatActivity() {
             binding!!.statusTextView.text = getString(R.string.status_running)
         }
         val path = Environment.getExternalStorageDirectory()
+        FirebaseCrashlytics.getInstance().log("External storage directory: $path")
 
         // scanner setup
         val fs = FileScanner(path, this)
@@ -198,7 +225,8 @@ class MainActivity : AppCompatActivity() {
 
         // failed scan
         if (path.listFiles() == null) { // is this needed? yes.
-            val textView = printTextView(getString(R.string.failed_scan), Color.RED)
+            FirebaseCrashlytics.getInstance().log("Failed scan - found files is null")
+            val textView = quickTextView(getString(R.string.failed_scan), Color.RED)
             runOnUiThread { binding!!.fileListView.addView(textView) }
         }
 
@@ -226,7 +254,7 @@ class MainActivity : AppCompatActivity() {
      * @param text - text of textview
      * @return - created textview
      */
-    private fun printTextView(text: String, color: Int): TextView {
+    private fun quickTextView(text: String, color: Int): TextView {
         val textView = TextView(this@MainActivity)
         textView.setTextColor(color)
         textView.text = text
@@ -241,7 +269,7 @@ class MainActivity : AppCompatActivity() {
      */
     fun displayDeletion(file: File): TextView {
         // creating and adding a text view to the scroll view with path to file
-        val textView = printTextView(file.absolutePath, resources.getColor(R.color.colorAccent,resources.newTheme()))
+        val textView = quickTextView(file.absolutePath, resources.getColor(R.color.colorAccent,resources.newTheme()))
 
         // adding to scroll view
         runOnUiThread { binding!!.fileListView.addView(textView) }
@@ -253,7 +281,7 @@ class MainActivity : AppCompatActivity() {
 
     fun displayText(text: String) {
         // creating and adding a text view to the scroll view with path to file
-        val textView = printTextView(text, Color.YELLOW)
+        val textView = quickTextView(text, Color.YELLOW)
 
         // adding to scroll view
         runOnUiThread { binding!!.fileListView.addView(textView) }
@@ -267,6 +295,8 @@ class MainActivity : AppCompatActivity() {
      * files to 0
      */
     private fun reset() {
+        FirebaseCrashlytics.getInstance().log("Resetting views")
+
         prefs = PreferenceManager.getDefaultSharedPreferences(this)
         runOnUiThread {
             binding!!.fileListView.removeAllViews()
@@ -279,6 +309,8 @@ class MainActivity : AppCompatActivity() {
      * Request write permission
      */
     private fun requestWriteExternalPermission() {
+        FirebaseCrashlytics.getInstance().log("Requesting permissions")
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) { // android 11 and up
             ActivityCompat.requestPermissions(
                 this, arrayOf(
@@ -327,6 +359,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateTheme() {
+        FirebaseCrashlytics.getInstance().log("Updating theme")
+
         prefs = PreferenceManager.getDefaultSharedPreferences(this)
         val dark = resources.getStringArray(R.array.themes)[2]
         val light = resources.getStringArray(R.array.themes)[1]
