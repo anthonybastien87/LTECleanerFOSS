@@ -60,7 +60,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-ads:20.5.0'
 
     implementation 'dev.shreyaspatil.MaterialDialog:MaterialDialog:2.2.2'
-    implementation 'com.airbnb.android:lottie:4.2.1'
+    implementation 'com.airbnb.android:lottie:4.2.2'
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
