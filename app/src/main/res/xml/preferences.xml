@@ -12,7 +12,7 @@
 
     <PreferenceCategory android:title="@string/links_category_title" app:iconSpaceReserved="false">
 
-        <Preference android:title="Remove Advertisements"
+        <Preference android:title="@string/remove_ads_title"
             android:key="removeads"
             app:iconSpaceReserved="false">
             <intent android:action="android.intent.action.VIEW"

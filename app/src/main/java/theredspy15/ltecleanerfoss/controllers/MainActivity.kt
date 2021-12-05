@@ -18,6 +18,7 @@ import android.os.Bundle
 import android.os.Environment
 import android.os.Looper
 import android.provider.Settings
+import android.util.DisplayMetrics
 import android.view.View
 import android.widget.ImageView
 import android.widget.ScrollView
@@ -27,10 +28,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.app.ActivityCompat
 import androidx.preference.PreferenceManager
-import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
-import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.admanager.AdManagerAdRequest
+import com.google.android.gms.ads.admanager.AdManagerAdView
 import com.google.android.gms.tasks.Task
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.crashlytics.FirebaseCrashlytics
@@ -44,8 +45,52 @@ import theredspy15.ltecleanerfoss.databinding.ActivityMainBinding
 import java.io.File
 import java.text.DecimalFormat
 
+
 class MainActivity : AppCompatActivity() {
     var binding: ActivityMainBinding? = null
+
+    // Determine the screen width (less decorations) to use for the ad width.
+    // If the ad hasn't been laid out, default to the full screen width.
+    private val adSize: AdSize
+        get() {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                val metrics = windowManager.currentWindowMetrics
+
+                val density: Float = resources.displayMetrics.density
+
+                var adWidthPixels = binding?.adViewContainer?.width?.toFloat()
+                if (adWidthPixels == 0f) {
+                    adWidthPixels = metrics.bounds.width().toFloat()
+                    println("eee - " + metrics.bounds.width().toFloat())
+                }
+
+                val adWidth = (adWidthPixels?.div(density))?.toInt()
+                return adWidth?.let {
+                    AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this,
+                        it
+                    )
+                }!!
+            } else {
+                val display = windowManager.defaultDisplay
+                val outMetrics = DisplayMetrics()
+                display.getMetrics(outMetrics)
+
+                val density = outMetrics.density
+
+                var adWidthPixels = binding?.adViewContainer?.width?.toFloat()
+                if (adWidthPixels == 0f) {
+                    adWidthPixels = outMetrics.widthPixels.toFloat()
+                }
+
+                val adWidth = (adWidthPixels?.div(density))?.toInt()
+                return adWidth?.let {
+                    AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this,
+                        it
+                    )
+                }!!
+            }
+        }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         if (prefs == null) updateTheme()
         super.onCreate(savedInstanceState)
@@ -57,7 +102,17 @@ class MainActivity : AppCompatActivity() {
         binding!!.whitelistBtn.setOnClickListener { whitelist() }
         binding!!.analyzeBtn.setOnClickListener { analyze() }
         WhitelistActivity.getWhiteList(prefs)
-        loadAdData()
+
+        // Initialize the Mobile Ads SDK.
+        MobileAds.initialize(this) { }
+
+        adView = AdManagerAdView(this)
+        binding!!.adViewContainer?.addView(adView)
+        val orientation = resources.configuration.orientation
+        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            FirebaseCrashlytics.getInstance().log("Displaying advertisement")
+            loadBanner()
+        }
 
         // crashlytics
         val crashlytics = FirebaseCrashlytics.getInstance()
@@ -75,9 +130,7 @@ class MainActivity : AppCompatActivity() {
             }
     }
 
-    private fun loadAdData() {
-        FirebaseCrashlytics.getInstance().log("Loading advertisement")
-
+    private fun loadBanner() {
         val unitId: String
         if (BuildConfig.DEBUG) {
             unitId = "ca-app-pub-3940256099942544/6300978111"
@@ -85,12 +138,13 @@ class MainActivity : AppCompatActivity() {
         } else {
             unitId = "ca-app-pub-5128547878021429/8516214533" // production only!
         }
-        MobileAds.initialize(this) { }
-        val adRequest = AdRequest.Builder().build()
-        val adView = AdView(this)
-        adView.adSize = AdSize.BANNER
+
         adView.adUnitId = unitId
-        binding!!.mainLayout.addView(adView)
+        adView.adSize = adSize
+
+        val adRequest = AdManagerAdRequest.Builder().build()
+
+        // Start loading the ad in the background.
         adView.loadAd(adRequest)
     }
 
@@ -374,6 +428,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
+        private lateinit var adView: AdManagerAdView
+
         @JvmField
         var prefs: SharedPreferences? = null
         @JvmStatic

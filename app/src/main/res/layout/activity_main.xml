@@ -160,4 +160,10 @@
 
     </androidx.gridlayout.widget.GridLayout>
 
+    <FrameLayout
+        android:id="@+id/adView_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </FrameLayout>
+
 </LinearLayout>

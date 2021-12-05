@@ -64,6 +64,7 @@
     <string name="clipboard_clear_failed">Failed to clear clipboard</string>
     <string name="settings_notification_name">Daily Cleaner Notification</string>
     <string name="settings_notification_sum">Shows notification of how much data was cleaned daily</string>
+    <string name="remove_ads_title">Remove Advertisements</string>
 
     <string-array name="generic_filter_files">
         <item>.tmp</item>
