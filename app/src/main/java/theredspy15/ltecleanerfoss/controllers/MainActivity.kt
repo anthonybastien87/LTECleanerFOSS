@@ -61,7 +61,6 @@ class MainActivity : AppCompatActivity() {
                 var adWidthPixels = binding?.adViewContainer?.width?.toFloat()
                 if (adWidthPixels == 0f) {
                     adWidthPixels = metrics.bounds.width().toFloat()
-                    println("eee - " + metrics.bounds.width().toFloat())
                 }
 
                 val adWidth = (adWidthPixels?.div(density))?.toInt()
